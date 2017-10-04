@@ -14,4 +14,24 @@ class DFS_NBA {
 			self::init_shortcodes();
 		}
 	}
+
+  private static function init_hooks() {
+  self::$initiated = true;
+
+  }
+
+  private static function init_ajax() {
+  self::$initiated = true;
+
+  }
+
+  private static function init_js() {
+  self::$initiated = true;
+
+  }
+
+  private static function init_shortcodes() {
+  self::$initiated = true;
+
+  }
 }
