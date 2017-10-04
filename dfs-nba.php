@@ -10,3 +10,8 @@
  */
 
 defined( 'ABSPATH' ) or die( 'Error: Plugin cannot be called directly!' );
+
+
+
+register_activation_hook( __FILE__, array('dfs_nba','plugin_activation'));
+register_deactivation_hook( __FILE__, array('dfs_nba','plugin_deactivation'));
