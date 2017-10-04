@@ -34,4 +34,15 @@ class DFS_NBA {
   self::$initiated = true;
 
   }
+
+  public static function plugin_activation() {
+  error_log("DFS NBA plugin activated!", 0);
+  self::start_cron();
+}
+
+public static function plugin_deactivation() {
+  error_log("DFS NBA plugin deactivated!", 0);
+  self::stop_cron();
+  delete_transient('');
+}
 }
