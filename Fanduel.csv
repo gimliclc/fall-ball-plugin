@@ -1,0 +1,701 @@
+playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,FanduelNumber,InitPlayerName,InitPlayerID,AtTeam
+759,Home,Russell Westbrook,18721-9642,PG,Russell,Russell Westbrook,Westbrook,59.03499756,80,13900,DEN@OKC,OKC,DEN,O,Rest,9642,Russell Westbrook,759,@OKC
+1598,Home,James Harden,18721-9644,SG,James,James Harden,Harden,53.72874756,80,11700,MIN@HOU,HOU,MIN,,,9644,James Harden,1598,@HOU
+13305,Away,Anthony Davis,18721-15755,PF,Anthony,Anthony Davis,Davis,49.81733398,75,11300,NO@POR,NO,POR,O,Knee,15755,Isaiah Thomas,4711,@NO
+250,Home,LeBron James,18721-9488,SF,LeBron,LeBron James,James,49.41621688,74,10900,TOR@CLE,CLE,TOR,O,Calf,9488,DeMar DeRozan,1605,@CLE
+39311,Away,Karl-Anthony Towns,18721-58462,C,Karl-Anthony,Karl-Anthony Towns,Towns,45.00864137,81,10600,MIN@HOU,MIN,HOU,,,58462,Anthony Davis,13305,@MIN
+49629,Away,Giannis Antetokounmpo,18721-40199,SG,Giannis,Giannis Antetokounmpo,Antetokounmpo,45.6625,80,10300,MIL@BOS,MIL,BOS,O,Rest,40199,DeMarcus Cousins,2192,@MIL
+6160,Home,Jimmy Butler,18721-14528,SF,Jimmy,Jimmy Butler,Butler,41.96400065,75,10200,BKN@CHI,CHI,BKN,,,14528,Damian Lillard,13809,@CHI
+1600,Home,Stephen Curry,18721-9524,PG,Stephen,Stephen Curry,Curry,41.70256473,78,10200,LAL@GS,GS,LAL,,,9524,Karl-Anthony Towns,39311,@GS
+2195,Away,John Wall,18721-12332,PG,John,John Wall,Wall,45.306409,78,10100,WAS@MIA,WAS,MIA,GTD,Quadriceps,12332,Stephen Curry,1600,@WAS
+2192,Away,DeMarcus Cousins,18721-12362,C,DeMarcus,DeMarcus Cousins,Cousins,48.77500068,72,10100,NO@POR,NO,POR,O,Achilles,12362,LeBron James,250,@NO
+2305,Home,Paul George,18721-12341,SF,Paul,Paul George,George,37.34053988,74,9900,ATL@IND,IND,ATL,,,12341,Kawhi Leonard,2256,@IND
+49571,Away,Nikola Jokic,18721-55062,PF,Nikola,Nikola Jokic,Jokic,36.51126829,71,9900,DEN@OKC,DEN,OKC,,,55062,Kevin Durant,34,@DEN
+34,Home,Kevin Durant,18721-9646,SF,Kevin,Kevin Durant,Durant,45.33606557,61,9800,LAL@GS,GS,LAL,,,9646,Kyrie Irving,7118,@GS
+13809,Home,Damian Lillard,18721-20848,PG,Damian,Damian Lillard,Lillard,41.39466797,75,9700,NO@POR,POR,NO,GTD,Foot,20848,Paul George,2305,@POR
+61,Home,Chris Paul,18721-9623,PG,Chris,Chris Paul,Paul,39.69333496,60,9400,SAC@LAC,LAC,SAC,,,9623,Giannis Antetokounmpo,49629,@LAC
+7693,Home,Hassan Whiteside,18721-12363,C,Hassan,Hassan Whiteside,Whiteside,38.625,76,9000,WAS@MIA,MIA,WAS,,,12363,Andrew Wiggins,24682,@MIA
+25858,Home,Rudy Gobert,18721-40203,C,Rudy,Rudy Gobert,Gobert,36.02749939,80,9000,SA@UTA,UTA,SA,,,40203,Carmelo Anthony,452,@UTA
+1605,Away,DeMar DeRozan,18721-9714,SG,DeMar,DeMar DeRozan,DeRozan,39.4621615,74,8900,TOR@CLE,TOR,CLE,,,9714,John Wall,2195,@TOR
+2256,Away,Kawhi Leonard,18721-14513,SF,Kawhi,Kawhi Leonard,Leonard,40.98630137,73,8800,SA@UTA,SA,UTA,,,14513,Bradley Beal,24148,@SA
+1596,Home,Blake Griffin,18721-9560,PF,Blake,Blake Griffin,Griffin,39.01000163,60,8800,SAC@LAC,LAC,SAC,,,9560,Jimmy Butler,6160,@LAC
+4711,Home,Isaiah Thomas,18721-14559,PG,Isaiah,Isaiah Thomas,Thomas,40.53599935,75,8700,MIL@BOS,BOS,MIL,,,14559,Kemba Walker,2181,@BOS
+7118,Home,Kyrie Irving,18721-14498,PG,Kyrie,Kyrie Irving,Irving,38.23611111,72,8500,TOR@CLE,CLE,TOR,GTD,Knee,14498,Klay Thompson,4717,@CLE
+78,Away,Kyle Lowry,18721-9535,PG,Kyle,Kyle Lowry,Lowry,39.59830591,59,8500,TOR@CLE,TOR,CLE,,,9535,C.J. McCollum,17251,@TOR
+24682,Away,Andrew Wiggins,18721-49116,SF,Andrew,Andrew Wiggins,Wiggins,32.36049322,81,8100,MIN@HOU,MIN,HOU,,,49116,Blake Griffin,1596,@MIN
+6925,Home,Nikola Vucevic,18721-14514,C,Nikola,Nikola Vucevic,Vucevic,33.58243375,74,8000,DET@ORL,ORL,DET,,,14514,Brook Lopez,770,@ORL
+802,Home,DeAndre Jordan,18721-9561,C,DeAndre,DeAndre Jordan,Jordan,33.91749878,80,8000,SAC@LAC,LAC,SAC,,,9561,Gordon Hayward,8226,@LAC
+812,Home,Goran Dragic,18721-9673,PG,Goran,Goran Dragic,Dragic,33.47916667,72,7900,WAS@MIA,MIA,WAS,,,9673,Eric Bledsoe,5714,@MIA
+33,Home,Mike Conley,18721-9575,PG,Mike,Mike Conley,Conley,35.27205882,68,7800,DAL@MEM,MEM,DAL,,,9575,Kyle Lowry,78,@MEM
+8226,Home,Gordon Hayward,18721-12366,SF,Gordon,Gordon Hayward,Hayward,34.40138753,72,7700,SA@UTA,UTA,SA,GTD,Quadriceps,12366,Devin Booker,41438,@UTA
+1599,Away,Ricky Rubio,18721-14496,PG,Ricky,Ricky Rubio,Rubio,30.74666667,75,7700,MIN@HOU,MIN,HOU,,,14496,Jabari Parker,24302,@MIN
+760,Home,Kevin Love,18721-9874,PF,Kevin,Kevin Love,Love,35.68666585,60,7600,TOR@CLE,CLE,TOR,,,9874,Goran Dragic,812,@CLE
+24148,Away,Bradley Beal,18721-15595,SG,Bradley,Bradley Beal,Beal,32.72077922,77,7500,WAS@MIA,WAS,MIA,,,15595,Joel Embiid,49880,@WAS
+22,Home,Marc Gasol,18721-9581,C,Marc,Marc Gasol,Gasol,36.21917808,73,7500,DAL@MEM,MEM,DAL,,,9581,Kevin Love,760,@MEM
+112,Away,Paul Millsap,18721-9729,PF,Paul,Paul Millsap,Millsap,34.92174055,69,7500,ATL@IND,ATL,IND,,,9729,Mike Conley,33,@ATL
+32965,Home,Jusuf Nurkic,18721-55057,C,Jusuf,Jusuf Nurkic,Nurkic,23.26000038,65,7500,NO@POR,POR,NO,O,Lower leg,55057,Marc Gasol,22,@POR
+1615,Away,Jrue Holiday,18721-9663,PG,Jrue,Jrue Holiday,Holiday,32.7599985,65,7400,NO@POR,NO,POR,,,9663,Harrison Barnes,2372,@NO
+4717,Home,Klay Thompson,18721-14509,SG,Klay,Klay Thompson,Thompson,30.99480646,77,7200,LAL@GS,GS,LAL,,,14509,Paul Millsap,112,@GS
+26503,Away,Dennis Schroder,18721-40201,PG,Dennis,Dennis Schroder,Schroder,30.15316579,79,7200,ATL@IND,ATL,IND,,,40201,Zach LaVine,41396,@ATL
+376,Away,Dwight Howard,18721-9660,C,Dwight,Dwight Howard,Howard,32.81081081,74,7200,ATL@IND,ATL,IND,,,9660,Dwyane Wade,450,@ATL
+32861,Home,Kristaps Porzingis,18721-63122,PF,Kristaps,Kristaps Porzingis,Porzingis,32.50757576,66,7200,PHI@NY,NY,PHI,O,Back,63122,Kristaps Porzingis,32861,@NY
+31736,Home,Elfrid Payton,18721-19138,PG,Elfrid,Elfrid Payton,Payton,28.84444324,81,7200,DET@ORL,ORL,DET,,,19138,Hassan Whiteside,7693,@ORL
+761,Away,Danilo Gallinari,18721-9637,SF,Danilo,Danilo Gallinari,Gallinari,28.02380952,63,7100,DEN@OKC,DEN,OKC,O,Rest,9637,Derrick Rose,756,@DEN
+93,Home,Rajon Rondo,18721-9455,PG,Rajon,Rajon Rondo,Rondo,24.71764778,68,7000,BKN@CHI,CHI,BKN,GTD,Wrist,9455,Danilo Gallinari,761,@CHI
+11707,Away,Robert Covington,18721-20491,SF,Robert,Robert Covington,Covington,26.88358136,67,6900,PHI@NY,PHI,NY,O,Knee,20491,Chris Paul,61,@PHI
+24241,Away,Andre Drummond,18721-15557,C,Andre,Andre Drummond,Drummond,35.28999939,80,6900,DET@ORL,DET,ORL,,,15557,Dion Waiters,9280,@DET
+1614,Home,Jeff Teague,18721-9446,PG,Jeff,Jeff Teague,Teague,32.48395001,81,6900,ATL@IND,IND,ATL,,,9446,Evan Fournier,24346,@IND
+35,Home,Al Horford,18721-9453,C,Al,Al Horford,Horford,32.10895595,67,6800,MIL@BOS,BOS,MIL,,,9453,Lou Williams,140,@BOS
+452,Home,Carmelo Anthony,18721-9508,SF,Carmelo,Carmelo Anthony,Anthony,34.44931574,73,6800,PHI@NY,NY,PHI,O,Rest,9508,LaMarcus Aldridge,66,@NY
+2369,Home,Draymond Green,18721-15860,PF,Draymond,Draymond Green,Green,34.58289538,76,6800,LAL@GS,GS,LAL,O,Rest,15860,Dennis Schroder,26503,@GS
+17251,Home,C.J. McCollum,18721-19067,SG,C.J.,C.J. McCollum,McCollum,33.34125061,80,6800,NO@POR,POR,NO,GTD,Hand,19067,Rudy Gay,71,@POR
+10168,Away,Jeremy Lin,18721-12443,PG,Jeremy,Jeremy Lin,Lin,27.47222222,36,6700,BKN@CHI,BKN,CHI,O,Rest,12443,George Hill,780,@BKN
+770,Away,Brook Lopez,18721-9621,C,Brook,Brook Lopez,Lopez,32.33866536,75,6700,BKN@CHI,BKN,CHI,O,Rest,9621,Victor Oladipo,22337,@BKN
+24342,Away,Dario Saric,18721-55056,PF,Dario,Dario Saric,Saric,23.69876513,81,6700,PHI@NY,PHI,NY,,,55056,Eric Gordon,762,@PHI
+47,Away,Wilson Chandler,18721-9636,SF,Wilson,Wilson Chandler,Chandler,27.33571429,70,6500,DEN@OKC,DEN,OKC,,,9636,Jrue Holiday,1615,@DEN
+66,Away,LaMarcus Aldridge,18721-9688,PF,LaMarcus,LaMarcus Aldridge,Aldridge,31.24084645,71,6500,SA@UTA,SA,UTA,,,9688,D'Angelo Russell,41490,@SA
+1604,Home,James Johnson,18721-9966,PF,James,James Johnson,Johnson,26.12799967,75,6500,WAS@MIA,MIA,WAS,,,9966,Nikola Jokic,49571,@MIA
+52575,Home,Myles Turner,18721-58253,C,Myles,Myles Turner,Turner,29.80249939,80,6500,ATL@IND,IND,ATL,,,58253,Tobias Harris,7119,@IND
+450,Home,Dwyane Wade,18721-9585,SG,Dwyane,Dwyane Wade,Wade,31.67118603,59,6400,BKN@CHI,CHI,BKN,,,9585,Nicolas Batum,782,@CHI
+24301,Away,Julius Randle,18721-42669,PF,Julius,Julius Randle,Randle,29.00416734,72,6400,LAL@GS,LAL,GS,,,42669,Wilson Chandler,47,@LAL
+41490,Away,D'Angelo Russell,18721-58312,PG,D'Angelo,D'Angelo Russell,Russell,27.51904684,63,6400,LAL@GS,LAL,GS,O,Personal,58312,Myles Turner,52575,@LAL
+24287,Away,Willie Cauley-Stein,18721-23823,PF,Willie,Willie Cauley-Stein,Cauley-Stein,16.34246575,73,6300,SAC@LAC,SAC,LAC,,,23823,J.J. Redick,76,@SAC
+9280,Home,Dion Waiters,18721-16220,SG,Dion,Dion Waiters,Waiters,26.81739077,46,6300,WAS@MIA,MIA,WAS,O,Ankle,16220,Nikola Vucevic,6925,@MIA
+756,Home,Derrick Rose,18721-9475,PG,Derrick,Derrick Rose,Rose,28.88593674,64,6200,PHI@NY,NY,PHI,O,Knee,9475,Jeff Teague,1614,@NY
+780,Home,George Hill,18721-9703,PG,George,George Hill,Hill,28.07291667,48,6200,SA@UTA,UTA,SA,,,9703,Reggie Jackson,3771,@UTA
+24308,Home,Aaron Gordon,18721-41594,PF,Aaron,Aaron Gordon,Gordon,22.7670883,79,6100,DET@ORL,ORL,DET,,,41594,Marcus Morris,4078,@ORL
+42932,Away,Richaun Holmes,18721-23447,PF,Richaun,Richaun Holmes,Holmes,20.19285801,56,6100,PHI@NY,PHI,NY,,,23447,Jordan Clarkson,22892,@PHI
+9269,Away,Will Barton,18721-17333,SG,Will,Will Barton,Barton,24.91333415,60,6100,DEN@OKC,DEN,OKC,O,Foot,17333,Avery Bradley,2194,@DEN
+2194,Home,Avery Bradley,18721-12334,SG,Avery,Avery Bradley,Bradley,28.40555601,54,6000,MIL@BOS,BOS,MIL,,,12334,Zach Randolph,165,@BOS
+24275,Home,Marcus Smart,18721-23670,SG,Marcus,Marcus Smart,Smart,24.08974359,78,6000,MIL@BOS,BOS,MIL,,,23670,Gary Harris,24252,@BOS
+165,Home,Zach Randolph,18721-9579,PF,Zach,Zach Randolph,Randolph,26.43888855,72,6000,DAL@MEM,MEM,DAL,,,9579,Serge Ibaka,779,@MEM
+22407,Home,Jae Crowder,18721-15800,SF,Jae,Jae Crowder,Crowder,25.51408451,71,6000,MIL@BOS,BOS,MIL,,,15800,Darren Collison,1637,@BOS
+4294,Away,Khris Middleton,18721-16261,SF,Khris,Khris Middleton,Middleton,25.92758705,29,5900,MIL@BOS,MIL,BOS,O,Rest,16261,Kentavious Caldwell-Pope,24162,@MIL
+24252,Away,Gary Harris,18721-24544,SG,Gary,Gary Harris,Harris,24.14285714,56,5900,DEN@OKC,DEN,OKC,,,24544,Al Horford,35,@DEN
+9276,Home,Nikola Mirotic,18721-14522,PF,Nikola,Nikola Mirotic,Mirotic,20.61594203,69,5800,BKN@CHI,CHI,BKN,,,14522,Tim Hardaway Jr.,9386,@CHI
+9386,Away,Tim Hardaway Jr.,18721-15846,SG,Tim,Tim Hardaway Jr.,Hardaway Jr.,21.75696264,79,5800,ATL@IND,ATL,IND,,,15846,Nick Young,234,@ATL
+22550,Away,T.J. McConnell,18721-18393,PG,T.J.,T.J. McConnell,McConnell,22.09499969,80,5800,PHI@NY,PHI,NY,,,18393,Jae Crowder,22407,@PHI
+46508,Away,Timothe Luwawu-Cabarrot,18721-70825,SG,Timothe,Timothe Luwawu-Cabarrot,Luwawu-Cabarrot,10.72647095,68,5700,PHI@NY,PHI,NY,,,70825,Rudy Gobert,25858,@PHI
+308,Away,Dirk Nowitzki,18721-9500,PF,Dirk,Dirk Nowitzki,Nowitzki,25.68867925,53,5700,DAL@MEM,DAL,MEM,O,Rest,9500,Khris Middleton,4294,@DAL
+515,Away,Pau Gasol,18721-9570,C,Pau,Pau Gasol,Gasol,27.01269919,63,5700,SA@UTA,SA,UTA,,,9570,T.J. Warren,24292,@SA
+22403,Away,Gorgui Dieng,18721-15771,PF,Gorgui,Gorgui Dieng,Dieng,25.59012406,81,5700,MIN@HOU,MIN,HOU,,,15771,Enes Kanter,9273,@MIN
+2178,Away,Greg Monroe,18721-12337,C,Greg,Greg Monroe,Monroe,24.63625031,80,5600,MIL@BOS,MIL,BOS,,,12337,Julius Randle,24301,@MIL
+23365,Home,Tyler Johnson,18721-18600,PG,Tyler,Tyler Johnson,Johnson,25.85416667,72,5600,WAS@MIA,MIA,WAS,,,18600,Andre Drummond,24241,@MIA
+3665,Away,Ish Smith,18721-12511,PG,Ish,Ish Smith,Smith,21.28999939,80,5600,DET@ORL,DET,ORL,,,12511,Wesley Matthews,1653,@DET
+398,Home,Trevor Ariza,18721-9538,SF,Trevor,Trevor Ariza,Ariza,25.00126551,79,5600,MIN@HOU,HOU,MIN,,,9538,Tyler Johnson,23365,@HOU
+22337,Home,Victor Oladipo,18721-15684,SG,Victor,Victor Oladipo,Oladipo,26.33484811,66,5600,DEN@OKC,OKC,DEN,,,15684,Otto Porter,24181,@OKC
+24209,Away,Malcolm Brogdon,18721-16359,PG,Malcolm,Malcolm Brogdon,Brogdon,20.96756724,74,5600,MIL@BOS,MIL,BOS,,,16359,Sean Kilpatrick,4347,@MIL
+42415,Away,Buddy Hield,18721-23665,SG,Buddy,Buddy Hield,Hield,16.27624969,80,5500,SAC@LAC,SAC,LAC,,,23665,Bojan Bogdanovic,9740,@SAC
+22892,Away,Jordan Clarkson,18721-20640,PG,Jordan,Jordan Clarkson,Clarkson,22.5,80,5500,LAL@GS,LAL,GS,,,20640,Markieff Morris,4191,@LAL
+24239,Away,Jonas Valanciunas,18721-14503,C,Jonas,Jonas Valanciunas,Valanciunas,25.63797499,79,5500,TOR@CLE,TOR,CLE,,,14503,Dirk Nowitzki,308,@TOR
+4191,Away,Markieff Morris,18721-14511,PF,Markieff,Markieff Morris,Morris,25.84999968,76,5500,WAS@MIA,WAS,MIA,,,14511,Clint Capela,28284,@WAS
+9273,Home,Enes Kanter,18721-14516,PF,Enes,Enes Kanter,Kanter,24.07605668,71,5500,DEN@OKC,OKC,DEN,,,14516,DeAndre Jordan,802,@OKC
+1637,Away,Darren Collison,18721-9624,PG,Darren,Darren Collison,Collison,23.37352977,68,5500,SAC@LAC,SAC,LAC,O,Head,9624,Dwight Howard,376,@SAC
+24346,Home,Evan Fournier,18721-23096,SG,Evan,Evan Fournier,Fournier,25.40596942,67,5500,DET@ORL,ORL,DET,,,23096,Rodney Hood,24165,@ORL
+1612,Away,Ty Lawson,18721-9964,PG,Ty,Ty Lawson,Lawson,20.24705954,68,5500,SAC@LAC,SAC,LAC,,,9964,Will Barton,9269,@SAC
+28284,Home,Clint Capela,18721-55059,C,Clint,Clint Capela,Capela,25.62031174,64,5500,MIN@HOU,HOU,MIN,O,Rest,55059,Jeremy Lin,10168,@HOU
+24675,Away,Rondae Hollis-Jefferson,18721-42148,SF,Rondae,Rondae Hollis-Jefferson,Hollis-Jefferson,20.35454609,77,5400,BKN@CHI,BKN,CHI,,,42148,Seth Curry,4873,@BKN
+7119,Away,Tobias Harris,18721-14518,PF,Tobias,Tobias Harris,Harris,26.09876543,81,5400,DET@ORL,DET,ORL,,,14518,Aaron Gordon,24308,@DET
+24303,Away,Nerlens Noel,18721-23825,C,Nerlens,Nerlens Noel,Noel,20.70204131,49,5400,DAL@MEM,DAL,MEM,,,23825,Ersan Ilyasova,128,@DAL
+7108,Away,Cory Joseph,18721-14529,PG,Cory,Cory Joseph,Joseph,18.56076011,79,5300,TOR@CLE,TOR,CLE,,,14529,Jordan Crawford,4441,@TOR
+4873,Away,Seth Curry,18721-15583,SG,Seth,Seth Curry,Curry,21.06857213,70,5300,DAL@MEM,DAL,MEM,O,Shoulder,15583,Robert Covington,11707,@DAL
+2214,Away,Mason Plumlee,18721-15590,C,Mason,Mason Plumlee,Plumlee,27.01518926,79,5300,DEN@OKC,DEN,OKC,,,15590,,,@DEN
+779,Away,Serge Ibaka,18721-9957,PF,Serge,Serge Ibaka,Ibaka,27.2924063,79,5300,TOR@CLE,TOR,CLE,,,9957,Elfrid Payton,31736,@TOR
+28787,Home,Josh Richardson,18721-16233,SG,Josh,Josh Richardson,Richardson,20.48846201,52,5300,WAS@MIA,MIA,WAS,,,16233,Jonas Valanciunas,24239,@MIA
+41,Home,Thaddeus Young,18721-9666,PF,Thaddeus,Thaddeus Young,Young,23.33561644,73,5200,ATL@IND,IND,ATL,,,9666,Greg Monroe,2178,@IND
+2372,Away,Harrison Barnes,18721-15946,SF,Harrison,Harrison Barnes,Barnes,28.15569682,79,5200,DAL@MEM,DAL,MEM,O,Rest,15946,Pau Gasol,515,@DAL
+2180,Home,Al-Farouq Aminu,18721-12342,PF,Al-Farouq,Al-Farouq Aminu,Aminu,21.9295074,61,5100,NO@POR,POR,NO,,,12342,Trevor Ariza,398,@POR
+4078,Away,Marcus Morris,18721-14512,SF,Marcus,Marcus Morris,Morris,23.43291077,79,5100,DET@ORL,DET,ORL,,,14512,Allen Crabbe,9300,@DET
+24181,Away,Otto Porter,18721-15628,SF,Otto,Otto Porter,Porter,26.92531769,79,5100,WAS@MIA,WAS,MIA,GTD,Back,15628,Justise Winslow,30323,@WAS
+1601,Away,Tyreke Evans,18721-9692,SG,Tyreke,Tyreke Evans,Evans,19.68000031,40,5100,SAC@LAC,SAC,LAC,O,Rest,9692,Jamal Crawford,162,@SAC
+37870,Home,Willy Hernangomez,18721-63127,C,Guillermo,Guillermo Hernangomez,Hernangomez,19.22112607,71,5100,PHI@NY,NY,PHI,,,63127,Thaddeus Young,41,@NY
+128,Away,Ersan Ilyasova,18721-9598,PF,Ersan,Ersan Ilyasova,Ilyasova,23.2728392,81,5000,ATL@IND,ATL,IND,,,9598,James Johnson,1604,@ATL
+769,Home,Robin Lopez,18721-9873,C,Robin,Robin Lopez,Lopez,21.76125031,80,5000,BKN@CHI,CHI,BKN,,,9873,Steven Adams,27993,@CHI
+24685,Away,Jahlil Okafor,18721-58083,C,Jahlil,Jahlil Okafor,Okafor,20.24,50,5000,PHI@NY,PHI,NY,O,Knee,58083,Kyle Korver,478,@PHI
+22395,Home,Shabazz Napier,18721-15560,PG,Shabazz,Shabazz Napier,Napier,7.436538696,52,4900,NO@POR,POR,NO,,,15560,Kent Bazemore,18858,@POR
+388,Away,Jameer Nelson,18721-9652,PG,Jameer,Jameer Nelson,Nelson,19.87866699,75,4900,DEN@OKC,DEN,OKC,O,Calf,9652,Emmanuel Mudiay,24680,@DEN
+2191,Home,Derrick Favors,18721-12351,PF,Derrick,Derrick Favors,Favors,20.7244898,49,4800,SA@UTA,UTA,SA,GTD,Knee,12351,Terrence Ross,9339,@UTA
+7103,Home,Tristan Thompson,18721-14501,C,Tristan,Tristan Thompson,Thompson,22.98311625,77,4800,TOR@CLE,CLE,TOR,GTD,Thumb,14501,Terrence Jones,7109,@CLE
+1684,Home,Patrick Beverley,18721-12474,PG,Patrick,Patrick Beverley,Beverley,24.88787842,66,4800,MIN@HOU,HOU,MIN,,,12474,Dario Saric,24342,@HOU
+24263,Away,Yogi Ferrell,18721-23772,PG,Yogi,Yogi Ferrell,Ferrell,19.24545427,44,4800,DAL@MEM,DAL,MEM,,,23772,Marvin Williams,59,@DAL
+777,Home,Courtney Lee,18721-9615,SG,Courtney,Courtney Lee,Lee,20.34342073,76,4800,PHI@NY,NY,PHI,,,9615,Nikola Mirotic,9276,@NY
+145,Away,Marcin Gortat,18721-9661,C,Marcin,Marcin Gortat,Gortat,26.45185306,81,4800,WAS@MIA,WAS,MIA,,,9661,Ricky Rubio,1599,@WAS
+379,Home,Andre Iguodala,18721-9664,SF,Andre,Andre Iguodala,Iguodala,19.76710591,76,4800,LAL@GS,GS,LAL,O,Rest,9664,Frank Kaminsky,28751,@GS
+27993,Home,Steven Adams,18721-23169,C,Steven,Steven Adams,Adams,24.57974745,79,4800,DEN@OKC,OKC,DEN,,,23169,Austin Rivers,9291,@OKC
+2303,Away,Kenneth Faried,18721-14521,PF,Kenneth,Kenneth Faried,Faried,21.81803319,61,4700,DEN@OKC,DEN,OKC,O,Back,14521,Maurice Harkless,24180,@DEN
+448,Home,Maybyner Nene,18721-9512,C,Nene,Nene Hilario,Hilario,17.38636364,66,4700,MIN@HOU,HOU,MIN,,,9512,Josh Richardson,28787,@HOU
+3771,Away,Reggie Jackson,18721-14523,PG,Reggie,Reggie Jackson,Jackson,24.22692402,52,4600,DET@ORL,DET,ORL,O,Knee,14523,Ryan Anderson,776,@DET
+18858,Away,Kent Bazemore,18721-19781,SF,Kent,Kent Bazemore,Bazemore,20.6123281,73,4600,ATL@IND,ATL,IND,,,19781,Deron Williams,60,@ATL
+762,Home,Eric Gordon,18721-9556,SG,Eric,Eric Gordon,Gordon,24.02162129,74,4600,MIN@HOU,HOU,MIN,,,9556,Jerryd Bayless,765,@HOU
+76,Home,J.J. Redick,18721-9655,SG,J.J.,J.J. Redick,Redick,20.14026037,77,4600,SAC@LAC,LAC,SAC,,,9655,Marcin Gortat,145,@LAC
+140,Home,Lou Williams,18721-9662,SG,Lou,Lou Williams,Williams,25.51125031,80,4600,MIN@HOU,HOU,MIN,,,9662,Kenneth Faried,2303,@HOU
+30624,Away,"Larry Nance, Jr.",18721-20992,PF,Larry,Larry Nance Jr.,Nance Jr.,19.09836066,61,4600,LAL@GS,LAL,GS,,,20992,Trevor Booker,3685,@LAL
+49976,Away,Jamal Murray,18721-66108,PG,Jamal,Jamal Murray,Murray,16.1875,80,4600,DEN@OKC,DEN,OKC,,,66108,Ty Lawson,1612,@DEN
+757,Away,Michael Beasley,18721-9587,SF,Michael,Michael Beasley,Beasley,15.45636319,55,4500,MIL@BOS,MIL,BOS,,,9587,Taj Gibson,1622,@MIL
+72279,Away,Brandon Ingram,18721-66048,SF,Brandon,Brandon Ingram,Ingram,17.736363,77,4500,LAL@GS,LAL,GS,,,66048,Mason Plumlee,2214,@LAL
+42074,Away,Skal Labissiere,18721-66109,PF,Skal,Skal Labissiere,Labissiere,16.3999998,31,4500,SAC@LAC,SAC,LAC,,,66109,Jahlil Okafor,24685,@SAC
+85,Away,Sergio Rodriguez,18721-71420,PG,Sergio,Sergio Rodriguez,Rodriguez,17.82941212,68,4500,PHI@NY,PHI,NY,O,Hamstring,71420,Cody Zeller,24152,@PHI
+42410,Away,Taurean Prince,18721-23572,SF,Taurean,Taurean Prince,Prince,11.50862069,58,4400,ATL@IND,ATL,IND,,,23572,J.J. Barea,298,@ATL
+9339,Home,Terrence Ross,18721-16405,SF,Terrence,Terrence Ross,Ross,18.10519449,77,4400,DET@ORL,ORL,DET,,,16405,Tony Parker,268,@ORL
+160,Home,Joe Johnson,18721-9447,SF,Joe,Joe Johnson,Johnson,16.20909059,77,4400,SA@UTA,UTA,SA,,,9447,Courtney Lee,777,@UTA
+1653,Away,Wesley Matthews,18721-9799,SG,Wesley,Wesley Matthews,Matthews,23.20274039,73,4400,DAL@MEM,DAL,MEM,O,Rest,9799,Richaun Holmes,42932,@DAL
+8330,Home,Kelly Olynyk,18721-22541,C,Kelly,Kelly Olynyk,Olynyk,18.38378411,74,4300,MIL@BOS,BOS,MIL,,,22541,C.J. Miles,125,@BOS
+3685,Away,Trevor Booker,18721-12350,PF,Trevor,Trevor Booker,Booker,23.66478804,71,4300,BKN@CHI,BKN,CHI,O,Rest,12350,Michael Beasley,757,@BKN
+2325,Home,Evan Turner,18721-12359,SF,Evan,Evan Turner,Turner,19.27499962,64,4300,NO@POR,POR,NO,,,12359,Tyreke Evans,1601,@POR
+9389,Home,Jerian Grant,18721-15996,PG,Jerian,Jerian Grant,Grant,11.81451613,62,4300,BKN@CHI,CHI,BKN,,,15996,Yogi Ferrell,24263,@CHI
+6653,Away,Solomon Hill,18721-15417,SF,Solomon,Solomon Hill,Hill,15.8243596,78,4200,NO@POR,NO,POR,,,15417,Marco Belinelli,48,@NO
+2565,Away,Nemanja Bjelica,18721-12368,PF,Nemanja,Nemanja Bjelica,Bjelica,13.46615366,65,4200,MIN@HOU,MIN,HOU,O,Foot,12368,Draymond Green,2369,@MIN
+391,Home,Tony Allen,18721-9458,SG,Tony,Tony Allen,Allen,20.58285784,70,4200,DAL@MEM,MEM,DAL,,,9458,Jusuf Nurkic,32965,@MEM
+42322,Away,Caris LeVert,18721-23798,SG,Caris,Caris LeVert,LeVert,15.97499956,56,4200,BKN@CHI,BKN,CHI,,,23798,J.R. Smith,386,@BKN
+129,Home,Monta Ellis,18721-9526,SG,Monta,Monta Ellis,Ellis,17.81232944,73,4200,ATL@IND,IND,ATL,,,9526,Wayne Ellington,1620,@IND
+2413,Away,Boban Marjanovic,18721-63826,C,Boban,Boban Marjanovic,Marjanovic,10.33235258,34,4200,DET@ORL,DET,ORL,,,63826,Buddy Hield,42415,@DET
+1609,Away,Brandon Jennings,18721-9593,PG,Brandon,Brandon Jennings,Jennings,17.61999969,80,4200,WAS@MIA,WAS,MIA,,,9593,Brandon Ingram,72279,@WAS
+776,Home,Ryan Anderson,18721-9772,PF,Ryan,Ryan Anderson,Anderson,20.8957743,71,4200,MIN@HOU,HOU,MIN,,,9772,Malcolm Brogdon,24209,@HOU
+1757,Away,Garrett Temple,18721-11074,SG,Garrett,Garrett Temple,Temple,17.22968674,64,4200,SAC@LAC,SAC,LAC,,,11074,Gerald Henderson,1606,@SAC
+1683,Home,Joe Ingles,18721-59318,SF,Joe,Joe Ingles,Ingles,16.24444505,81,4200,SA@UTA,UTA,SA,,,59318,Patrick Beverley,1684,@UTA
+30385,Away,Spencer Dinwiddie,18721-15542,PG,Spencer,Spencer Dinwiddie,Dinwiddie,16.56034483,58,4100,BKN@CHI,BKN,CHI,,,15542,Marquese Chriss,72600,@BKN
+24162,Away,Kentavious Caldwell-Pope,18721-15636,SG,Kentavious,Kentavious Caldwell-Pope,Caldwell-Pope,23.03066732,75,4100,DET@ORL,DET,ORL,,,15636,Marcus Smart,24275,@DET
+298,Away,J.J. Barea,18721-9495,PG,J.J.,J.J. Barea,Barea,20.72941141,34,4100,DAL@MEM,DAL,MEM,,,9495,Jeremy Lamb,22394,@DAL
+1948,Home,Lance Thomas,18721-16859,SF,Lance,Lance Thomas,Thomas,11.4108701,46,4100,PHI@NY,NY,PHI,O,Hip,16859,Michael Kidd-Gilchrist,9290,@NY
+60,Home,Deron Williams,18721-9722,PG,Deron,Deron Williams,Williams,21.29841347,63,4100,TOR@CLE,CLE,TOR,,,9722,Jamal Murray,49976,@CLE
+778,Away,Kosta Koufos,18721-9731,C,Kosta,Kosta Koufos,Koufos,15.93098557,71,4100,SAC@LAC,SAC,LAC,O,Rest,9731,Robin Lopez,769,@SAC
+100,Away,P.J. Tucker,18721-23407,SF,P.J.,P.J. Tucker,Tucker,18.15749969,80,4100,TOR@CLE,TOR,CLE,,,23407,Gorgui Dieng,22403,@TOR
+19543,Home,Kyle O'Quinn,18721-17384,C,Kyle,Kyle O'Quinn,O'Quinn,17.7217955,78,4100,PHI@NY,NY,PHI,,,17384,Ish Smith,3665,@NY
+2198,Home,Larry Sanders,18721-12346,C,Larry,Larry Sanders,Sanders,2.160000038,5,4000,TOR@CLE,CLE,TOR,,,12346,Al-Farouq Aminu,2180,@CLE
+9300,Home,Allen Crabbe,18721-15501,SG,Allen,Allen Crabbe,Crabbe,17.00253103,79,4000,NO@POR,POR,NO,GTD,Foot,15501,DeMarre Carroll,1631,@POR
+24291,Away,Justin Anderson,18721-23744,SF,Justin,Justin Anderson,Anderson,12.81216183,74,4000,PHI@NY,PHI,NY,,,23744,Jon Leuer,4000,@PHI
+2279,Away,Manny Harris,18721-12818,SG,Manny,Manny Harris,Harris,4.949999809,4,4000,DAL@MEM,DAL,MEM,,,12818,Monta Ellis,129,@DAL
+24165,Home,Rodney Hood,18721-15904,SG,Rodney,Rodney Hood,Hood,19.82068923,58,4000,SA@UTA,UTA,SA,GTD,Knee,15904,Shabazz Muhammad,24245,@UTA
+27049,Away,Tyler Ennis,18721-42689,PG,Tyler,Tyler Ennis,Ennis,7.623529172,51,4000,LAL@GS,LAL,GS,,,42689,Evan Turner,2325,@LAL
+52352,Away,"Kelly Oubre, Jr.",18721-58153,SF,Kelly,Kelly Oubre Jr.,Oubre Jr.,12.37948687,78,4000,WAS@MIA,WAS,MIA,,,58153,Cory Joseph,7108,@WAS
+9359,Away,Tarik Black,18721-17332,C,Tarik,Tarik Black,Black,13.97692308,65,4000,LAL@GS,LAL,GS,,,17332,Channing Frye,84,@LAL
+4347,Away,Sean Kilpatrick,18721-15520,SG,Sean,Sean Kilpatrick,Kilpatrick,20.82142857,70,3900,BKN@CHI,BKN,CHI,O,Hamstring,15520,Brandon Knight,2258,@BKN
+41433,Home,Bobby Portis,18721-42156,PF,Bobby,Bobby Portis,Portis,13.17777797,63,3900,BKN@CHI,CHI,BKN,,,42156,Nik Stauskas,26608,@CHI
+24290,Home,Montrezl Harrell,18721-23776,PF,Montrezl,Montrezl Harrell,Harrell,16.65172393,58,3900,MIN@HOU,HOU,MIN,,,23776,Nerlens Noel,24303,@HOU
+9291,Home,Austin Rivers,18721-15592,PG,Austin,Austin Rivers,Rivers,18.77297231,74,3900,SAC@LAC,LAC,SAC,O,Hamstring,15592,E'Twaun Moore,2354,@LAC
+84,Home,Channing Frye,18721-9678,PF,Channing,Channing Frye,Frye,16.08630204,73,3900,TOR@CLE,CLE,TOR,,,9678,Patty Mills,1632,@CLE
+24680,Away,Emmanuel Mudiay,18721-63124,PG,Emmanuel,Emmanuel Mudiay,Mudiay,20.49272683,55,3900,DEN@OKC,DEN,OKC,O,Ankle,63124,Montrezl Harrell,24290,@DEN
+24323,Home,Noah Vonleh,18721-42661,PF,Noah,Noah Vonleh,Vonleh,11.65205446,73,3900,NO@POR,POR,NO,,,42661,Dahntay Jones,445,@POR
+264,Away,Ian Mahinmi,18721-9953,C,Ian,Ian Mahinmi,Mahinmi,14.9516129,31,3900,WAS@MIA,WAS,MIA,GTD,Calf,9953,Doug McDermott,23478,@WAS
+58185,Away,David Nwaba,18721-42733,SG,David,David Nwaba,Nwaba,11.95000034,18,3900,LAL@GS,LAL,GS,,,42733,Maybyner Nene,448,@LAL
+24340,Home,Bismack Biyombo,18721-14505,C,Bismack,Bismack Biyombo,Biyombo,17.55375061,80,3800,DET@ORL,ORL,DET,,,14505,JaMychal Green,2187,@ORL
+23283,Home,Andre Roberson,18721-15548,SF,Andre,Andre Roberson,Roberson,17.98860729,79,3800,DEN@OKC,OKC,DEN,O,Rest,15548,Ben McLemore,24188,@OKC
+1622,Home,Taj Gibson,18721-9481,PF,Taj,Taj Gibson,Gibson,21.04025942,77,3800,DEN@OKC,OKC,DEN,O,Rest,9481,Jameer Nelson,388,@OKC
+386,Home,J.R. Smith,18721-9506,SG,J.R.,J.R. Smith,Smith,16.13000031,40,3800,TOR@CLE,CLE,TOR,,,9506,Tyson Chandler,516,@CLE
+24188,Away,Ben McLemore,18721-15727,SG,Ben,Ben McLemore,McLemore,11.50678007,59,3800,SAC@LAC,SAC,LAC,,,15727,Tony Snell,22374,@SAC
+862,Home,Bobby Brown,18721-74101,PG,Bobby,Bobby Brown,Brown,3.633333206,24,3800,MIN@HOU,HOU,MIN,,,74101,Alex Poythress,24266,@HOU
+164,Away,David Lee,18721-9638,PF,David,David Lee,Lee,17.25769199,78,3800,SA@UTA,SA,UTA,,,9638,Joe Johnson,160,@SA
+86,Away,Thabo Sefolosha,18721-9647,SF,Thabo,Thabo Sefolosha,Sefolosha,18.40491723,61,3800,ATL@IND,ATL,IND,,,9647,Marreese Speights,771,@ATL
+51,Away,Jason Smith,18721-9669,PF,Jason,Jason Smith,Smith,11.95205479,73,3800,WAS@MIA,WAS,MIA,,,9669,Tony Allen,391,@WAS
+268,Away,Tony Parker,18721-9702,PG,Tony,Tony Parker,Parker,18.8048391,62,3800,SA@UTA,SA,UTA,,,9702,Arron Afflalo,54,@SA
+773,Home,JaVale McGee,18721-9739,C,JaVale,JaVale McGee,McGee,11.85263142,76,3800,LAL@GS,GS,LAL,,,9739,Kelly Olynyk,8330,@GS
+1642,Away,Danny Green,18721-9758,SG,Danny,Danny Green,Green,16.64179104,67,3800,SA@UTA,SA,UTA,,,9758,Willie Cauley-Stein,24287,@SA
+24319,Home,Troy Williams,18721-42662,SF,Troy,Troy Williams,Williams,11.90689613,29,3800,MIN@HOU,HOU,MIN,,,42662,Jeff Green,37,@HOU
+1632,Away,Patty Mills,18721-9939,PG,Patty,Patty Mills,Mills,17.25063353,79,3800,SA@UTA,SA,UTA,,,9939,Timofey Mozgov,11008,@SA
+59353,Away,Nicolas Brussino,18721-71469,SG,Nicolas,Nicolas Brussino,Brussino,6.125,52,3800,DAL@MEM,DAL,MEM,,,71469,Derrick Favors,2191,@DAL
+9346,Away,Dwight Powell,18721-16196,PF,Dwight,Dwight Powell,Powell,14.52133301,75,3800,DAL@MEM,DAL,MEM,,,16196,Caris LeVert,42322,@DAL
+2429,Home,Kevin Seraphin,18721-12335,PF,Kevin,Kevin Seraphin,Seraphin,9.447916667,48,3700,ATL@IND,IND,ATL,,,12335,Norman Powell,24195,@IND
+4441,Away,Jordan Crawford,18721-12352,SG,Jordan,Jordan Crawford,Crawford,20.29411765,17,3700,NO@POR,NO,POR,,,12352,Matt Dellavedova,8530,@NO
+2151,Home,Kyle Singler,18721-14532,SF,Kyle,Kyle Singler,Singler,4.883870771,31,3700,DEN@OKC,OKC,DEN,,,14532,D.J. Augustin,764,@OKC
+9419,Home,Shelvin Mack,18721-14533,PG,Shelvin,Shelvin Mack,Mack,14.60925971,54,3700,SA@UTA,UTA,SA,,,14533,Langston Galloway,22568,@UTA
+4000,Away,Jon Leuer,18721-14539,PF,Jon,Jon Leuer,Leuer,19.65405438,74,3700,DET@ORL,DET,ORL,,,14539,Justin Anderson,24291,@DET
+6968,Home,Justin Holiday,18721-16604,SG,Justin,Justin Holiday,Holiday,14.1691352,81,3700,PHI@NY,NY,PHI,,,16604,Skal Labissiere,42074,@NY
+24179,Away,Quinn Cook,18721-15582,SG,Quinn,Quinn Cook,Cook,8.224999746,12,3700,NO@POR,NO,POR,,,15582,Jordan Farmar,91,@NO
+26608,Away,Nik Stauskas,18721-23801,SG,Nik,Nik Stauskas,Stauskas,16.64430411,79,3700,PHI@NY,PHI,NY,,,23801,Ivica Zubac,49290,@PHI
+459,Home,Boris Diaw,18721-9471,PF,Boris,Boris Diaw,Diaw,10.29027812,72,3700,SA@UTA,UTA,SA,,,9471,Al Jefferson,384,@UTA
+304,Away,Jason Terry,18721-9496,PG,Jason,Jason Terry,Terry,9.249315236,73,3700,MIL@BOS,MIL,BOS,,,9496,Shelvin Mack,9419,@MIL
+91,Away,Jordan Farmar,18721-9565,PG,Jordan,Jordan Farmar,Farmar,15.05000019,2,3700,SAC@LAC,SAC,LAC,,,9565,Troy Daniels,18948,@SAC
+2383,Away,Thomas Robinson,18721-15730,PF,Thomas,Thomas Robinson,Robinson,12.04999973,46,3700,LAL@GS,LAL,GS,,,15730,Andre Roberson,23283,@LAL
+458,Home,David West,18721-9629,PF,David,David West,West,13.16119385,67,3700,LAL@GS,GS,LAL,,,9629,Alan Williams,31153,@GS
+505,Home,Matt Barnes,18721-9657,SF,Matt,Matt Barnes,Barnes,17.85540607,74,3700,LAL@GS,GS,LAL,O,Foot,9657,Shawn Long,28798,@GS
+234,Away,Nick Young,18721-9737,SG,Nick,Nick Young,Young,18.49333293,60,3700,LAL@GS,LAL,GS,O,Coach's decision,9737,Manu Ginobili,266,@LAL
+786,Home,Luc Mbah a Moute,18721-9796,SF,Luc Richard,Luc Richard Mbah a Moute,Mbah a Moute,11.58101297,79,3700,SAC@LAC,LAC,SAC,,,9796,Justin Holiday,6968,@LAC
+7120,Away,Reggie Bullock,18721-15947,SG,Reggie,Reggie Bullock,Bullock,8.846666463,30,3700,DET@ORL,DET,ORL,,,15947,Willy Hernangomez,37870,@DET
+775,Away,Alexis Ajinca,18721-9804,C,Alexis,Alexis Ajinca,Ajinca,11.99729713,37,3700,NO@POR,NO,POR,,,9804,Sergio Rodriguez,85,@NO
+2209,Away,John Henson,18721-15952,PF,John,John Henson,Henson,17.20000043,57,3700,MIL@BOS,MIL,BOS,,,15952,Jodie Meeks,1644,@MIL
+24234,Home,Pat Connaughton,18721-15993,SG,Pat,Pat Connaughton,Connaughton,4.381578947,38,3700,NO@POR,POR,NO,,,15993,Joe Ingles,1683,@POR
+147,Home,Amir Johnson,18721-9862,PF,Amir,Amir Johnson,Johnson,16.33797407,79,3700,MIL@BOS,BOS,MIL,,,9862,Devin Harris,276,@BOS
+478,Home,Kyle Korver,18721-9870,SG,Kyle,Kyle Korver,Korver,16.69394013,66,3700,TOR@CLE,CLE,TOR,,,9870,Rodney Stuckey,42,@CLE
+57363,Home,Maurice Ndour,18721-48799,PF,Maurice,Maurice Ndour,Ndour,6.793548584,31,3700,PHI@NY,NY,PHI,,,48799,Alex Len,26866,@NY
+22568,Away,Langston Galloway,18721-17230,SG,Langston,Langston Galloway,Galloway,12.96527778,72,3700,SAC@LAC,SAC,LAC,,,17230,P.J. Tucker,100,@SAC
+24159,Away,Dorian Finney-Smith,18721-16376,SF,Dorian,Dorian Finney-Smith,Finney-Smith,9.97088623,79,3700,DAL@MEM,DAL,MEM,,,16376,Iman Shumpert,2183,@DAL
+1790,Away,Aron Baynes,18721-37931,C,Aron,Aron Baynes,Baynes,11.66133301,75,3600,DET@ORL,DET,ORL,,,37931,Rondae Hollis-Jefferson,24675,@DET
+2187,Home,JaMychal Green,18721-15405,PF,JaMychal,JaMychal Green,Green,20.06973748,76,3600,DAL@MEM,MEM,DAL,,,15405,Joe Harris,23549,@MEM
+2174,Home,Ed Davis,18721-12365,PF,Ed,Ed Davis,Davis,12.36521713,46,3600,NO@POR,POR,NO,O,Shoulder,12365,Matt Barnes,505,@POR
+2196,Home,Lance Stephenson,18721-12369,SG,Lance,Lance Stephenson,Stephenson,13.93529376,17,3600,ATL@IND,IND,ATL,,,12369,Tristan Thompson,7103,@IND
+22374,Away,Tony Snell,18721-17517,SF,Tony,Tony Snell,Snell,15.09499969,80,3600,MIL@BOS,MIL,BOS,O,Rest,17517,David Lee,164,@MIL
+24265,Away,Kyle Anderson,18721-23716,SF,Kyle,Kyle Anderson,Anderson,10.32676074,71,3600,SA@UTA,SA,UTA,,,23716,Vince Carter,275,@SA
+24245,Away,Shabazz Muhammad,18721-23717,SF,Shabazz,Shabazz Muhammad,Muhammad,13.76103864,77,3600,MIN@HOU,MIN,HOU,,,23717,Tim Frazier,3977,@MIN
+26506,Home,Paul Zipser,18721-70832,SF,Paul,Paul Zipser,Zipser,10.11162762,43,3600,BKN@CHI,CHI,BKN,,,70832,Tyler Ulis,52567,@CHI
+30538,Home,Ron Baker,18721-22727,PG,Ron,Ron Baker,Baker,9.982353061,51,3600,PHI@NY,NY,PHI,,,22727,Spencer Dinwiddie,30385,@NY
+2354,Away,E'Twaun Moore,18721-14554,SG,E'Twaun,E'Twaun Moore,Moore,16.96111043,72,3600,NO@POR,NO,POR,O,Ankle,14554,Bobby Portis,41433,@NO
+162,Home,Jamal Crawford,18721-9448,SG,Jamal,Jamal Crawford,Crawford,18.28148208,81,3600,SAC@LAC,LAC,SAC,,,9448,Rajon Rondo,93,@LAC
+311,Home,Zaza Pachulia,18721-9454,C,Zaza,Zaza Pachulia,Pachulia,17.31594274,69,3600,LAL@GS,GS,LAL,,,9454,Kyle O'Quinn,19543,@GS
+28240,Away,Kris Dunn,18721-23802,SG,Kris,Kris Dunn,Dunn,11.34805179,77,3600,MIN@HOU,MIN,HOU,,,23802,"Larry Nance, Jr.",30624,@MIN
+54,Away,Arron Afflalo,18721-9507,SG,Arron,Arron Afflalo,Afflalo,12.77666626,60,3600,SAC@LAC,SAC,LAC,O,Rest,9507,Garrett Temple,1757,@SAC
+9270,Home,Meyers Leonard,18721-15669,PF,Meyers,Meyers Leonard,Leonard,11.2136983,73,3600,NO@POR,POR,NO,,,15669,Anthony Tolliver,328,@POR
+393,Home,Sasha Vujacic,18721-9567,SG,Sasha,Sasha Vujacic,Vujacic,6.565853956,41,3600,PHI@NY,NY,PHI,,,9567,Andre Iguodala,379,@NY
+384,Home,Al Jefferson,18721-9609,C,Al,Al Jefferson,Jefferson,15.0166663,66,3600,ATL@IND,IND,ATL,GTD,Ankle,9609,Luol Deng,323,@IND
+9475,Away,Justin Hamilton,18721-15788,C,Justin,Justin Hamilton,Hamilton,14.50952342,63,3600,BKN@CHI,BKN,CHI,,,15788,Solomon Hill,6653,@BKN
+394,Away,Beno Udrih,18721-9693,PG,Beno,Beno Udrih,Udrih,12.3564101,39,3600,DET@ORL,DET,ORL,O,Knee,9693,Danny Green,1642,@DET
+366,Away,Jarrett Jack,18721-9713,PG,Jarrett,Jarrett Jack,Jack,7.25,2,3600,NO@POR,NO,POR,O,Knee,9713,Patrick Patterson,2152,@NO
+28798,Away,Shawn Long,18721-15907,C,Shawn,Shawn Long,Long,16.04117719,17,3600,PHI@NY,PHI,NY,,,15907,Ian Clark,14156,@PHI
+49322,Away,Malachi Richardson,18721-66203,SG,Malachi,Malachi Richardson,Richardson,5.777272658,22,3600,SAC@LAC,SAC,LAC,O,Hamstring,66203,Josh Huestis,23259,@SAC
+28245,Home,Dante Exum,18721-55055,PG,Dante,Dante Exum,Exum,10.96461557,65,3600,SA@UTA,UTA,SA,,,55055,Amir Johnson,147,@UTA
+24180,Home,Maurice Harkless,18721-16178,SF,Maurice,Maurice Harkless,Harkless,19.97105327,76,3600,NO@POR,POR,NO,,,16178,James Ennis,31122,@POR
+42078,Away,Isaiah Whitehead,18721-58247,PG,Isaiah,Isaiah Whitehead,Whitehead,14.68333266,72,3600,BKN@CHI,BKN,CHI,,,58247,Dante Cunningham,1650,@BKN
+12049,Home,Isaiah Canaan,18721-19456,PG,Isaiah,Isaiah Canaan,Canaan,8.243589744,39,3500,BKN@CHI,CHI,BKN,,,19456,Jonathon Simmons,30740,@CHI
+53231,Away,Jakob Poeltl,18721-58378,C,Jakob,Jakob Poeltl,Poeltl,7.698113208,53,3500,TOR@CLE,TOR,CLE,,,58378,Isaiah Whitehead,42078,@TOR
+6964,Home,C.J. Wilcox,18721-16411,SG,C.J.,C.J. Wilcox,Wilcox,2.427272797,22,3500,DET@ORL,ORL,DET,,,16411,Thabo Sefolosha,86,@ORL
+2152,Away,Patrick Patterson,18721-12340,PF,Patrick,Patrick Patterson,Patterson,15.47500038,64,3500,TOR@CLE,TOR,CLE,,,12340,Archie Goodwin,24257,@TOR
+2327,Away,Greivis Vasquez,18721-12344,PG,Greivis,Greivis Vasquez,Vasquez,6.633333206,3,3500,BKN@CHI,BKN,CHI,,,12344,Derrick Williams,6644,@BKN
+57281,Home,Kay Felder,18721-43064,PG,Kay,Kay Felder,Felder,7.671428862,42,3500,TOR@CLE,CLE,TOR,GTD,Lower leg,43064,Marcus Thornton,1634,@CLE
+4081,Home,Wesley Johnson,18721-12348,SF,Wesley,Wesley Johnson,Johnson,7.97761194,67,3500,SAC@LAC,LAC,SAC,,,12348,Alec Burks,4169,@LAC
+2185,Home,Luke Babbitt,18721-12349,SF,Luke,Luke Babbitt,Babbitt,8.59117665,68,3500,WAS@MIA,MIA,WAS,GTD,Hip,12349,Paul Zipser,26506,@MIA
+2159,Away,Cole Aldrich,18721-12354,C,Cole,Cole Aldrich,Aldrich,6.644262095,61,3500,MIN@HOU,MIN,HOU,,,12354,Lance Stephenson,2196,@MIN
+2912,Home,Damjan Rudez,18721-55376,SF,Damjan,Damjan Rudez,Rudez,3.533333333,45,3500,DET@ORL,ORL,DET,,,55376,Raymond Felton,62,@ORL
+31122,Home,James Ennis,18721-17491,SF,James,James Ennis III,Ennis III,14.16874981,64,3500,DAL@MEM,MEM,DAL,GTD,Knee,17491,Dante Exum,28245,@MEM
+41445,Away,Chris McCullough,18721-59483,PF,Chris,Chris McCullough,McCullough,4.226666768,15,3500,WAS@MIA,WAS,MIA,,,59483,JaVale McGee,773,@WAS
+28238,Home,Trey Lyles,18721-58461,PF,Trey,Trey Lyles,Lyles,12.14142892,70,3500,SA@UTA,UTA,SA,,,58461,"Kelly Oubre, Jr.",52352,@UTA
+24658,Home,Brice Johnson,18721-23654,PF,Brice,Brice Johnson,Johnson,4.700000127,3,3500,SAC@LAC,LAC,SAC,,,23654,Nemanja Bjelica,2565,@LAC
+28236,Home,Jordan Mickey,18721-41063,PF,Jordan,Jordan Mickey,Mickey,3.932000122,25,3500,MIL@BOS,BOS,MIL,,,41063,Jared Dudley,44,@BOS
+56701,Home,Tim Quarterman,18721-41065,PG,Tim,Tim Quarterman,Quarterman,3.133333333,15,3500,NO@POR,POR,NO,,,41065,Ramon Sessions,14,@POR
+4130,Away,Quincy Acy,18721-15469,PF,Quincy,Quincy Acy,Acy,11.15789474,38,3500,BKN@CHI,BKN,CHI,O,Ankle,15469,Sam Dekker,28239,@BKN
+42379,Home,Damian Jones,18721-41082,C,Damian,Damian Jones,Jones,3.911111196,9,3500,LAL@GS,GS,LAL,,,41082,Darrell Arthur,785,@GS
+81056,Home,Wade Baldwin IV,18721-58490,PG,Wade,Wade Baldwin IV,Baldwin IV,7.809374809,32,3500,DAL@MEM,MEM,DAL,,,58490,John Henson,2209,@MEM
+73136,Away,Dejounte Murray,18721-67708,PG,Dejounte,Dejounte Murray,Murray,6.497297132,37,3500,SA@UTA,SA,UTA,,,67708,Chandler Parsons,2537,@SA
+373,Away,Tiago Splitter,18721-12421,C,Tiago,Tiago Splitter,Splitter,7.200000218,7,3500,PHI@NY,PHI,NY,,,12421,Jaylen Brown,52544,@PHI
+54847,Home,Chinanu Onuaku,18721-58505,C,Chinanu,Chinanu Onuaku,Onuaku,6.9,5,3500,MIN@HOU,HOU,MIN,,,58505,Dwight Powell,9346,@HOU
+80992,Away,Gary Payton II,18721-58519,PG,Gary,Gary Payton II,Payton II,7.6,5,3500,MIL@BOS,MIL,BOS,,,58519,Luc Mbah a Moute,786,@MIL
+939,Home,Alan Anderson,18721-21665,SG,Alan,Alan Anderson,Anderson,4.343333435,30,3500,SAC@LAC,LAC,SAC,,,21665,Glenn Robinson,28500,@LAC
+6644,Home,Derrick Williams,18721-14500,PF,Derrick,Derrick Williams,Williams,10.17755127,49,3500,TOR@CLE,CLE,TOR,,,14500,Mindaugas Kuzminskas,9729,@CLE
+,Away,Georgios Papagiannis,18721-70821,C,Georgios,Georgios Papagiannis,Papagiannis,12.24000015,20,3500,SAC@LAC,SAC,LAC,,,70821,Brandon Jennings,1609,@SAC
+42192,Away,Thon Maker,18721-70820,C,Thon,Thon Maker,Maker,7.653571538,56,3500,MIL@BOS,MIL,BOS,,,70820,Lance Thomas,1948,@MIL
+52816,Away,Juancho Hernangomez,18721-70822,PF,Juancho,Juancho Hernangomez,Hernangomez,9.754999797,60,3500,DEN@OKC,DEN,OKC,,,70822,Beno Udrih,394,@DEN
+28823,Away,K.J. McDaniels,18721-15532,SG,K.J.,K.J. McDaniels,McDaniels,7.202083588,48,3500,BKN@CHI,BKN,CHI,,,15532,Ian Mahinmi,264,@BKN
+4169,Home,Alec Burks,18721-14510,SG,Alec,Alec Burks,Burks,11.60000015,41,3500,SA@UTA,UTA,SA,,,14510,Kosta Koufos,778,@UTA
+2183,Home,Iman Shumpert,18721-14515,SG,Iman,Iman Shumpert,Shumpert,14.30666667,75,3500,TOR@CLE,CLE,TOR,,,14515,Rodney McGruder,4210,@CLE
+2314,Away,Donatas Motiejunas,18721-14519,PF,Donatas,Donatas Motiejunas,Motiejunas,9.828125,32,3500,NO@POR,NO,POR,,,14519,Brandan Wright,45,@NO
+49891,Away,DeAndre' Bembry,18721-49336,SF,DeAndre',DeAndre' Bembry,Bembry,5.497297132,37,3500,ATL@IND,ATL,IND,,,49336,T.J. McConnell,22550,@ATL
+15435,Home,Norris Cole,18721-14527,PG,Norris,Norris Cole,Cole,6.233333588,12,3500,DEN@OKC,OKC,DEN,,,14527,Delon Wright,56842,@OKC
+24260,Away,Daniel Ochefu,18721-23743,PF,Daniel,Daniel Ochefu,Ochefu,2.266666624,18,3500,WAS@MIA,WAS,MIA,,,23743,Trey Lyles,28238,@WAS
+9740,Away,Bojan Bogdanovic,18721-14530,SF,Bojan,Bojan Bogdanovic,Bogdanovic,19.41499939,80,3500,WAS@MIA,WAS,MIA,,,14530,Toney Douglas,1624,@WAS
+56862,Home,Isaiah Taylor,18721-49349,PG,Isaiah,Isaiah Taylor,Taylor,5.03333346,3,3500,MIN@HOU,HOU,MIN,,,49349,Aron Baynes,1790,@HOU
+2537,Home,Chandler Parsons,18721-14537,SF,Chandler,Chandler Parsons,Parsons,12.33235258,34,3500,DAL@MEM,MEM,DAL,O,Knee,14537,Timothe Luwawu-Cabarrot,46508,@MEM
+24343,Away,Davis Bertans,18721-14543,SF,Davis,Davis Bertans,Bertans,8.248485218,66,3500,SA@UTA,SA,UTA,,,14543,Richard Jefferson,278,@SA
+41494,Home,Kevon Looney,18721-58576,PF,Kevon,Kevon Looney,Looney,7.062263921,53,3500,LAL@GS,GS,LAL,O,Hip,58576,Tarik Black,9359,@GS
+9730,Home,Lavoy Allen,18721-14549,PF,Lavoy,Lavoy Allen,Allen,9.513114554,61,3500,ATL@IND,IND,ATL,,,14549,Edy Tavares,39662,@IND
+5713,Away,DeAndre Liggins,18721-14552,SG,DeAndre,DeAndre Liggins,Liggins,6.921311676,61,3500,DAL@MEM,DAL,MEM,O,Coach's decision,14552,Jerami Grant,24661,@DAL
+24168,Away,Michael Gbinije,18721-15585,SG,Michael,Michael Gbinije,Gbinije,1.17777782,9,3500,DET@ORL,DET,ORL,GTD,Illness,15585,Bismack Biyombo,24340,@DET
+2193,Away,Ryan Kelly,18721-15587,SF,Ryan,Ryan Kelly,Kelly,4.133333333,15,3500,ATL@IND,ATL,IND,,,15587,Mike Muscala,17065,@ATL
+41248,Home,Jake Layman,18721-23780,PF,Jake,Jake Layman,Layman,3.5,34,3500,NO@POR,POR,NO,,,23780,Spencer Hawes,370,@POR
+24177,Home,Marshall Plumlee,18721-15589,C,Marshall,Marshall Plumlee,Plumlee,4.7,20,3500,PHI@NY,NY,PHI,,,15589,Alex Abrines,26575,@NY
+42884,Away,Bryn Forbes,18721-23788,SG,Bryn,Bryn Forbes,Forbes,4.127777947,36,3500,SA@UTA,SA,UTA,,,23788,David Nwaba,58185,@SA
+566,Home,Paul Pierce,18721-9459,SF,Paul,Paul Pierce,Pierce,6.483333588,24,3500,SAC@LAC,LAC,SAC,,,9459,Michael Carter-Williams,24158,@LAC
+28500,Home,Glenn Robinson,18721-23800,SF,Glenn,Glenn Robinson III,Robinson III,12.58695652,69,3500,ATL@IND,IND,ATL,GTD,Calf,23800,Derrick Jones,59508,@IND
+62,Home,Raymond Felton,18721-9465,PG,Raymond,Raymond Felton,Felton,14.80886107,79,3500,SAC@LAC,LAC,SAC,,,9465,Domas Sabonis,33381,@LAC
+764,Home,D.J. Augustin,18721-9466,PG,D.J.,D.J. Augustin,Augustin,13.46103896,77,3500,DET@ORL,ORL,DET,,,9466,Jason Smith,51,@ORL
+9344,Home,Okaro White,18721-15620,PF,Okaro,Okaro White,White,7.291176291,34,3500,WAS@MIA,MIA,WAS,,,15620,Justin Hamilton,9475,@MIA
+323,Away,Luol Deng,18721-9479,SF,Luol,Luol Deng,Deng,17.55357143,56,3500,LAL@GS,LAL,GS,O,Coach's decision,9479,Meyers Leonard,9270,@LAL
+24240,Away,Lucas Nogueira,18721-40200,C,Lucas,Lucas Nogueira,Nogueira,14.96785736,56,3500,TOR@CLE,TOR,CLE,,,40200,Malcolm Delaney,2301,@TOR
+26575,Home,Alex Abrines,18721-40206,SG,Alex,Alex Abrines,Abrines,9.067164179,67,3500,DEN@OKC,OKC,DEN,,,40206,Shaun Livingston,377,@OKC
+6088,Away,Hollis Thompson,18721-15631,SG,Hollis,Hollis Thompson,Thompson,10.82249985,40,3500,NO@POR,NO,POR,,,15631,Anthony Morrow,864,@NO
+24257,Away,Archie Goodwin,18721-23824,PG,Archie,Archie Goodwin,Goodwin,10.72857121,14,3500,BKN@CHI,BKN,CHI,,,23824,Thomas Robinson,2383,@BKN
+24092,Home,Raulzinho Neto,18721-40208,PG,Raul,Raul Neto,Neto,5.6,40,3500,SA@UTA,UTA,SA,O,Ankle,40208,,,@UTA
+24383,Home,Joffrey Lauvergne,18721-40209,C,Joffrey,Joffrey Lauvergne,Lauvergne,11.26666702,69,3500,BKN@CHI,CHI,BKN,,,40209,Mike Dunleavy,244,@CHI
+251,Home,Anderson Varejao,18721-9490,C,Anderson,Anderson Varejao,Varejao,4.957142966,14,3500,LAL@GS,GS,LAL,,,9490,Anthony Brown,6998,@GS
+24266,Away,Alex Poythress,18721-23826,SF,Alex,Alex Poythress,Poythress,16.51999969,5,3500,PHI@NY,PHI,NY,,,23826,Chasson Randle,24199,@PHI
+24661,Home,Jerami Grant,18721-23831,SF,Jerami,Jerami Grant,Grant,11.52784826,79,3500,DEN@OKC,OKC,DEN,,,23831,Gerald Green,354,@OKC
+383,Away,Kris Humphries,18721-9501,PF,Kris,Kris Humphries,Humphries,10.41999956,55,3500,ATL@IND,ATL,IND,,,9501,Wayne Selden,24687,@ATL
+80940,Home,Patrick McCaw,18721-58658,SG,Patrick,Patrick McCaw,McCaw,7.931428746,70,3500,LAL@GS,GS,LAL,,,58658,Denzel Valentine,44077,@GS
+42082,Away,Rashad Vaughn,18721-58661,SG,Rashad,Rashad Vaughn,Vaughn,6.367499924,40,3500,MIL@BOS,MIL,BOS,,,58661,Cameron Payne,57476,@MIL
+787,Home,C.J. Watson,18721-9525,SG,C.J.,C.J. Watson,Watson,9.706451416,62,3500,DET@ORL,ORL,DET,,,9525,Omri Casspi,1618,@ORL
+43395,Home,Demetrius Jackson,18721-41269,PG,Demetrius,Demetrius Jackson,Jackson,3.859999847,5,3500,MIL@BOS,BOS,MIL,,,41269,Zaza Pachulia,311,@BOS
+864,Home,Anthony Morrow,18721-9529,SG,Anthony,Anthony Morrow,Morrow,8.056250254,48,3500,BKN@CHI,CHI,BKN,,,9529,Hollis Thompson,6088,@CHI
+53,Home,Aaron Brooks,18721-9534,PG,Aaron,Aaron Brooks,Brooks,9.223437309,64,3500,ATL@IND,IND,ATL,GTD,Knee,9534,Andrew Harrison,24306,@IND
+18948,Home,Troy Daniels,18721-20805,SG,Troy,Troy Daniels,Daniels,11.17575721,66,3500,DAL@MEM,MEM,DAL,,,20805,Taurean Prince,42410,@MEM
+181,Away,Luis Scola,18721-9542,PF,Luis,Luis Scola,Scola,11.34166633,36,3500,BKN@CHI,BKN,CHI,,,9542,Joffrey Lauvergne,24383,@BKN
+244,Away,Mike Dunleavy,18721-9547,SF,Mike,Mike Dunleavy,Dunleavy,9.459615267,52,3500,ATL@IND,ATL,IND,,,9547,Leandro Barbosa,465,@ATL
+767,Away,Brandon Rush,18721-9549,SG,Brandon,Brandon Rush,Rush,9.432608563,46,3500,MIN@HOU,MIN,HOU,,,9549,Terry Rozier,24644,@MIN
+772,Away,Roy Hibbert,18721-9553,C,Roy,Roy Hibbert,Hibbert,10.64374987,48,3500,DEN@OKC,DEN,OKC,,,9553,Brandon Rush,767,@DEN
+14156,Home,Ian Clark,18721-17747,SG,Ian,Ian Clark,Clark,10.96184178,76,3500,LAL@GS,GS,LAL,,,17747,Brandon Bass,126,@GS
+25855,Away,Axel Toupane,18721-63828,SF,Axel,Axel Toupane,Toupane,0,2,3500,NO@POR,NO,POR,,,63828,Mirza Teletovic,28228,@NO
+540,Away,Metta World Peace,18721-9568,SF,Metta,Metta World Peace,World Peace,3.195652174,23,3500,LAL@GS,LAL,GS,,,9568,Quincy Acy,4130,@LAL
+785,Away,Darrell Arthur,18721-9580,PF,Darrell,Darrell Arthur,Arthur,11.98461523,39,3500,DEN@OKC,DEN,OKC,,,9580,Jonathan Gibson,2550,@DEN
+682,Home,Udonis Haslem,18721-9589,PF,Udonis,Udonis Haslem,Haslem,5.5,16,3500,WAS@MIA,MIA,WAS,,,9589,Lucas Nogueira,24240,@MIA
+4518,Home,Jeff Withey,18721-15736,C,Jeff,Jeff Withey,Withey,7.525999756,50,3500,SA@UTA,UTA,SA,,,15736,Trey Burke,24223,@UTA
+4210,Home,Rodney McGruder,18721-15744,SF,Rodney,Rodney McGruder,McGruder,13.72467596,77,3500,WAS@MIA,MIA,WAS,,,15744,Juancho Hernangomez,52816,@MIA
+30740,Away,Jonathon Simmons,18721-18821,SF,Jonathon,Jonathon Simmons,Simmons,12.05324644,77,3500,SA@UTA,SA,UTA,,,18821,Josh McRoberts,6,@SA
+43,Away,Corey Brewer,18721-9606,SF,Corey,Corey Brewer,Brewer,9.734999847,80,3500,LAL@GS,LAL,GS,,,9606,Reggie Williams,1783,@LAL
+22869,Home,Joe Young,18721-18828,SG,Joe,Joe Young,Young,3.451515198,33,3500,ATL@IND,IND,ATL,,,18828,Greivis Vasquez,2327,@IND
+276,Away,Devin Harris,18721-9613,PG,Devin,Devin Harris,Harris,12.56031727,63,3500,DAL@MEM,DAL,MEM,,,9613,Aaron Brooks,53,@DAL
+7109,Away,Terrence Jones,18721-15757,PF,Terrence,Terrence Jones,Jones,21.84629539,54,3500,MIL@BOS,MIL,BOS,,,15757,Mario Hezonja,24763,@MIL
+24155,Home,Kyle Wiltjer,18721-15767,PF,Kyle,Kyle Wiltjer,Wiltjer,2.384615385,13,3500,MIN@HOU,HOU,MIN,,,15767,Corey Brewer,43,@HOU
+54846,Home,Stephen Zimmerman,18721-66966,C,Stephen,Stephen Zimmerman Jr.,Zimmerman Jr.,4.322222392,18,3500,DET@ORL,ORL,DET,,,66966,Dewayne Dedmon,28991,@ORL
+377,Home,Shaun Livingston,18721-9643,PG,Shaun,Shaun Livingston,Livingston,10.95866699,75,3500,LAL@GS,GS,LAL,,,9643,Joakim Noah,50,@GS
+37,Home,Jeff Green,18721-9648,SF,Jeff,Jeff Green,Green,15.09130506,69,3500,DET@ORL,ORL,DET,O,Back,9648,Cristiano Felicio,24840,@ORL
+292,Home,Nick Collison,18721-9649,PF,Nick,Nick Collison,Collison,4.331579108,19,3500,DEN@OKC,OKC,DEN,,,9649,Pascal Siakam,81426,@OKC
+25038,Away,Nicolas Laprovittola,18721-74164,PG,Nicolas,Nicolas Laprovittola,Laprovittola,5.777777778,18,3500,SA@UTA,SA,UTA,,,74164,Jerian Grant,9389,@SA
+275,Home,Vince Carter,18721-9654,SF,Vince,Vince Carter,Carter,16.49305556,72,3500,DAL@MEM,MEM,DAL,,,9654,Luke Babbitt,2185,@MEM
+57476,Home,Cameron Payne,18721-48567,PG,Cameron,Cameron Payne,Payne,9.90645181,31,3500,BKN@CHI,CHI,BKN,,,48567,Kevin Seraphin,2429,@CHI
+126,Home,Brandon Bass,18721-9659,PF,Brandon,Brandon Bass,Bass,9.629411884,51,3500,SAC@LAC,LAC,SAC,,,9659,Jason Terry,304,@LAC
+771,Home,Marreese Speights,18721-9671,PF,Marreese,Marreese Speights,Speights,16.1271611,81,3500,SAC@LAC,LAC,SAC,,,9671,Dorian Finney-Smith,24159,@LAC
+52544,Home,Jaylen Brown,18721-67026,SF,Jaylen,Jaylen Brown,Brown,11.63246769,77,3500,MIL@BOS,BOS,MIL,,,67026,Ron Baker,30538,@BOS
+24223,Away,Trey Burke,18721-15843,PG,Trey,Trey Burke,Burke,7.899999891,56,3500,WAS@MIA,WAS,MIA,,,15843,Shabazz Napier,22395,@WAS
+370,Away,Spencer Hawes,18721-9700,C,Spencer,Spencer Hawes,Hawes,13.33396249,53,3500,MIL@BOS,MIL,BOS,O,Rest,9700,C.J. Watson,787,@MIL
+17065,Away,Mike Muscala,18721-17894,PF,Mike,Mike Muscala,Muscala,13.54927572,69,3500,ATL@IND,ATL,IND,,,17894,Ed Davis,2174,@ATL
+266,Away,Manu Ginobili,18721-9704,SG,Manu,Manu Ginobili,Ginobili,15.72794118,68,3500,SA@UTA,SA,UTA,,,9704,Roy Hibbert,772,@SA
+278,Home,Richard Jefferson,18721-9706,SF,Richard,Richard Jefferson,Jefferson,10.3897439,78,3500,TOR@CLE,CLE,TOR,,,9706,Adreian Payne,9303,@CLE
+794,Away,Jose Calderon,18721-9712,PG,Jose,Jose Calderon,Calderon,8.147499847,40,3500,ATL@IND,ATL,IND,,,9712,Christian Wood,41451,@ATL
+9303,Away,Adreian Payne,18721-15864,PF,Adreian,Adreian Payne,Payne,7.788234935,17,3500,MIN@HOU,MIN,HOU,,,15864,Reggie Bullock,7120,@MIN
+125,Home,C.J. Miles,18721-9725,SF,C.J.,C.J. Miles,Miles,16.66533366,75,3500,ATL@IND,IND,ATL,,,9725,Jarell Martin,41442,@IND
+79,Away,Randy Foye,18721-9733,SG,Randy,Randy Foye,Foye,10.96323529,68,3500,BKN@CHI,BKN,CHI,,,9733,Thon Maker,42192,@BKN
+186,Away,Mike Miller,18721-9734,SF,Mike,Mike Miller,Miller,3.255555471,18,3500,DEN@OKC,DEN,OKC,,,9734,Randy Foye,79,@DEN
+24116,Away,Salah Mejri,18721-64017,C,Salah,Salah Mejri,Mejri,10.3943662,71,3500,DAL@MEM,DAL,MEM,,,64017,Willie Reed,10776,@DAL
+73131,Away,Malik Beasley,18721-66064,SG,Malik,Malik Beasley,Beasley,3.590000153,20,3500,DEN@OKC,DEN,OKC,,,66064,Davis Bertans,24343,@DEN
+1624,Home,Toney Douglas,18721-9751,PG,Toney,Toney Douglas,Douglas,12.46666718,24,3500,DAL@MEM,MEM,DAL,,,9751,George Papagiannis,32198,@MEM
+1603,Away,Jordan Hill,18721-9752,PF,Jordan,Jordan Hill,Hill,3.82857132,7,3500,MIN@HOU,MIN,HOU,,,9752,Kris Humphries,383,@MIN
+49975,Away,Cheick Diallo,18721-66091,PF,Cheick,Cheick Diallo,Diallo,8.479999797,15,3500,NO@POR,NO,POR,,,66091,Donatas Motiejunas,2314,@NO
+6,Home,Josh McRoberts,18721-9778,PF,Josh,Josh McRoberts,McRoberts,12.53636308,22,3500,WAS@MIA,MIA,WAS,GTD,Foot,9778,Isaiah Canaan,12049,@MIA
+789,Away,Joel Anthony,18721-9783,C,Joel,Joel Anthony,Anthony,4.142105103,19,3500,SA@UTA,SA,UTA,,,9783,Noah Vonleh,24323,@SA
+477,Home,James Jones,18721-9785,SG,James,James Jones,Jones,4.263829657,47,3500,TOR@CLE,CLE,TOR,,,9785,Tyler Zeller,2175,@CLE
+24374,Away,Tomas Satoransky,18721-23097,SG,Tomas,Tomas Satoransky,Satoransky,7.166071211,56,3500,WAS@MIA,WAS,MIA,,,23097,Nicolas Laprovittola,25038,@WAS
+1631,Away,DeMarre Carroll,18721-9787,SF,DeMarre,DeMarre Carroll,Carroll,17.31408519,71,3500,TOR@CLE,TOR,CLE,,,9787,Tyler Ennis,27049,@TOR
+41493,Home,Diamond Stone,18721-66117,C,Diamond,Diamond Stone,Stone,2.457142966,7,3500,SAC@LAC,LAC,SAC,GTD,Knee,66117,David West,458,@LAC
+73162,Home,Deyonta Davis,18721-66129,PF,Deyonta,Deyonta Davis,Davis,4.611428397,35,3500,DAL@MEM,MEM,DAL,,,66129,Jonas Jerebko,1623,@MEM
+9304,Home,James McAdoo,18721-15955,PF,James Michael,James Michael McAdoo,McAdoo,6.480392157,51,3500,LAL@GS,GS,LAL,,,15955,Marcus Georges-Hunt,24663,@GS
+2175,Home,Tyler Zeller,18721-15961,C,Tyler,Tyler Zeller,Zeller,8.367999878,50,3500,MIL@BOS,BOS,MIL,,,15961,Chinanu Onuaku,54847,@BOS
+24744,Home,Patricio Garino,18721-23134,SG,Patricio,Patricio Garino,Garino,1.850000024,4,3500,DET@ORL,ORL,DET,,,23134,Demetrius Jackson,43395,@ORL
+8530,Away,Matt Dellavedova,18721-20064,PG,Matthew,Matthew Dellavedova,Dellavedova,16.58815725,76,3500,MIL@BOS,MIL,BOS,O,Rest,20064,Justin Harper,10687,@MIL
+26729,Home,Semaj Christon,18721-23148,PG,Semaj,Semaj Christon,Christon,7.977777875,63,3500,DEN@OKC,OKC,DEN,,,23148,Alexis Ajinca,775,@OKC
+42429,Home,Georges Niang,18721-23156,SF,Georges,Georges Niang,Niang,2.169565284,23,3500,ATL@IND,IND,ATL,,,23156,Troy Williams,24319,@IND
+81426,Away,Pascal Siakam,18721-60021,PF,Pascal,Pascal Siakam,Siakam,10.4537037,54,3500,TOR@CLE,TOR,CLE,,,60021,Boban Marjanovic,2413,@TOR
+354,Home,Gerald Green,18721-9849,SG,Gerald,Gerald Green,Green,8.556521872,46,3500,MIL@BOS,BOS,MIL,,,9849,Pierre Jackson,28285,@BOS
+28228,Away,Mirza Teletovic,18721-23178,SF,Mirza,Mirza Teletovic,Teletovic,10.38840562,69,3500,MIL@BOS,MIL,BOS,,,23178,Kris Dunn,28240,@MIL
+24763,Home,Mario Hezonja,18721-63123,SG,Mario,Mario Hezonja,Hezonja,9.2421875,64,3500,DET@ORL,ORL,DET,,,63123,Dejounte Murray,73136,@ORL
+45041,Home,Joel Bolomboy,18721-23189,PF,Joel,Joel Bolomboy,Bolomboy,4.116666794,12,3500,SA@UTA,UTA,SA,,,23189,Rashad Vaughn,42082,@UTA
+97,Away,Steve Novak,18721-9895,SF,Steve,Steve Novak,Novak,1.075000048,8,3500,MIL@BOS,MIL,BOS,,,9895,Stanley Johnson,26756,@MIL
+24306,Home,Andrew Harrison,18721-42665,PG,Andrew,Andrew Harrison,Harrison,13.06901443,71,3500,DAL@MEM,MEM,DAL,,,42665,Wade Baldwin IV,81056,@MEM
+24681,Home,James Young,18721-42671,SF,James,James Young,Young,4.435714177,28,3500,MIL@BOS,BOS,MIL,,,42671,Kay Felder,57281,@BOS
+9729,Home,Mindaugas Kuzminskas,18721-71345,SF,Mindaugas,Mindaugas Kuzminskas,Kuzminskas,10.37164216,67,3500,PHI@NY,NY,PHI,,,71345,Boris Diaw,459,@NY
+24644,Home,Terry Rozier,18721-42677,PG,Terry,Terry Rozier,Rozier,12.89315085,73,3500,MIL@BOS,BOS,MIL,,,42677,Tiago Splitter,373,@BOS
+44094,Away,Fred VanVleet,18721-24247,PG,Fred,Fred VanVleet,VanVleet,5.947222392,36,3500,TOR@CLE,TOR,CLE,,,24247,Jose Calderon,794,@TOR
+328,Away,Anthony Tolliver,18721-9920,PF,Anthony,Anthony Tolliver,Tolliver,13.8125,64,3500,SAC@LAC,SAC,LAC,,,9920,K.J. McDaniels,28823,@SAC
+3977,Away,Tim Frazier,18721-16071,SG,Tim,Tim Frazier,Frazier,18.42063492,63,3500,NO@POR,NO,POR,,,16071,Jeff Withey,4518,@NO
+45,Home,Brandan Wright,18721-9935,C,Brandan,Brandan Wright,Wright,12.77036992,27,3500,DAL@MEM,MEM,DAL,,,9935,Tyus Jones,26752,@MEM
+1650,Away,Dante Cunningham,18721-9940,SF,Dante,Dante Cunningham,Cunningham,13.93437481,64,3500,NO@POR,NO,POR,,,9940,Luis Scola,181,@NO
+6235,Away,Lamar Patterson,18721-16089,SG,Lamar,Lamar Patterson,Patterson,4.879999924,5,3500,ATL@IND,ATL,IND,,,16089,Dragan Bender,41582,@ATL
+1606,Away,Gerald Henderson,18721-9951,SG,Gerald,Gerald Henderson,Henderson,15.31690141,71,3500,PHI@NY,PHI,NY,,,9951,Quinn Cook,24179,@PHI
+26752,Away,Tyus Jones,18721-58081,PG,Tyus,Tyus Jones,Jones,9.39152501,59,3500,MIN@HOU,MIN,HOU,,,58081,Patrick McCaw,80940,@MIN
+1634,Away,Marcus Thornton,18721-9955,SG,Marcus,Marcus Thornton,Thornton,11.83939431,33,3500,BKN@CHI,BKN,CHI,,,9955,Jakob Poeltl,53231,@BKN
+1620,Home,Wayne Ellington,18721-9956,SG,Wayne,Wayne Ellington,Ellington,15.39836046,61,3500,WAS@MIA,MIA,WAS,,,9956,Brian Roberts,1806,@MIA
+1618,Away,Omri Casspi,18721-9960,PF,Omri,Omri Casspi,Casspi,11.09428537,35,3500,MIN@HOU,MIN,HOU,,,9960,Metta World Peace,540,@MIN
+24294,Away,A.J. Hammons,18721-23273,C,A.J.,A.J. Hammons,Hammons,5.025,20,3500,DAL@MEM,DAL,MEM,,,23273,Semaj Christon,26729,@DAL
+1623,Home,Jonas Jerebko,18721-9962,PF,Jonas,Jonas Jerebko,Jerebko,10.05844156,77,3500,MIL@BOS,BOS,MIL,,,9962,Pat Connaughton,24234,@BOS
+1644,Home,Jodie Meeks,18721-9968,SG,Jodie,Jodie Meeks,Meeks,14.72571498,35,3500,DET@ORL,ORL,DET,,,9968,Jordan McRae,9345,@ORL
+28239,Home,Sam Dekker,18721-23282,SF,Sam,Sam Dekker,Dekker,13.45194869,77,3500,MIN@HOU,HOU,MIN,O,Hand,23282,Mike Scott,3753,@HOU
+24662,Away,Danuel House,18721-23294,SF,Danuel,Danuel House,House,1.200000048,1,3500,WAS@MIA,WAS,MIA,,,23294,Malachi Richardson,49322,@WAS
+39662,Away,Edy Tavares,18721-55063,C,Edy,Edy Tavares,Tavares,3.200000048,1,3500,ATL@IND,ATL,IND,,,55063,Malik Beasley,73131,@ATL
+2301,Away,Malcolm Delaney,18721-71467,PG,Malcolm,Malcolm Delaney,Delaney,11.00277795,72,3500,ATL@IND,ATL,IND,,,71467,Paul Pierce,566,@ATL
+10776,Home,Willie Reed,18721-34615,C,Willie,Willie Reed,Reed,12.71714303,70,3500,WAS@MIA,MIA,WAS,,,34615,Jarrod Uthoff,24236,@MIA
+6998,Home,Anthony Brown,18721-16188,SF,Anthony,Anthony Brown,Brown,9.145454407,11,3500,DET@ORL,ORL,DET,,,16188,Norris Cole,15435,@ORL
+23259,Home,Josh Huestis,18721-16191,SF,Josh,Josh Huestis,Huestis,13.30000019,1,3500,DEN@OKC,OKC,DEN,,,16191,Lavoy Allen,9730,@OKC
+10813,Away,Andrew Nicholson,18721-17218,PF,Andrew,Andrew Nicholson,Nicholson,5.545945863,37,3500,BKN@CHI,BKN,CHI,,,17218,Sasha Vujacic,393,@BKN
+24199,Home,Chasson Randle,18721-16197,PG,Chasson,Chasson Randle,Randle,8.695999756,25,3500,PHI@NY,NY,PHI,,,16197,Anthony Bennett,24660,@NY
+24158,Home,Michael Carter-Williams,18721-16201,PG,Michael,Michael Carter-Williams,Carter-Williams,15.96818126,44,3500,BKN@CHI,CHI,BKN,,,16201,,,@CHI
+24156,Home,Rakeem Christmas,18721-16202,C,Rakeem,Rakeem Christmas,Christmas,4.903448171,29,3500,ATL@IND,IND,ATL,,,16202,Wesley Johnson,4081,@IND
+23478,Home,Doug McDermott,18721-18256,SF,Doug,Doug McDermott,McDermott,13.51212103,66,3500,DEN@OKC,OKC,DEN,O,Knee,18256,Omer Asik,807,@OKC
+9345,Home,Jordan McRae,18721-16230,SG,Jordan,Jordan McRae,McRae,6.829729647,37,3500,TOR@CLE,CLE,TOR,,,16230,Miles Plumlee,3654,@CLE
+41442,Home,Jarell Martin,18721-40819,PF,Jarell,Jarell Martin,Martin,9.395122249,41,3500,DAL@MEM,MEM,DAL,,,40819,James Jones,477,@MEM
+24189,Away,Sheldon McClellan,18721-16246,SG,Sheldon,Sheldon McClellan,McClellan,5.086206897,29,3500,WAS@MIA,WAS,MIA,,,16246,Chris Andersen,866,@WAS
+80300,Away,Ben Bentil,18721-58237,PF,Ben,Ben Bentil,Bentil,0.4666666587,3,3500,DAL@MEM,DAL,MEM,,,58237,Damian Jones,42379,@DAL
+56842,Away,Delon Wright,18721-40830,PG,Delon,Delon Wright,Wright,12.6807697,26,3500,TOR@CLE,TOR,CLE,,,40830,Darrun Hilliard,28956,@TOR
+54842,Away,Henry Ellenson,18721-66455,PF,Henry,Henry Ellenson,Ellenson,5,18,3500,DET@ORL,DET,ORL,,,66455,Tomas Satoransky,24374,@DET
+24195,Away,Norman Powell,18721-16293,SG,Norman,Norman Powell,Powell,13.21866699,75,3500,TOR@CLE,TOR,CLE,,,16293,Salah Mejri,24116,@TOR
+28991,Away,Dewayne Dedmon,18721-16301,C,Dewayne,Dewayne Dedmon,Dedmon,15.64799967,75,3500,SA@UTA,SA,UTA,,,16301,Maurice Ndour,57363,@SA
+,Home,Festus Ezeli,18721-16331,C,Festus,Festus Ezeli,Ezeli,16.91304348,46,3500,NO@POR,POR,NO,O,Knee,16331,Kyle Anderson,24265,@POR
+,Home,Wayne Selden Jr.,18721-49115,SG,Wayne,Wayne Selden Jr.,Selden Jr.,7.692307692,13,3500,DAL@MEM,MEM,DAL,,,49115,Kevon Looney,41494,@MEM
+28956,Away,Darrun Hilliard,18721-16348,SG,Darrun,Darrun Hilliard,Hilliard,5.436842266,38,3500,DET@ORL,DET,ORL,,,16348,James McAdoo,9304,@DET
+33381,Home,Domas Sabonis,18721-59358,PF,Domantas,Domantas Sabonis,Sabonis,12.475,80,3500,DEN@OKC,OKC,DEN,,,59358,Raulzinho Neto,24092,@OKC
+44077,Home,Denzel Valentine,18721-24546,SG,Denzel,Denzel Valentine,Valentine,10.37142835,56,3500,BKN@CHI,CHI,BKN,,,24546,Jordan Mickey,28236,@CHI
+23549,Away,Joe Harris,18721-16363,SG,Joe,Joe Harris,Harris,13.58461585,52,3500,BKN@CHI,BKN,CHI,O,Shoulder,16363,Gary Payton II,80992,@BKN
+26756,Away,Stanley Johnson,18721-58350,SF,Stanley,Stanley Johnson,Johnson,10.6723681,76,3500,DET@ORL,DET,ORL,,,58350,Jake Layman,41248,@DET
+24840,Home,Cristiano Felicio,18721-63478,C,Cristiano,Cristiano Felicio,Felicio,12.15230807,65,3500,BKN@CHI,CHI,BKN,,,63478,Briante Weber,31267,@CHI
+,Away,,,,,,,,,,,,,,,#VALUE!,Andrew Bogut,58,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Marcelinho Huertas,2707,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Jared Sullinger,2375,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Okaro White,9344,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Fred VanVleet,44094,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Bryn Forbes,42884,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Rakeem Christmas,24156,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Tim Quarterman,56701,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Marshall Plumlee,24177,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Johnny O'Bryant,24170,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Bobby Brown,862,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Jarnell Stokes,24264,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Brice Johnson,24658,@
+,Away,,,,,,,,,,,,,,,#VALUE!,DeAndre Liggins,5713,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Kyle Singler,2151,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Damjan Rudez,2912,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Nicolas Brussino,59353,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Alan Anderson,939,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Andrew Nicholson,10813,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Nick Collison,292,@
+,Away,,,,,,,,,,,,,,,#VALUE!,DeAndre' Bembry,49891,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Henry Ellenson,54842,@
+,Away,,,,,,,,,,,,,,,#VALUE!,James Young,24681,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Treveon Graham,31269,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Anderson Varejao,251,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Joel Bolomboy,45041,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Mike Miller,186,@
+,Away,,,,,,,,,,,,,,,#VALUE!,John Jenkins,2377,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Kyle Wiltjer,24155,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Deyonta Davis,73162,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Jordan Hill,1603,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Alonzo Gee,1657,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Stephen Zimmerman,54846,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Cole Aldrich,2159,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Udonis Haslem,682,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Diamond Stone,41493,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Sheldon McClellan,24189,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Joel Anthony,789,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Georges Niang,42429,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Manny Harris,2279,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Daniel Ochefu,24260,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Ryan Kelly,2193,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Chris McCullough,41445,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Joe Young,22869,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Larry Sanders,2198,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Lamar Patterson,6235,@
+,Away,,,,,,,,,,,,,,,#VALUE!,A.J. Hammons,24294,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Bruno Caboclo,59172,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Ronnie Price,886,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Cheick Diallo,49975,@
+,Away,,,,,,,,,,,,,,,#VALUE!,C.J. Wilcox,6964,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Jarrett Jack,366,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Aaron Harrison,24309,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Danuel House,24662,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Arinze Onuaku,2316,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Michael Gbinije,24168,@
+,Away,,,,,,,,,,,,,,,#VALUE!,John Lucas,361,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Isaiah Taylor,56862,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Axel Toupane,25855,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Steve Novak,97,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Ben Bentil,80300,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Gary Neal,10568,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Elijah Millsap,8158,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Patricio Garino,24744,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
+,Away,,,,,,,,,,,,,,,,,,
