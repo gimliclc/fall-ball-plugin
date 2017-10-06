@@ -6,18 +6,26 @@ class DFS_NBA_Cron {
   public static function load_stats() {
     $result_arr = array();
 
-    $home_stats_url = "http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home";
-    // Save response from URL to variable
-    $home_stats_response = file_get_contents($home_stats_url);
+    $home_stats_array = array(
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home'
+              );
     $home_dom = new DOMDocument();
     libxml_use_internal_errors(true);
-    $home_dom->loadHTML($home_stats_response);
+    // Save response from URL to variable
+    foreach ($home_stats_array as $home_stats_url){
+        $home_stats_response = file_get_contents($home_stats_url);
+        $home_dom->loadHTML($home_stats_response);
+    }
+    libxml_use_internal_errors(false);
     // Lets you search for specific elements using xpath
 		$home_xpath = new DOMXPath($home_dom);
-    // Use xpath to search for all tr elements and save to result rows
+    // Use xpath to query for elements and save to variables
     $td_query = ".//td";
     $a_query = ".//a";
-
     $home_player_query = "//tr";
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
