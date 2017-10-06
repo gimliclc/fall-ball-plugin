@@ -20,16 +20,21 @@ class DFS_NBA_Cron {
     foreach ($home_result_rows as $home_player){
       $home_player_tds = $home_xpath->query('//td', $home_player);
 
-      $playerNameNode = $home_xpath->query('//a', $home_player_tds->item(1));
+      $playerNameNode = $home_player_tds->item(1);
+      $playerNameLinkNode = $home_xpath->query('//a', $playerNameNode);
 
-      if($playerNameNode->item(0)->nodeValue == "Player"){
+      if($playerNameLinkNode->item(0)->nodeValue == "Player"){
         continue;
       }
 
+
+error_log($home_player->item(0)->nodeValue,0);
+      error_log($playerNameLinkNode->item(0)->nodeValue,0);
+
       $home_player_obj = array(
         "playerId" => $home_player_tds->item(0)->nodeValue,
-        "name" => $playerNameNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameNode->item(0)->attributes->getNamedItem("href"),
+        "name" => $playerNameLinkNode->item(0)->nodeValue,
+        "playerUrl" => $playerNameLinkNode->item(0)->attributes->getNamedItem("href"),
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
       );
