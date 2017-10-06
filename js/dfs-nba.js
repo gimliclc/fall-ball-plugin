@@ -19,7 +19,7 @@ var DfsNba = (function() {
   return {
     buildTable: buildTable
   }
-})
+})();
 
 jQuery(document).ready(function() {
   if(jQuery('#dfs-nba-table')){
