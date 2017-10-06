@@ -29,12 +29,6 @@ class DFS_NBA_Cron {
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
-      // Returns full row
-      error_log($home_player->nodeValue,0);
-      // Returns player name
-      error_log($playerNameLinkNode->item(0)->nodeValue,0);
-      //Returns playerUrl
-      error_log($playerNameLinkNode->item(0)->getAttribute('href'));
 
       $home_player_obj = array(
         "playerId" => $home_player_tds->item(0)->nodeValue,
