@@ -33,16 +33,25 @@ class DFS_NBA_Cron {
 
       $playerNameNode = $home_player_tds->item(1);
       $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
+      $findPlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
 
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
+      if(preg_match("/\/(\d+)$/",$findPlayerId,$matches))
+      {
+        $playerID=$matches[1];
+      }
+        else
+        {
+          error_log("No player ID found for home_player");
+        }
 
 
       $home_player_obj = array(
-        "playerId" => $home_player_tds->item(0)->nodeValue,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
         "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
+        "playerId" => $playerID,
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
         "minutes" => $home_player_tds->item(4)->nodeValue,
