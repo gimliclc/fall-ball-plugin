@@ -33,14 +33,14 @@ class DFS_NBA_Cron {
 
       $playerNameNode = $home_player_tds->item(1);
       $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
-      $findPlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
+      $findHomePlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
 
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
-      if(preg_match("/\/(\d+)$/",$findPlayerId,$matches))
+      if(preg_match("/\/(\d+)$/",$findHomePlayerId,$matches))
       {
-        $playerID=$matches[1];
+        $homePlayerID=$matches[1];
       }
         else
         {
@@ -49,9 +49,8 @@ class DFS_NBA_Cron {
 
 
       $home_player_obj = array(
+        "playerId" => $homePlayerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
-        "playerId" => $playerID,
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
         "minutes" => $home_player_tds->item(4)->nodeValue,
@@ -95,16 +94,23 @@ class DFS_NBA_Cron {
 
       $playerNameNode = $away_player_tds->item(1);
       $playerNameLinkNode = $away_xpath->query($a_query, $playerNameNode);
+      $findAwayPlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
 
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
-
+      if(preg_match("/\/(\d+)$/",$findAwayPlayerId,$matches))
+      {
+        $awayPlayerID=$matches[1];
+      }
+        else
+        {
+          error_log("No player ID found for away_player");
+        }
 
       $away_player_obj = array(
-        "playerId" => $away_player_tds->item(0)->nodeValue,
+        "playerId" => $awayPlayerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $away_player_tds->item(2)->nodeValue,
         "gp" => $away_player_tds->item(3)->nodeValue,
         "minutes" => $away_player_tds->item(4)->nodeValue,
