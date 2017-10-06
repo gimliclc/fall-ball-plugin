@@ -14,7 +14,7 @@ var DfsNba = (function() {
       table.append(tempEl.html())
     }
 
-  }
+  };
 
   return {
     buildTable: buildTable
