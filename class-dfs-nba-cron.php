@@ -37,7 +37,7 @@ class DFS_NBA_Cron {
       $home_player_obj = array(
         "playerId" => $home_player_tds->item(0)->nodeValue,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->attributes->getAttribute('href'),
+        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
       );
