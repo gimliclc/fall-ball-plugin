@@ -18,7 +18,6 @@ class DFS_NBA_Cron {
     $home_player_query = '//tr';
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $result_arr[] = $home_player;
       //$home_player_id = item();
     //  $home_player_name = item(1);
     //  $home_minutes_per_game = item(5);
