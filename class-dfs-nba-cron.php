@@ -16,7 +16,7 @@ class DFS_NBA_Cron {
 		$home_xpath = new DOMXPath($home_dom);
     // Use xpath to search for all tr elements and save to result rows
     $home_player_query = '//tr';
-    $home_result_rows = $home_xpath =>query($home_player_query);
+    $home_result_rows = $home_xpath->query($home_player_query);
     foreach ($home_result_rows as $home_player){
       $home_player_id = item();
       $home_player_name = item(1);
@@ -53,6 +53,8 @@ class DFS_NBA_Cron {
     $result_arr[] = $testPlayer1;
     $result_arr[] = $testPlayer2;
 
+    #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
+    #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
     error_log("Executed NBA DFS cron job",0);
   }
