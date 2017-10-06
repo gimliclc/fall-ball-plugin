@@ -18,21 +18,23 @@ class DFS_NBA_Cron {
     $home_player_query = '//tr';
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $playerNameNode = $home_xpath->query('//a', $home_player->item(1));
+      $home_player_tds = $home_xpath->query('//td', $home_player);
+
+      $playerNameNode = $home_xpath->query('//a', $home_player_tds->item(1));
 
       if($playerNameNode->item(0)->nodeValue == "Player"){
         continue;
       }
 
-      $home_player = array(
-        "playerId" => $home_player->item(0)->nodeValue,
+      $home_player_obj = array(
+        "playerId" => $home_player_tds->item(0)->nodeValue,
         "name" => $playerNameNode->item(0)->nodeValue,
         "playerUrl" => $playerNameNode->item(0)->attributes->getNamedItem("href"),
-        "team" => $home_player->item(2)->nodeValue,
-        "gp" => $home_player->item(3)->nodeValue,
+        "team" => $home_player_tds->item(2)->nodeValue,
+        "gp" => $home_player_tds->item(3)->nodeValue,
       );
 
-      $result_arr[] = $home_player;
+      $result_arr[] = $home_player_obj;
       //$home_player_id = item();
     //  $home_player_name = item(1);
     //  $home_minutes_per_game = item(5);
