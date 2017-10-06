@@ -11,10 +11,11 @@
 
 defined( 'ABSPATH' ) or die( 'Error: Plugin cannot be called directly!' );
 
+define('DFS_NBA_URL',plugin_dir_url( __FILE__ ) );
+define('DFS_NBA_DIR',plugin_dir_path( __FILE__ ) );
 
-
-register_activation_hook( __FILE__, array('dfs_nba','plugin_activation'));
-register_deactivation_hook( __FILE__, array('dfs_nba','plugin_deactivation'));
+register_activation_hook( __FILE__, array('DFS_NBA','plugin_activation'));
+register_deactivation_hook( __FILE__, array('DFS_NBA','plugin_deactivation'));
 
 require_once(DFS_NBA_DIR . 'class-dfs-nba.php');
 require_once(DFS_NBA_DIR . 'class-dfs-nba-cron.php');
