@@ -15,13 +15,13 @@ class DFS_NBA_Cron {
     // Lets you search for specific elements using xpath
 		$home_xpath = new DOMXPath($home_dom);
     // Use xpath to search for all tr elements and save to result rows
-    $home_player_query = '//tr';
+    $home_player_query = "//tr";
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $home_player_tds = $home_xpath->query('td', $home_player);
+      $home_player_tds = $home_xpath->query("td", $home_player);
 
       $playerNameNode = $home_player_tds->item(1);
-      $playerNameLinkNode = $home_xpath->query('a', $playerNameNode);
+      $playerNameLinkNode = $home_xpath->query("a", $playerNameNode);
 
       if($playerNameLinkNode->item(0)->nodeValue == "Player"){
         continue;
