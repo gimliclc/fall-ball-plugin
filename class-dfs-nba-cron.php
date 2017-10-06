@@ -18,7 +18,7 @@ class DFS_NBA_Cron {
     $home_player_query = '//tr';
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $playerNameNode = $xpath->query('//a', $home_player->item(1));
+      $playerNameNode = $home_xpath->query('//a', $home_player->item(1));
 
       if($playerNameNode->item(0)->nodeValue == "Player"){
         continue;
