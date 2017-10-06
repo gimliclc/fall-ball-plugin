@@ -29,7 +29,7 @@ class DFS_NBA_Cron {
       $home_steals = item(21);
       $home_blocks = item(22);
       $home_turnovers = item(15);
-      $home_result_arr[] = $home_player;
+      $result_arr[] = $home_player;
     }
 
 
