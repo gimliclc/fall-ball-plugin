@@ -28,7 +28,7 @@ class DFS_NBA_Cron {
       }
 
 
-error_log($home_player->item(0)->nodeValue,0);
+      error_log($home_player->nodeValue,0);
       error_log($playerNameLinkNode->item(0)->nodeValue,0);
 
       $home_player_obj = array(
