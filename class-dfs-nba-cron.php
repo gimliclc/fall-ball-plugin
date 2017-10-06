@@ -18,6 +18,20 @@ class DFS_NBA_Cron {
     $home_player_query = '//tr';
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
+      $playerNameNode = $xpath->query('//a', $home_player->item(1));
+
+      if($playerNameNode->item(0)->nodeValue == "Player"){
+        continue;
+      }
+
+      $home_player = array(
+        "playerId" => $home_player->item(0)->nodeValue,
+        "name" => $playerNameNode->item(0)->nodeValue,
+        "playerUrl" => $playerNameNode->item(0)->attributes->getNamedItem("href"),
+        "team" => $home_player->item(2)->nodeValue,
+        "gp" => $home_player->item(3)->nodeValue,
+      );
+
       $result_arr[] = $home_player;
       //$home_player_id = item();
     //  $home_player_name = item(1);
@@ -51,8 +65,8 @@ class DFS_NBA_Cron {
       "isHome" => false
     );
 
-    $result_arr[] = $testPlayer1;
-    $result_arr[] = $testPlayer2;
+    //$result_arr[] = $testPlayer1;
+    //$result_arr[] = $testPlayer2;
 
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
