@@ -38,6 +38,7 @@ class DFS_NBA_Cron {
         continue;
       }
 
+
       $home_player_obj = array(
         "playerId" => $home_player_tds->item(0)->nodeValue,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
@@ -56,6 +57,59 @@ class DFS_NBA_Cron {
       );
 
       $result_arr[] = $home_player_obj;
+    }
+
+    $away_stats_array = array(
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away',
+                'http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away'
+              );
+    $away_dom = new DOMDocument();
+    libxml_use_internal_errors(true);
+    // Save response from URL to variable
+    foreach ($away_stats_array as $away_stats_url){
+        $away_stats_response = file_get_contents($away_stats_url);
+        $away_dom->loadHTML($away_stats_response);
+    }
+    libxml_use_internal_errors(false);
+    // Lets you search for specific elements using xpath
+		$away_xpath = new DOMXPath($away_dom);
+    // Use xpath to query for elements and save to variables
+    $td_query = ".//td";
+    $a_query = ".//a";
+    $away_player_query = "//tr";
+    $away_result_rows = $away_xpath ->query($away_player_query);
+    foreach ($away_result_rows as $away_player){
+      $away_player_tds = $away_xpath->query($td_query, $away_player);
+
+      $playerNameNode = $away_player_tds->item(1);
+      $playerNameLinkNode = $away_xpath->query($a_query, $playerNameNode);
+
+      if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
+        continue;
+      }
+
+
+      $away_player_obj = array(
+        "playerId" => $away_player_tds->item(0)->nodeValue,
+        "name" => $playerNameLinkNode->item(0)->nodeValue,
+        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
+        "team" => $away_player_tds->item(2)->nodeValue,
+        "gp" => $away_player_tds->item(3)->nodeValue,
+        "minutes" => $away_player_tds->item(4)->nodeValue,
+        "field_goals" => $away_player_tds->item(5)->nodeValue,
+        "three_pointers" => $away_player_tds->item(8)->nodeValue,
+        "free_throws" => $away_player_tds->item(11)->nodeValue,
+        "rebounds" => $away_player_tds->item(18)->nodeValue,
+        "assists" => $away_player_tds->item(19)->nodeValue,
+        "steals" => $away_player_tds->item(20)->nodeValue,
+        "blocks" => $away_player_tds->item(21)->nodeValue,
+        "turnovers" => $away_player_tds->item(14)->nodeValue
+      );
+
+      $result_arr[] = $away_player_obj;
     }
 
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
