@@ -35,14 +35,23 @@ class DFS_NBA {
 
   }
 
+  private static function start_cron() {
+  if(!wp_next_scheduled('dfs_nba_cron')) {
+    wp_schedule_event(time(), 'daily', 'dfs_nba_cron');
+    }
+  }
+
+private static function stop_cron() {
+  wp_clear_scheduled_hook('dfs_nba_cron');
+  }
+
   public static function plugin_activation() {
   error_log("DFS NBA plugin activated!", 0);
   self::start_cron();
-}
+  }
 
 public static function plugin_deactivation() {
   error_log("DFS NBA plugin deactivated!", 0);
   self::stop_cron();
-  delete_transient('');
-}
+  }
 }
