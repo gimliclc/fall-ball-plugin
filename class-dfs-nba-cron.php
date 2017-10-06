@@ -15,30 +15,46 @@ class DFS_NBA_Cron {
     // Lets you search for specific elements using xpath
 		$home_xpath = new DOMXPath($home_dom);
     // Use xpath to search for all tr elements and save to result rows
-    $home_result_rows = $home_xpath->query('//tr');
+    $td_query = ".//td";
+    $a_query = ".//a";
+
+    $home_player_query = "//tr";
+    $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $home_player_tds = $home_xpath->query("td", $home_player);
+      $home_player_tds = $home_xpath->query($td_query, $home_player);
 
       $playerNameNode = $home_player_tds->item(1);
-      $playerNameLinkNode = $home_xpath->query("a", $playerNameNode);
+      $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
 
-      if($playerNameLinkNode->item(0)->nodeValue == "Player"){
-        error_log("At least we found the first row!");
+      if($home_player_tds->item(0)->nodeValue == "#"){
+        continue;
       }
 
 
-      //error_log($home_player->nodeValue,0);
-      //error_log($playerNameLinkNode->item(0)->nodeValue,0);
+      error_log($home_player->nodeValue,0);
+      error_log($playerNameLinkNode->item(0)->nodeValue,0);
 
       $home_player_obj = array(
-        //"playerId" => $home_player_tds->item(0)->nodeValue,
-        //"name" => $playerNameLinkNode->item(0)->nodeValue,
+        "playerId" => $home_player_tds->item(0)->nodeValue,
+        "name" => $playerNameLinkNode->item(0)->nodeValue,
         "playerUrl" => $playerNameLinkNode->item(0)->attributes->getNamedItem("href"),
-        //"team" => $home_player_tds->item(2)->nodeValue,
-        //"gp" => $home_player_tds->item(3)->nodeValue,
+        "team" => $home_player_tds->item(2)->nodeValue,
+        "gp" => $home_player_tds->item(3)->nodeValue,
       );
 
       $result_arr[] = $home_player_obj;
+      //$home_player_id = item();
+    //  $home_player_name = item(1);
+    //  $home_minutes_per_game = item(5);
+    //  $home_field_goals = item(6);
+    //  $home_three_pointers = item(9);
+    //  $home_free_throws = item(12);
+    //  $home_rebounds = item(19);
+    //  $home_assists = item(20);
+    //  $home_steals = item(21);
+    //  $home_blocks = item(22);
+    //  $home_turnovers = item(15);
+    //  $result_arr[] = $home_player;
     }
 
 
@@ -59,8 +75,8 @@ class DFS_NBA_Cron {
       "isHome" => false
     );
 
-
-    $result_arr[] = $testPlayer2;
+    //$result_arr[] = $testPlayer1;
+    //$result_arr[] = $testPlayer2;
 
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
