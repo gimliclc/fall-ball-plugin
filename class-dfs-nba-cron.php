@@ -26,7 +26,7 @@ class DFS_NBA_Cron {
       $playerNameNode = $home_player_tds->item(1);
       $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
 
-      if($home_player_tds->item(0)->nodeValue == "#"){
+      if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
       // Returns full row
