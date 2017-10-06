@@ -42,43 +42,19 @@ class DFS_NBA_Cron {
         "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
+        "minutes" => $home_player_tds->item(4)->nodeValue,
+        "field_goals" => $home_player_tds->item(5)->nodeValue,
+        "three_pointers" => $home_player_tds->item(8)->nodeValue,
+        "free_throws" => $home_player_tds->item(11)->nodeValue,
+        "rebounds" => $home_player_tds->item(18)->nodeValue,
+        "assists" => $home_player_tds->item(19)->nodeValue,
+        "steals" => $home_player_tds->item(20)->nodeValue,
+        "blocks" => $home_player_tds->item(21)->nodeValue,
+        "turnovers" => $home_player_tds->item(14)->nodeValue
       );
 
       $result_arr[] = $home_player_obj;
-      //$home_player_id = item();
-    //  $home_player_name = item(1);
-    //  $home_minutes_per_game = item(5);
-    //  $home_field_goals = item(6);
-    //  $home_three_pointers = item(9);
-    //  $home_free_throws = item(12);
-    //  $home_rebounds = item(19);
-    //  $home_assists = item(20);
-    //  $home_steals = item(21);
-    //  $home_blocks = item(22);
-    //  $home_turnovers = item(15);
-    //  $result_arr[] = $home_player;
     }
-
-
-    $testPlayer1 = array(
-      "playerId" => 1,
-      "name" => "Test Player",
-      "team" => "CHI",
-      "minutesAvg" => 14.5,
-      "field_goals" =>9.5,
-      "isHome" => true
-    );
-    $testPlayer2 = array(
-      "playerId" => 1,
-      "name" => "Second Person",
-      "team" => "LAC",
-      "minutesAvg" => 19.5,
-      "field_goals" =>3.5,
-      "isHome" => false
-    );
-
-    //$result_arr[] = $testPlayer1;
-    //$result_arr[] = $testPlayer2;
 
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
