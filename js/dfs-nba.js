@@ -11,7 +11,7 @@ var DfsNba = (function() {
 
     for(var i=0; i < data.length; i++){
       var tempEl = jQuery("<tr><td>Player " + i + "</td><td>" + JSON.stringify(data[i]) + "</td></tr>");
-      table.append(tempEl.html())
+      table.append(tempEl)
     }
 
   };
