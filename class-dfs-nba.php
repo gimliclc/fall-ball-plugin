@@ -124,7 +124,7 @@ class DFS_NBA {
 	public static function plugin_deactivation() {
   	error_log("DFS NBA plugin deactivated!", 0);
   	self::stop_cron();
-  	delete_transient('');
+  	delete_transient('dfs_nba_stats');
 	}
 
 }

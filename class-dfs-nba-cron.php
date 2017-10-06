@@ -18,18 +18,19 @@ class DFS_NBA_Cron {
     $home_player_query = '//tr';
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $home_player_id = item();
-      $home_player_name = item(1);
-      $home_minutes_per_game = item(5);
-      $home_field_goals = item(6);
-      $home_three_pointers = item(9);
-      $home_free_throws = item(12);
-      $home_rebounds = item(19);
-      $home_assists = item(20);
-      $home_steals = item(21);
-      $home_blocks = item(22);
-      $home_turnovers = item(15);
       $result_arr[] = $home_player;
+      //$home_player_id = item();
+    //  $home_player_name = item(1);
+    //  $home_minutes_per_game = item(5);
+    //  $home_field_goals = item(6);
+    //  $home_three_pointers = item(9);
+    //  $home_free_throws = item(12);
+    //  $home_rebounds = item(19);
+    //  $home_assists = item(20);
+    //  $home_steals = item(21);
+    //  $home_blocks = item(22);
+    //  $home_turnovers = item(15);
+    //  $result_arr[] = $home_player;
     }
 
 
