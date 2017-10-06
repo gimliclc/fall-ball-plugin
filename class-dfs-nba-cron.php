@@ -15,26 +15,29 @@ class DFS_NBA_Cron {
     // Lets you search for specific elements using xpath
 		$home_xpath = new DOMXPath($home_dom);
     // Use xpath to search for all tr elements and save to result rows
+    $td_query = "td";
+    $a_query = "a";
+
     $home_player_query = "//tr";
     $home_result_rows = $home_xpath ->query($home_player_query);
     foreach ($home_result_rows as $home_player){
-      $home_player_tds = $home_xpath->query("td", $home_player);
+      $home_player_tds = $home_xpath->query($td_query, $home_player);
 
-      $playerNameNode = $home_player_tds->item(1);
-      $playerNameLinkNode = $home_xpath->query("a", $playerNameNode);
+      $playerNameNode = $home_player_tds->childNodes->item(1);
+      $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
 
-      if($playerNameLinkNode->item(0)->nodeValue == "Player"){
+      if($playerNameLinkNode->childNodes->item(0)->nodeValue == "Player"){
         continue;
       }
 
 
       error_log($home_player->nodeValue,0);
-      error_log($playerNameLinkNode->item(0)->nodeValue,0);
+      error_log($playerNameLinkNode->childNodes->item(0)->nodeValue,0);
 
       $home_player_obj = array(
         "playerId" => $home_player_tds->item(0)->nodeValue,
-        "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->attributes->getNamedItem("href"),
+        "name" => $playerNameLinkNode->childNodes->item(0)->nodeValue,
+        "playerUrl" => $playerNameLinkNode->childNodes->item(0)->attributes->getNamedItem("href"),
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
       );
