@@ -6,6 +6,33 @@ class DFS_NBA_Cron {
   public static function load_stats() {
     $result_arr = array();
 
+    $home_stats_url = "http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home";
+    // Save response from URL to variable
+    $home_stats_response = file_get_contents($home_stats_url);
+    $home_dom = new DOMDocument();
+    libxml_use_internal_errors(true);
+    $home_dom->loadHTML($home_stats_response);
+    // Lets you search for specific elements using xpath
+		$home_xpath = new DOMXPath($home_dom);
+    // Use xpath to search for all tr elements and save to result rows
+    $home_player_query = '//tr';
+    $home_result_rows = $home_xpath =>query($home_player_query);
+    foreach ($home_result_rows as $home_player){
+      $home_player_id = item();
+      $home_player_name = item(1);
+      $home_minutes_per_game = item(5);
+      $home_field_goals = item(6);
+      $home_three_pointers = item(9);
+      $home_free_throws = item(12);
+      $home_rebounds = item(19);
+      $home_assists = item(20);
+      $home_steals = item(21);
+      $home_blocks = item(22);
+      $home_turnovers = item(15);
+      $home_result_arr[] = $home_player;
+    }
+
+
     $testPlayer1 = array(
       "playerId" => 1,
       "name" => "Test Player",
