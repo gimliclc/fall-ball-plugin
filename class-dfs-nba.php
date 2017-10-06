@@ -85,6 +85,7 @@ class DFS_NBA {
 		add_shortcode('dfs-nba',array('DFS_NBA','dfs_nba_shortcode'));
   }
 
+<<<<<<< HEAD
 	#Processes the html for the shortcode.  In our case we are just outputting a simple container to be filled in by javascript
 	public static function dfs_nba_shortcode($atts) {
 		return '<table id="dfs-nba-table" style="display:none;" class="dfs-nba-table"><tr><td>Empty DFS NBA Table</td></tr></table>';
@@ -115,15 +116,28 @@ class DFS_NBA {
 	}
 
 	#Method to be run when the plugin in activated.  We will want to start our cron job so that the transient variable is filled
+=======
+>>>>>>> 7b766e5279f770a22f5fac688cf4d9e1e859f011
   public static function plugin_activation() {
   	error_log("DFS NBA plugin activated!", 0);
   	self::start_cron();
 	}
+  error_log("DFS NBA plugin activated!", 0);
+  self::start_cron();
+}
 
+<<<<<<< HEAD
 	#Tears down the plugin when it is deactived.  The cron job will be stopped and the transient deleted
 	public static function plugin_deactivation() {
   	error_log("DFS NBA plugin deactivated!", 0);
   	self::stop_cron();
   	delete_transient('');
 	}
+=======
+public static function plugin_deactivation() {
+  error_log("DFS NBA plugin deactivated!", 0);
+  self::stop_cron();
+  delete_transient('');
+}
+>>>>>>> 7b766e5279f770a22f5fac688cf4d9e1e859f011
 }
