@@ -51,7 +51,7 @@ class DFS_NBA {
 	}
 
   private static function init_js() {
-		wp_register_script('DFS_NBA_MAIN',DFS_MAIN_URL.'js/dfs-nba.js',array('jquery'), false, true);
+		wp_register_script('DFS_NBA_MAIN',DFS_NBA_URL.'js/dfs-nba.js',array('jquery'), false, true);
 		wp_enqueue_script('DFS_NBA_MAIN');
   }
 
