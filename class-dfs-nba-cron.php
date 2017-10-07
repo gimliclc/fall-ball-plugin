@@ -45,7 +45,6 @@ class DFS_NBA_Cron {
         "blocks" => $home_player_tds->item(21)->nodeValue,
         "turnovers" => $home_player_tds->item(14)->nodeValue
       );
-      error_log($home_player_obj['name']);
       $home_result_arr[] = $home_player_obj;
     }
   }
@@ -54,6 +53,54 @@ class DFS_NBA_Cron {
     home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
     home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
     home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
+
+    // Save response from URL to variable
+    function away_load_stats($url_to_scrape){
+    $away_stats_url = $url_to_scrape;
+    $away_stats_response = file_get_contents($away_stats_url);
+    $away_dom = new DOMDocument();
+    libxml_use_internal_errors(true);
+    $away_dom->loadHTML($away_stats_response);
+    // Lets you search for specific elements using xpath
+		$away_xpath = new DOMXPath($away_dom);
+    // Use xpath to search for all tr elements and save to result rows
+    $td_query = ".//td";
+    $a_query = ".//a";
+    $away_player_query = "//tr";
+    $away_result_rows = $away_xpath ->query($away_player_query);
+    foreach ($away_result_rows as $away_player){
+      $away_player_tds = $away_xpath->query($td_query, $away_player);
+      $playerNameNode = $away_player_tds->item(1);
+      $playerNameLinkNode = $away_xpath->query($a_query, $playerNameNode);
+      if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
+        continue;
+      }
+      $away_player_obj = array(
+        "playerId" => $away_player_tds->item(0)->nodeValue,
+        "name" => $playerNameLinkNode->item(0)->nodeValue,
+        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
+        "team" => $away_player_tds->item(2)->nodeValue,
+        "gp" => $away_player_tds->item(3)->nodeValue,
+        "minutes" => $away_player_tds->item(4)->nodeValue,
+        "field_goals" => $away_player_tds->item(5)->nodeValue,
+        "three_pointers" => $away_player_tds->item(8)->nodeValue,
+        "free_throws" => $away_player_tds->item(11)->nodeValue,
+        "rebounds" => $away_player_tds->item(18)->nodeValue,
+        "assists" => $away_player_tds->item(19)->nodeValue,
+        "steals" => $away_player_tds->item(20)->nodeValue,
+        "blocks" => $away_player_tds->item(21)->nodeValue,
+        "turnovers" => $away_player_tds->item(14)->nodeValue
+      );
+      $away_result_arr[] = $away_player_obj;
+    }
+  }
+    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
+    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
+    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
+    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
+    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+
+
     $fileFanduel = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv', 'r');
     while (($line = fgetcsv($fileFanduel)) !== FALSE) {
         // if there is no playerID then pass
