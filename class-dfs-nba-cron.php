@@ -8,6 +8,10 @@ class DFS_NBA_Cron {
     // using the Fanduel data to push to final result_arr
     $home_result_arr = array();
     $away_result_arr = array();
+    // We need separate arrays to store FD, DK and Yahoo data
+    $fd_result_arr = array();
+    $dk_result_arr = array();
+    $y_result_arr = array();
     $result_arr = array();
 
     // create function to scrape home stats pages
@@ -122,10 +126,10 @@ class DFS_NBA_Cron {
       return $csv_arr;
     }
     // load csvs to the $result_arr
-    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
-    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
-    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
-    error_log(print_r($result_arr, TRUE));
+    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
+    $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
+    $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
+    $result_arr[] = $fd_result_arr;
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
