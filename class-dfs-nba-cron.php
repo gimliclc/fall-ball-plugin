@@ -129,7 +129,7 @@ class DFS_NBA_Cron {
     $fileFanduel = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv', 'r');
     while (($line = fgetcsv($fileFanduel)) !== FALSE) {
         // if there is no playerID then pass
-        if ($line[0] == ""){}
+        if ($line[0] == "" || "playerID"){}
         else {
           $result_arr[] = $line[0];
         }
@@ -139,7 +139,7 @@ class DFS_NBA_Cron {
     $fileDraftkings = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv', 'r');
     while (($line = fgetcsv($fileDraftkings)) !== FALSE) {
         // if there is no playerID then pass
-        if ($line[0] == ""){}
+        if ($line[0] == "" || "playerID"){}
         else {
           $result_arr[] = $line[1];
         }
@@ -149,7 +149,7 @@ class DFS_NBA_Cron {
     $fileYahoo = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv', 'r');
     while (($line = fgetcsv($fileYahoo)) !== FALSE) {
         // if there is no playerID then pass
-        if ($line[0] == ""){}
+        if ($line[0] == "" || "playerID"){}
         else {
           $result_arr[] = $line[0];
         }
