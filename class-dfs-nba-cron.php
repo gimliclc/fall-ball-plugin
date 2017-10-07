@@ -126,7 +126,16 @@ class DFS_NBA_Cron {
 
       $result_arr[] = $away_player_obj;
     }
+    $fileFanduel = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv', 'r');
+    while (($line = fgetcsv($fileFanduel)) !== FALSE) {
+        // if there is no playerID then pass
+        if ($line[0] == ""){}
+        else {
+          $result_arr[] = $line[0];
+        }
 
+        }
+    fclose($fileFanduel);
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
