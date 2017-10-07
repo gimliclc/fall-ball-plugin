@@ -107,40 +107,25 @@ class DFS_NBA_Cron {
     $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
     $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
     $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
-    error_log( print_r($away_result_arr, TRUE) );
-    $fileFanduel = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv', 'r');
-    while (($line = fgetcsv($fileFanduel)) !== FALSE) {
-        // if there is no playerID then pass
+    // create function to handle scraping of CSVs
+    function load_csvs($csv_to_scrape) {
+      $csv_arr = array();
+      $openFile = fopen($csv_to_scrape, 'r');
+      while (($line = fgetcsv($openFile)) !== FALSE) {
         if ($line[0] == ""){}
         elseif ($line[0] == "playerID") {}
         else {
-          $result_arr[] = $line[0];
+          $csv_arr[] = $line;
         }
-
-        }
-    fclose($fileFanduel);
-    $fileDraftkings = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv', 'r');
-    while (($line = fgetcsv($fileDraftkings)) !== FALSE) {
-        // if there is no playerID then pass
-        if ($line[0] == ""){}
-        elseif ($line[0] == "playerID") {}
-        else {
-          $result_arr[] = $line[3];
-        }
-
-        }
-    fclose($fileDraftkings);
-    $fileYahoo = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv', 'r');
-    while (($line = fgetcsv($fileYahoo)) !== FALSE) {
-        // if there is no playerID then pass
-        if ($line[0] == ""){}
-        elseif ($line[0] == "playerID") {}
-        else {
-          $result_arr[] = $line[0];
-        }
-
-        }
-    fclose($fileYahoo);
+      }
+      fclose($openFile);
+      return $csv_arr;
+    }
+    // load csvs to the $result_arr
+    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
+    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
+    $result_arr[] = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
+    error_log(print_r($result_arr, TRUE));
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
