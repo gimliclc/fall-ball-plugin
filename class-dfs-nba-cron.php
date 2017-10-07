@@ -4,11 +4,13 @@ defined( 'ABSPATH' ) or die( 'Error: Plugin cannot be called directly!' );
 
 class DFS_NBA_Cron {
   public static function load_stats() {
+    // create separate arrays for home and away to be accessed later
+    // using the Fanduel data to push to final result_arr
     $home_result_arr = array();
     $away_result_arr = array();
     $result_arr = array();
 
-    // Save response from URL to variable
+    // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
     $home_stats_url = $url_to_scrape;
     $home_stats_response = file_get_contents($home_stats_url);
@@ -54,7 +56,7 @@ class DFS_NBA_Cron {
     home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
     home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
 
-    // Save response from URL to variable
+    // create function to process away stats pages
     function away_load_stats($url_to_scrape){
     $away_stats_url = $url_to_scrape;
     $away_stats_response = file_get_contents($away_stats_url);
