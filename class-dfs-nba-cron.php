@@ -122,7 +122,8 @@ class DFS_NBA_Cron {
       return $csv_arr;
     }
     // load csvs to the $result_arr
-    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
+    // Need to figure out how to reference the files without full path!
+    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
     $result_arr[] = $fd_result_arr;
