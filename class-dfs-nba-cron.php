@@ -8,10 +8,6 @@ class DFS_NBA_Cron {
     // using the Fanduel data to push to final result_arr
     $home_result_arr = array();
     $away_result_arr = array();
-    // We need separate arrays to store FD, DK and Yahoo data
-    $fd_result_arr = array();
-    $dk_result_arr = array();
-    $y_result_arr = array();
     $result_arr = array();
 
     // create function to scrape home stats pages
