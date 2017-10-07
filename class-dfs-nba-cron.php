@@ -143,7 +143,7 @@ class DFS_NBA_Cron {
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
     //This extracts playerID from array $home_result_arr[0][0]['playerID']
-    $result_arr[] = fd_result_arr;
+    $result_arr[] = $fd_result_arr;
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
