@@ -42,9 +42,8 @@ class DFS_NBA_Cron {
           error_log("No player ID found for home_player");
         }
       $home_player_obj = array(
-        "playerId" => $playerID,
+        "playerID" => $playerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $home_player_tds->item(2)->nodeValue,
         "gp" => $home_player_tds->item(3)->nodeValue,
         "minutes" => $home_player_tds->item(4)->nodeValue,
@@ -100,9 +99,8 @@ class DFS_NBA_Cron {
           error_log("No player ID found for home_player");
         }
       $away_player_obj = array(
-        "playerId" => $playerID,
+        "playerID" => $playerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
-        "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $away_player_tds->item(2)->nodeValue,
         "gp" => $away_player_tds->item(3)->nodeValue,
         "minutes" => $away_player_tds->item(4)->nodeValue,
@@ -144,7 +142,8 @@ class DFS_NBA_Cron {
     $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
-    $result_arr[] = $home_result_arr;
+    //This gets us to the player object. How do we extract the playerID in php 7?
+    $result_arr[] = $home_result_arr[0][0]{0}->playerID;
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
