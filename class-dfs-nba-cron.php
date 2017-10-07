@@ -29,11 +29,20 @@ class DFS_NBA_Cron {
       $home_player_tds = $home_xpath->query($td_query, $home_player);
       $playerNameNode = $home_player_tds->item(1);
       $playerNameLinkNode = $home_xpath->query($a_query, $playerNameNode);
+      $findPlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
+      if(preg_match("/\/(\d+)$/",$findPlayerId,$matches))
+      {
+        $playerID=$matches[1];
+      }
+        else
+        {
+          error_log("No player ID found for home_player");
+        }
       $home_player_obj = array(
-        "playerId" => $home_player_tds->item(0)->nodeValue,
+        "playerId" => $playerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
         "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $home_player_tds->item(2)->nodeValue,
@@ -78,11 +87,20 @@ class DFS_NBA_Cron {
       $away_player_tds = $away_xpath->query($td_query, $away_player);
       $playerNameNode = $away_player_tds->item(1);
       $playerNameLinkNode = $away_xpath->query($a_query, $playerNameNode);
+      $findPlayerId = $playerNameLinkNode->item(0)->getAttribute('href');
       if($playerNameLinkNode->item(0)->getAttribute('href') == "/"){
         continue;
       }
+      if(preg_match("/\/(\d+)$/",$findPlayerId,$matches))
+      {
+        $playerID=$matches[1];
+      }
+        else
+        {
+          error_log("No player ID found for home_player");
+        }
       $away_player_obj = array(
-        "playerId" => $away_player_tds->item(0)->nodeValue,
+        "playerId" => $playerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
         "playerUrl" => $playerNameLinkNode->item(0)->getAttribute('href'),
         "team" => $away_player_tds->item(2)->nodeValue,
@@ -126,7 +144,7 @@ class DFS_NBA_Cron {
     $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
-    $result_arr[] = $fd_result_arr;
+    $result_arr[] = $home_result_arr;
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
