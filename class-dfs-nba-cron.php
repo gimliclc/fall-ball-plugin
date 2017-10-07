@@ -12,6 +12,7 @@ class DFS_NBA_Cron {
 
     // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
+    $home_scraped = array();
     $home_stats_url = $url_to_scrape;
     $home_stats_response = file_get_contents($home_stats_url);
     $home_dom = new DOMDocument();
@@ -47,17 +48,20 @@ class DFS_NBA_Cron {
         "blocks" => $home_player_tds->item(21)->nodeValue,
         "turnovers" => $home_player_tds->item(14)->nodeValue
       );
-      $home_result_arr[] = $home_player_obj;
+      $home_scraped[] = $home_player_obj;
+
     }
+    return $home_scraped;
   }
-    home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
-    home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
-    home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
-    home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
-    home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
+    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
+    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
+    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
+    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
+    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
 
     // create function to process away stats pages
     function away_load_stats($url_to_scrape){
+    $away_scraped = array();
     $away_stats_url = $url_to_scrape;
     $away_stats_response = file_get_contents($away_stats_url);
     $away_dom = new DOMDocument();
@@ -93,16 +97,17 @@ class DFS_NBA_Cron {
         "blocks" => $away_player_tds->item(21)->nodeValue,
         "turnovers" => $away_player_tds->item(14)->nodeValue
       );
-      $away_result_arr[] = $away_player_obj;
+      $away_scraped[] = $away_player_obj;
+
     }
+    return $away_scraped;
   }
-    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
-    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
-    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
-    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
-    away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
-
-
+    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
+    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
+    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
+    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
+    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+    error_log( print_r($away_result_arr, TRUE) );
     $fileFanduel = fopen('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv', 'r');
     while (($line = fgetcsv($fileFanduel)) !== FALSE) {
         // if there is no playerID then pass
