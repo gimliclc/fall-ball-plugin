@@ -145,6 +145,7 @@ class DFS_NBA_Cron {
     //This extracts playerID from array $home_result_arr[0][0]['playerID']
     $result_arr[] = $fd_result_arr[0][0];
     // Create function to search through arrays
+    //CURRENTLY NOT finding a match for most playerID's... need to find out why
     function selectById($array, $data) {
     foreach($array as $row) {
        if($row[0]['playerID'] == $data) {
@@ -159,13 +160,6 @@ class DFS_NBA_Cron {
             error_log($player[0]);
             $found_player = selectById($home_result_arr, $player[0]);
             error_log($found_player);
-          //  error_log($stats[0]['playerID']);
-          //if ($player[0] == $stats[0]['playerID']){
-          //  error_log($player[2] . " We have a match!!");
-          //}
-          //else {
-          //  error_log($player[2] . "Something went wrong");
-          //}
         }
         else {
           error_log("Found Away");
