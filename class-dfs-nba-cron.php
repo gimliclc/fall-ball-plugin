@@ -139,11 +139,38 @@ class DFS_NBA_Cron {
     }
     // load csvs to the $result_arr
     // Need to figure out how to reference the files without full path!
-    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
+    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
     //This extracts playerID from array $home_result_arr[0][0]['playerID']
-    $result_arr[] = $fd_result_arr;
+    $result_arr[] = $fd_result_arr[0][0];
+    // Create function to search through arrays
+    function selectById($array, $data) {
+    foreach($array as $row) {
+       if($row[0]['playerID'] == $data) {
+         return $row[0]['playerID'];
+       }
+    }
+    return ("Didn't find " . $data);
+    }
+    // Set up for loop to match playerID to home or away stats
+    foreach ($fd_result_arr as $player){
+        if ($player[1] == "Home") {
+            error_log($player[0]);
+            $found_player = selectById($home_result_arr, $player[0]);
+            error_log($found_player);
+          //  error_log($stats[0]['playerID']);
+          //if ($player[0] == $stats[0]['playerID']){
+          //  error_log($player[2] . " We have a match!!");
+          //}
+          //else {
+          //  error_log($player[2] . "Something went wrong");
+          //}
+        }
+        else {
+          error_log("Found Away");
+        }
+      }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
