@@ -61,11 +61,11 @@ class DFS_NBA_Cron {
     }
     return $home_scraped;
   }
-    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
-    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
-    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
-    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
-    $home_result_arr[] = home_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
+    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
+    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
+    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
+    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
+    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
 
     // create function to process away stats pages
     function away_load_stats($url_to_scrape){
@@ -118,11 +118,11 @@ class DFS_NBA_Cron {
     }
     return $away_scraped;
   }
-    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
-    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
-    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
-    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
-    $away_result_arr[] = away_load_stats("http://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
+    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
+    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
+    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
+    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
     // create function to handle scraping of CSVs
     function load_csvs($csv_to_scrape) {
       $csv_arr = array();
@@ -145,11 +145,11 @@ class DFS_NBA_Cron {
     //This extracts playerID from array $home_result_arr[0][0]['playerID']
     $result_arr[] = $fd_result_arr[0][0];
     // Create function to search through arrays
-    //CURRENTLY NOT finding a match for most playerID's... need to find out why
+    // FIRST page of arr results comes in fine. Need to figure out why other pages dont
     function selectById($array, $data) {
     foreach($array as $row) {
-       if($row[0]['playerID'] == $data) {
-         return $row[0]['playerID'];
+       if($row['playerID'] == $data) {
+         return $row['name'];
        }
     }
     return ("Didn't find " . $data);
@@ -157,12 +157,12 @@ class DFS_NBA_Cron {
     // Set up for loop to match playerID to home or away stats
     foreach ($fd_result_arr as $player){
         if ($player[1] == "Home") {
-            error_log($player[0]);
-            $found_player = selectById($home_result_arr, $player[0]);
+            $found_player = selectById($home_result_arr[0], $player[0]);
             error_log($found_player);
         }
         else {
-          error_log("Found Away");
+          $found_player = selectById($away_result_arr[0], $player[0]);
+          error_log($found_player);
         }
       }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
