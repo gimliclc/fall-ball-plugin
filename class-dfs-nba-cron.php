@@ -172,9 +172,6 @@ class DFS_NBA_Cron {
                   $found_player = selectById($home_result_arr4[0], $player[0]);
                   if ($found_player == "X"){
                     $found_player = selectById($home_result_arr5[0], $player[0]);
-                    if($found_player == "X"){
-                      $found_player == $player;
-                    }
                   }
                 }
               }
@@ -183,7 +180,7 @@ class DFS_NBA_Cron {
             if ($found_player == "X"){
               $found_home_player_obj = array(
                 "playerID" => $player[0],
-                "name" => $player[2],
+                "fd_name" => $player[2],
                 "homeaway" => $player[1],
                 "team" => $player[12],
                 "opp" => $player[13],
@@ -207,7 +204,7 @@ class DFS_NBA_Cron {
             else {
             $found_home_player_obj = array(
               "playerID" => $found_player['playerID'],
-              "name" => $player[2],
+              "fd_name" => $player[2],
               "homeaway" => $player[1],
               "team" => $player[12],
               "opp" => $player[13],
@@ -228,7 +225,8 @@ class DFS_NBA_Cron {
               "injured note" => $player[15]
             );
           }
-            $result_arr[] = $found_home_player_obj;
+          // Store in a FD array to be added to the DK data
+          $fd_arr[] = $found_home_player_obj;
         }
         else {
           $found_player = selectById($away_result_arr1[0], $player[0]);
@@ -249,7 +247,7 @@ class DFS_NBA_Cron {
           if ($found_player == "X"){
             $found_away_player_obj = array(
               "playerID" => $player[0],
-              "name" => $player[2],
+              "fd_name" => $player[2],
               "homeaway" => $player[1],
               "team" => $player[12],
               "opp" => $player[13],
@@ -274,7 +272,7 @@ class DFS_NBA_Cron {
           else {
           $found_away_player_obj = array(
             "playerID" => $found_player['playerID'],
-            "name" => $player[2],
+            "fd_name" => $player[2],
             "homeaway" => $player[1],
             "team" => $player[12],
             "opp" => $player[13],
@@ -295,9 +293,10 @@ class DFS_NBA_Cron {
             "injured note" => $player[15]
           );
         }
-          $result_arr[] = $found_away_player_obj;
+          $fd_arr[] = $found_away_player_obj;
         }
       }
+    error_log(print_r($fd_arr, TRUE));
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
