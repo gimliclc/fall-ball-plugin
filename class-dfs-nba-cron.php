@@ -11,7 +11,11 @@ class DFS_NBA_Cron {
     $home_result_arr3 = array();
     $home_result_arr4 = array();
     $home_result_arr5 = array();
-    $away_result_arr = array();
+    $away_result_arr1 = array();
+    $away_result_arr2 = array();
+    $away_result_arr3 = array();
+    $away_result_arr4 = array();
+    $away_result_arr5 = array();
     $result_arr = array();
 
     // create function to scrape home stats pages
@@ -122,11 +126,11 @@ class DFS_NBA_Cron {
     }
     return $away_scraped;
   }
-    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
-    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
-    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
-    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
-    $away_result_arr[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+    $away_result_arr1[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
+    $away_result_arr2[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
+    $away_result_arr3[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
+    $away_result_arr4[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
+    $away_result_arr5[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
     // create function to handle scraping of CSVs
     function load_csvs($csv_to_scrape) {
       $csv_arr = array();
@@ -177,7 +181,19 @@ class DFS_NBA_Cron {
             error_log($found_player);
         }
         else {
-          $found_player = selectById($away_result_arr[0], $player[0]);
+          $found_player = selectById($away_result_arr1[0], $player[0]);
+          if ($found_player == "X"){
+            $found_player = selectById($away_result_arr2[0], $player[0]);
+            if ($found_player == "X"){
+              $found_player = selectById($away_result_arr3[0], $player[0]);
+              if ($found_player == "X"){
+                $found_player = selectById($away_result_arr4[0], $player[0]);
+                if ($found_player == "X"){
+                  $found_player = selectById($away_result_arr5[0], $player[0]);
+                }
+              }
+            }
+          }
         }
       }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
