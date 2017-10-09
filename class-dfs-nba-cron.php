@@ -150,14 +150,12 @@ class DFS_NBA_Cron {
     $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
     $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
     $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
-    //This extracts playerID from array $home_result_arr[0][0]['playerID']
-    $result_arr[] = $fd_result_arr[0][0];
     // Create function to search through arrays
     // Have to use multiple arrays to store scraped data
     function selectById($array, $data) {
     foreach($array as $row) {
        if($row['playerID'] == $data) {
-         return $row['name'];
+         return $row;
        }
     }
     return ("X");
@@ -178,7 +176,31 @@ class DFS_NBA_Cron {
                 }
               }
             }
-            error_log($found_player);
+            // Combine info from home scrape and FD csv
+            $found_home_player_obj = array(
+              "playerID" => $found_player['playerID'],
+              "name" => $player[2],
+              "homeaway" => $player[1],
+              "team" => $player[12],
+              "opp" => $player[13],
+              "gp" => $player[9],
+              "minutes" => $found_player['minutes'],
+              "field_goals" => $found_player['field_goals'],
+              "three_pointers" => $found_player['three_pointers'],
+              "free_throws" => $found_player['free_throws'],
+              "rebounds" => $found_player['rebounds'],
+              "assists" => $found_player['assists'],
+              "steals" => $found_player['steals'],
+              "blocks" => $found_player['blocks'],
+              "turnovers" => $found_player['turnovers'],
+              "position" => $player[4],
+              "fppg" => $player[8],
+              "price" => $player[10],
+              "injured" => $player[14],
+              "injured note" => $player[15]
+            );
+            $result_arr[] = $found_home_player_obj;
+            error_log($found_player['name'] . $found_player['playerID']);
         }
         else {
           $found_player = selectById($away_result_arr1[0], $player[0]);
@@ -194,6 +216,31 @@ class DFS_NBA_Cron {
               }
             }
           }
+          // Combine info from away scrape and FD csv
+          $found_away_player_obj = array(
+            "playerID" => $found_player['playerID'],
+            "name" => $player[2],
+            "homeaway" => $player[1],
+            "team" => $player[12],
+            "opp" => $player[13],
+            "gp" => $player[9],
+            "minutes" => $found_player['minutes'],
+            "field_goals" => $found_player['field_goals'],
+            "three_pointers" => $found_player['three_pointers'],
+            "free_throws" => $found_player['free_throws'],
+            "rebounds" => $found_player['rebounds'],
+            "assists" => $found_player['assists'],
+            "steals" => $found_player['steals'],
+            "blocks" => $found_player['blocks'],
+            "turnovers" => $found_player['turnovers'],
+            "position" => $player[4],
+            "fppg" => $player[8],
+            "price" => $player[10],
+            "injured" => $player[14],
+            "injured note" => $player[15]
+          );
+          $result_arr[] = $found_away_player_obj;
+          error_log("Away ". $found_player['name'] . $found_player['playerID']);
         }
       }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
