@@ -6,7 +6,11 @@ class DFS_NBA_Cron {
   public static function load_stats() {
     // create separate arrays for home and away to be accessed later
     // using the Fanduel data to push to final result_arr
-    $home_result_arr = array();
+    $home_result_arr1 = array();
+    $home_result_arr2 = array();
+    $home_result_arr3 = array();
+    $home_result_arr4 = array();
+    $home_result_arr5 = array();
     $away_result_arr = array();
     $result_arr = array();
 
@@ -61,11 +65,11 @@ class DFS_NBA_Cron {
     }
     return $home_scraped;
   }
-    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
-    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
-    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
-    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
-    $home_result_arr[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
+    $home_result_arr1[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
+    $home_result_arr2[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
+    $home_result_arr3[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
+    $home_result_arr4[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
+    $home_result_arr5[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
 
     // create function to process away stats pages
     function away_load_stats($url_to_scrape){
@@ -145,24 +149,35 @@ class DFS_NBA_Cron {
     //This extracts playerID from array $home_result_arr[0][0]['playerID']
     $result_arr[] = $fd_result_arr[0][0];
     // Create function to search through arrays
-    // FIRST page of arr results comes in fine. Need to figure out why other pages dont
+    // Have to use multiple arrays to store scraped data
     function selectById($array, $data) {
     foreach($array as $row) {
        if($row['playerID'] == $data) {
          return $row['name'];
        }
     }
-    return ("Didn't find " . $data);
+    return ("X");
     }
     // Set up for loop to match playerID to home or away stats
     foreach ($fd_result_arr as $player){
         if ($player[1] == "Home") {
-            $found_player = selectById($home_result_arr[0], $player[0]);
+            $found_player = selectById($home_result_arr1[0], $player[0]);
+            if ($found_player == "X"){
+              $found_player = selectById($home_result_arr2[0], $player[0]);
+              if ($found_player == "X"){
+                $found_player = selectById($home_result_arr3[0], $player[0]);
+                if ($found_player == "X"){
+                  $found_player = selectById($home_result_arr4[0], $player[0]);
+                  if ($found_player == "X"){
+                    $found_player = selectById($home_result_arr5[0], $player[0]);
+                  }
+                }
+              }
+            }
             error_log($found_player);
         }
         else {
           $found_player = selectById($away_result_arr[0], $player[0]);
-          error_log($found_player);
         }
       }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
