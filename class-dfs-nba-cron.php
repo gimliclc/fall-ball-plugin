@@ -172,11 +172,39 @@ class DFS_NBA_Cron {
                   $found_player = selectById($home_result_arr4[0], $player[0]);
                   if ($found_player == "X"){
                     $found_player = selectById($home_result_arr5[0], $player[0]);
+                    if($found_player == "X"){
+                      $found_player == $player;
+                    }
                   }
                 }
               }
             }
             // Combine info from home scrape and FD csv
+            if ($found_player == "X"){
+              $found_home_player_obj = array(
+                "playerID" => $player[0],
+                "name" => $player[2],
+                "homeaway" => $player[1],
+                "team" => $player[12],
+                "opp" => $player[13],
+                "gp" => $player[9],
+                "minutes" => "",
+                "field_goals" => "",
+                "three_pointers" => "",
+                "free_throws" => "",
+                "rebounds" => "",
+                "assists" => "",
+                "steals" => "",
+                "blocks" => "",
+                "turnovers" => "",
+                "fd_position" => $player[4],
+                "fd_fppg" => $player[8],
+                "fd_price" => $player[10],
+                "injured" => $player[14],
+                "injured note" => $player[15]
+              );
+            }
+            else {
             $found_home_player_obj = array(
               "playerID" => $found_player['playerID'],
               "name" => $player[2],
@@ -193,12 +221,13 @@ class DFS_NBA_Cron {
               "steals" => $found_player['steals'],
               "blocks" => $found_player['blocks'],
               "turnovers" => $found_player['turnovers'],
-              "position" => $player[4],
-              "fppg" => $player[8],
-              "price" => $player[10],
+              "fd_position" => $player[4],
+              "fd_fppg" => $player[8],
+              "fd_price" => $player[10],
               "injured" => $player[14],
               "injured note" => $player[15]
             );
+          }
             $result_arr[] = $found_home_player_obj;
         }
         else {
@@ -216,6 +245,33 @@ class DFS_NBA_Cron {
             }
           }
           // Combine info from away scrape and FD csv
+          // If player doesn't have stats
+          if ($found_player == "X"){
+            $found_away_player_obj = array(
+              "playerID" => $player[0],
+              "name" => $player[2],
+              "homeaway" => $player[1],
+              "team" => $player[12],
+              "opp" => $player[13],
+              "gp" => $player[9],
+              "minutes" => "",
+              "field_goals" => "",
+              "three_pointers" => "",
+              "free_throws" => "",
+              "rebounds" => "",
+              "assists" => "",
+              "steals" => "",
+              "blocks" => "",
+              "turnovers" => "",
+              "fd_position" => $player[4],
+              "fd_fppg" => $player[8],
+              "fd_price" => $player[10],
+              "injured" => $player[14],
+              "injured note" => $player[15]
+            );
+          }
+          // Find player stats and assign to object
+          else {
           $found_away_player_obj = array(
             "playerID" => $found_player['playerID'],
             "name" => $player[2],
@@ -232,12 +288,13 @@ class DFS_NBA_Cron {
             "steals" => $found_player['steals'],
             "blocks" => $found_player['blocks'],
             "turnovers" => $found_player['turnovers'],
-            "position" => $player[4],
-            "fppg" => $player[8],
-            "price" => $player[10],
+            "fd_position" => $player[4],
+            "fd_fppg" => $player[8],
+            "fd_price" => $player[10],
             "injured" => $player[14],
             "injured note" => $player[15]
           );
+        }
           $result_arr[] = $found_away_player_obj;
         }
       }
