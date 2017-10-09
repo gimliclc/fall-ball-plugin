@@ -200,7 +200,6 @@ class DFS_NBA_Cron {
               "injured note" => $player[15]
             );
             $result_arr[] = $found_home_player_obj;
-            error_log($found_player['name'] . $found_player['playerID']);
         }
         else {
           $found_player = selectById($away_result_arr1[0], $player[0]);
@@ -240,7 +239,6 @@ class DFS_NBA_Cron {
             "injured note" => $player[15]
           );
           $result_arr[] = $found_away_player_obj;
-          error_log("Away ". $found_player['name'] . $found_player['playerID']);
         }
       }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
