@@ -17,6 +17,10 @@ class DFS_NBA_Cron {
     $away_result_arr4 = array();
     $away_result_arr5 = array();
     $result_arr = array();
+    $dvp_arr = array();
+
+    // create function to scrape DvP pages
+    
 
     // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
