@@ -20,8 +20,29 @@ class DFS_NBA_Cron {
     $dvp_arr = array();
 
     // create function to scrape DvP pages
-    
-
+    function dvp_scrape($dvp_url){
+      $dvp_url_to_scrape = $dvp_url;
+      $dvp_url_response = file_get_contents($dvp_url_to_scrape);
+      $dvp_dom = new DOMDocument();
+      libxml_use_internal_errors(true);
+      $dvp_dom->loadHTML($dvp_url_response);
+      $dvp_xpath = new DOMXpath($dvp_dom);
+      $td_query = ".//td";
+      $dvp_row_query = "//*/div/table/tbody/tr";
+      $dvp_rows_result = $dvp_xpath->query($dvp_row_query);
+      foreach($dvp_rows_result as $row){
+        $dvp_tds = $dvp_xpath->query($td_query, $row);
+        $teamNameNode = $dvp_tds->item(0);
+        // Avoids wayback machine text
+        if (strpos($teamNameNode->nodeValue, 'captures') !== false){}
+        else {
+          $dvp_arr[] = $teamNameNode->nodeValue;
+        }
+      }
+      return $dvp_arr;
+    }
+    $dvp_pg = dvp_scrape('https://web.archive.org/web/20170310152146/http://www.rotowire.com/daily/nba/defense-vspos.php?site=FanDuel&astatview=season&pos=PG');
+    error_log(print_r($dvp_pg, TRUE));
     // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
     $home_scraped = array();
