@@ -33,11 +33,18 @@ class DFS_NBA_Cron {
       foreach($dvp_rows_result as $row){
         $dvp_tds = $dvp_xpath->query($td_query, $row);
         $teamNameNode = $dvp_tds->item(0);
+        $seasonDvp = $dvp_tds->item(2);
+        $lastFiveDvp = $dvp_tds->item(3);
+        $lastTenDvp = $dvp_tds->item(4);
         // Avoids wayback machine text
-        if (strpos($teamNameNode->nodeValue, 'captures') !== false){}
-        else {
-          $dvp_arr[] = $teamNameNode->nodeValue;
-        }
+        $dvp_obj = array(
+          "team" => $teamNameNode->nodeValue,
+          "seasonDvp" => (int)$seasonDvp->nodeValue,
+          "lastFiveDvp" => (int)$lastFiveDvp->nodeValue,
+          "lastTenDvp" => (int)$lastTenDvp->nodeValue
+        );
+          $dvp_arr[] = $dvp_obj;
+
       }
       return $dvp_arr;
     }
@@ -78,16 +85,16 @@ class DFS_NBA_Cron {
         "playerID" => $playerID,
         "name" => $playerNameLinkNode->item(0)->nodeValue,
         "team" => $home_player_tds->item(2)->nodeValue,
-        "gp" => $home_player_tds->item(3)->nodeValue,
-        "minutes" => $home_player_tds->item(4)->nodeValue,
-        "field_goals" => $home_player_tds->item(5)->nodeValue,
-        "three_pointers" => $home_player_tds->item(8)->nodeValue,
-        "free_throws" => $home_player_tds->item(11)->nodeValue,
-        "rebounds" => $home_player_tds->item(18)->nodeValue,
-        "assists" => $home_player_tds->item(19)->nodeValue,
-        "steals" => $home_player_tds->item(20)->nodeValue,
-        "blocks" => $home_player_tds->item(21)->nodeValue,
-        "turnovers" => $home_player_tds->item(14)->nodeValue
+        "gp" => (int)$home_player_tds->item(3)->nodeValue,
+        "minutes" => (int)$home_player_tds->item(4)->nodeValue,
+        "field_goals" => (int)$home_player_tds->item(5)->nodeValue,
+        "three_pointers" => (int)$home_player_tds->item(8)->nodeValue,
+        "free_throws" => (int)$home_player_tds->item(11)->nodeValue,
+        "rebounds" => (int)$home_player_tds->item(18)->nodeValue,
+        "assists" => (int)$home_player_tds->item(19)->nodeValue,
+        "steals" => (int)$home_player_tds->item(20)->nodeValue,
+        "blocks" => (int)$home_player_tds->item(21)->nodeValue,
+        "turnovers" => (int)$home_player_tds->item(14)->nodeValue
       );
       $home_scraped[] = $home_player_obj;
 
