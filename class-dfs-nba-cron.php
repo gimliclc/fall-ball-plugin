@@ -146,10 +146,9 @@ class DFS_NBA_Cron {
       return $csv_arr;
     }
     // load csvs to the $result_arr
-    // Need to figure out how to reference the files without full path!
-    $fd_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Fanduel.csv');
-    $dk_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Draftkings.csv');
-    $y_result_arr = load_csvs('C:\wamp\www\fta\wp-content\plugins\fall-ball-plugin\Yahoo.csv');
+    $fd_result_arr = load_csvs(DFS_NBA_DIR . '\Fanduel.csv');
+    $dk_result_arr = load_csvs(DFS_NBA_DIR . '\Draftkings.csv');
+    $y_result_arr = load_csvs(DFS_NBA_DIR . '\Yahoo.csv');
     // Create function to search through arrays
     // Have to use multiple arrays to store scraped data
     function selectById($array, $data) {
@@ -733,6 +732,7 @@ class DFS_NBA_Cron {
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
+    set_transient('dfs_nba_dvp', $dvp_arr, 60*60*48 );
     error_log("Executed NBA DFS cron job",0);
   }
 }
