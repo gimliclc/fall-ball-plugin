@@ -8,13 +8,93 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var tableHeader = jQuery("<tr class='nba-table-header'><td>" + "Player Name" + "</td><td>" + "FPPG" + "</td><td>" + "Min" + "</td><td>" + "3PT" + "</td></tr>");
+    var tableHeader = jQuery("<tr class='nba-table-header' id='draftkings-nba'><td class='player-name'>" + "Player Name" +
+                            "</td><td id='nba-pos'>" + "POS" +
+                            "</td><td>" + "Min" +
+                            "</td><td>" + "Proj" +
+                            "</td><td id='nba-price'>" + "Price" +
+                            "</td><td>" + "Val" +
+                            "</td><td id='nba-inj'>" + "Inj?" +
+                            "</td><td id='nba-note'>" + "Note" +
+                            "</td><td>" + "DvP" +
+                            "</td><td>" + "PTS" +
+                            "</td><td>" + "3PT" +
+                            "</td><td>" + "FT" +
+                            "</td><td>" + "Reb" +
+                            "</td><td>" + "Ast" +
+                            "</td><td>" + "Stl" +
+                            "</td><td>" + "Blk" +
+                            "</td><td>" + "TO" +
+                            "</td><td id='nba-game-info'>" + "Game" +
+                            "</td></tr>");
     table.append(tableHeader)
     for(var i=0; i < data.length; i++){
-      var playerRow = jQuery("<tr><td>" + data[i]['dk_name'] +
-                              "</td><td>" + data[i]['dk_fppg'] +
+      let minutes = data[i]['minutes'];
+      // Tie calculations from data to the minutes for updated projections
+      let field_goals_per_min = (parseFloat(data[i]['field_goals']) / parseFloat(minutes));
+      let three_points_per_min = (parseFloat(data[i]['three_pointers']) / parseFloat(minutes));
+      let free_throws_per_min = (parseFloat(data[i]['free_throws']) / parseFloat(minutes));
+      let rebounds_per_min = (parseFloat(data[i]['rebounds']) / parseFloat(minutes));
+      let assists_per_min = (parseFloat(data[i]['assists']) / parseFloat(minutes));
+      let steals_per_min = (parseFloat(data[i]['steals']) / parseFloat(minutes));
+      let blocks_per_min = (parseFloat(data[i]['blocks']) / parseFloat(minutes));
+      let turnovers_per_min = (parseFloat(data[i]['turnovers']) / parseFloat(minutes));
+      // Calculate projected number of points to score
+      let points = (((parseFloat(field_goals_per_min)*2) + parseFloat(three_points_per_min) + parseFloat(free_throws_per_min))*minutes).toFixed(1);
+      let three_points = (parseFloat(three_points_per_min) * parseFloat(minutes)).toFixed(1);
+      let free_throws = (parseFloat(free_throws_per_min) * parseFloat(minutes)).toFixed(1);
+      let rebounds = (parseFloat(rebounds_per_min) * parseFloat(minutes)).toFixed(1);
+      let assists = (parseFloat(assists_per_min) * parseFloat(minutes)).toFixed(1);
+      let steals = (parseFloat(steals_per_min) * parseFloat(minutes)).toFixed(1);
+      let blocks = (parseFloat(blocks_per_min) * parseFloat(minutes)).toFixed(1);
+      let turnovers = (parseFloat(turnovers_per_min) * parseFloat(minutes)).toFixed(1);
+      // Create function to determine odds of double double
+      function dbl_odds(stats){
+        if (stats > 10){
+          return 1;
+        }
+        else {
+          return (stats/10);
+        }
+      }
+      let dbl_comparison_arr = [];
+      let dbl_dbl_odds = 0;
+      let trp_dbl_odds = 0;
+      let pts_dbl_odds = dbl_odds(points);
+      let reb_dbl_odds = dbl_odds(rebounds);
+      let assists_dbl_odds = dbl_odds(assists);
+      dbl_comparison_arr.push(pts_dbl_odds);
+      dbl_comparison_arr.push(reb_dbl_odds);
+      dbl_comparison_arr.push(assists_dbl_odds);
+      console.log(dbl_comparison_arr[0]);
+      // Calculate player projection
+      let proj = (parseFloat(points)+
+                  (parseFloat(data[i]['three_pointers'])*0.5)+
+                  (parseFloat(data[i]['rebounds'])*1.25)+
+                  (parseFloat(data[i]['assists'])*1.5)+
+                  (parseFloat(data[i]['steals'])*2)+
+                  (parseFloat(data[i]['blocks'])*2)+
+                  (parseFloat(data[i]['turnovers'])*(-0.5))).toFixed(1);
+      let value = ((proj) / ((parseFloat(data[i]['dk_price']))/1000)).toFixed(1);
+      // Assign each player row
+      var playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
+                              "</td><td id='nba-pos'>" + data[i]['dk_position'] +
                               "</td><td>" + data[i]['minutes'] +
-                              "</td><td>" + data[i]['three_pointers'] +
+                              "</td><td>" + proj +
+                              "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
+                              "</td><td>" + value +
+                              "</td><td id='nba-inj'>" + data[i]['injured'] +
+                              "</td><td id='nba-note'>" + data[i]['injured note'] +
+                              "</td><td>" + "DvP" +
+                              "</td><td>" + points +
+                              "</td><td>" + three_points +
+                              "</td><td>" + free_throws +
+                              "</td><td>" + rebounds +
+                              "</td><td>" + assists +
+                              "</td><td>" + steals +
+                              "</td><td>" + blocks +
+                              "</td><td>" + turnovers +
+                              "</td><td id='nba-game-info'>" + data[i]['game_info'] +
                               "</td></tr>");
       table.append(playerRow)
     }
