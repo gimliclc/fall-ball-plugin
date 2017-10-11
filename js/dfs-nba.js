@@ -25,6 +25,8 @@ var DfsNba = (function() {
                             "</td><td>" + "Stl" +
                             "</td><td>" + "Blk" +
                             "</td><td>" + "TO" +
+                            "</td><td>" + "DBL" +
+                            "</td><td>" + "TRP" +
                             "</td><td id='nba-game-info'>" + "Game" +
                             "</td></tr>");
     table.append(tableHeader)
@@ -66,7 +68,22 @@ var DfsNba = (function() {
       dbl_comparison_arr.push(pts_dbl_odds);
       dbl_comparison_arr.push(reb_dbl_odds);
       dbl_comparison_arr.push(assists_dbl_odds);
-      console.log(dbl_comparison_arr[0]);
+      // Sort array
+      dbl_comparison_arr.sort();
+      // Code to determine odds of a double double
+      if ((pts_dbl_odds == 1 && reb_dbl_odds == 1) || (pts_dbl_odds == 1 && assists_dbl_odds == 1) || (reb_dbl_odds == 1 && assists_dbl_odds == 1)){
+        dbl_dbl_odds = 1;
+      }
+      else {
+        dbl_dbl_odds = dbl_comparison_arr[1];
+      }
+      // Code to determine odds of a triple double
+      if (pts_dbl_odds == 1 && reb_dbl_odds == 1 && assists_dbl_odds == 1){
+        trp_dbl_odds = 1;
+      }
+      else {
+        trp_dbl_odds = dbl_comparison_arr[0];
+      }
       // Calculate player projection
       let proj = (parseFloat(points)+
                   (parseFloat(data[i]['three_pointers'])*0.5)+
@@ -74,7 +91,9 @@ var DfsNba = (function() {
                   (parseFloat(data[i]['assists'])*1.5)+
                   (parseFloat(data[i]['steals'])*2)+
                   (parseFloat(data[i]['blocks'])*2)+
-                  (parseFloat(data[i]['turnovers'])*(-0.5))).toFixed(1);
+                  (parseFloat(data[i]['turnovers'])*(-0.5))+
+                  (parseFloat(dbl_dbl_odds)*1.5)+
+                  (parseFloat(trp_dbl_odds)*3)).toFixed(1);
       let value = ((proj) / ((parseFloat(data[i]['dk_price']))/1000)).toFixed(1);
       // Assign each player row
       var playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
@@ -94,6 +113,8 @@ var DfsNba = (function() {
                               "</td><td>" + steals +
                               "</td><td>" + blocks +
                               "</td><td>" + turnovers +
+                              "</td><td>" + dbl_dbl_odds.toFixed(1) +
+                              "</td><td>" + trp_dbl_odds.toFixed(1) +
                               "</td><td id='nba-game-info'>" + data[i]['game_info'] +
                               "</td></tr>");
       table.append(playerRow)
@@ -110,7 +131,7 @@ var DfsNba = (function() {
 //This function will execute once the page has finished building itself
 jQuery(document).ready(function() {
   if(jQuery('#dfs-nba-table')){
-    //Assumed that we're able to find our container, will will initiate an ajax call through wordpress
+    //Assumed that we're able to find our container, will initiate an ajax call through wordpress
     //We must supply our action through a wordpress post
     jQuery.ajax({
       type: "POST",
