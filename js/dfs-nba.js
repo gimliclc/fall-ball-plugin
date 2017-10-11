@@ -8,28 +8,28 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var tableHeader = jQuery("<thead class='nba-table-header' id='draftkings-nba'><td class='player-name'>" + "Player Name" +
-                            "</td><td id='nba-pos'>" + "POS" +
-                            "</td><td>" + "Min" +
-                            "</td><td>" + "Proj" +
-                            "</td><td id='nba-price'>" + "Price" +
-                            "</td><td>" + "Val" +
-                            "</td><td id='nba-inj'>" + "Inj?" +
-                            "</td><td id='nba-note'>" + "Note" +
-                            "</td><td>" + "DvP" +
-                            "</td><td>" + "PTS" +
-                            "</td><td>" + "3PT" +
-                            "</td><td>" + "FT" +
-                            "</td><td>" + "Reb" +
-                            "</td><td>" + "Ast" +
-                            "</td><td>" + "Stl" +
-                            "</td><td>" + "Blk" +
-                            "</td><td>" + "TO" +
-                            "</td><td>" + "DBL" +
-                            "</td><td>" + "TRP" +
+    var DKtableHeader = jQuery("<thead class='nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
+                            "</td><td id='nba-pos' title='Draftkings position'>" + "POS" +
+                            "</td><td title='Projected minutes'>" + "Min" +
+                            "</td><td title='Projected fantasy points'>" + "Proj" +
+                            "</td><td id='nba-price' title='Draftkings cost'>" + "Price" +
+                            "</td><td title='Returned value (Over 5.5x is good)'>" + "Val" +
+                            "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" +
+                            "</td><td id='nba-note' title='Player note'>" + "Note" +
+                            "</td><td title='Defense vs position'>" + "DvP" +
+                            "</td><td title='Projected points'>" + "PTS" +
+                            "</td><td title='Projected three pointers'>" + "3PT" +
+                            "</td><td title='Projected points from free throws'>" + "FT" +
+                            "</td><td title='Projected rebounds'>" + "Reb" +
+                            "</td><td title='Projected assists'>" + "Ast" +
+                            "</td><td title='Projected steals'>" + "Stl" +
+                            "</td><td title='Projected blocks'>" + "Blk" +
+                            "</td><td title='Projected turnovers'>" + "TO" +
+                            "</td><td title='Projected odds of a double double'>" + "DBL" +
+                            "</td><td title='Projected odds of a triple double'>" + "TRP" +
                             "</td><td id='nba-game-info'>" + "Game" +
                             "</td></thead>");
-    table.append(tableHeader)
+    table.append(DKtableHeader)
     for(var i=0; i < data.length; i++){
       let minutes = data[i]['minutes'];
       // Tie calculations from data to the minutes for updated projections
@@ -158,7 +158,6 @@ jQuery(document).ready(function() {
           DfsNba.buildTable(stats);
           //Once processing is complete go ahead and show the table (it's initially hidden)
           jQuery('#dfs-nba-table').show();
-          // Make table sortable
           var newTableObject = document.getElementById('dfs-nba-table');
           sorttable.makeSortable(newTableObject)
         }
