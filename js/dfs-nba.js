@@ -8,9 +8,14 @@ var DfsNba = (function() {
     }
 
     table.empty();
-
+    var tableHeader = jQuery("<tr class='nba-table-header'><td>" + "Player Name" + "</td><td>" + "FPPG" + "</td><td>" + "Min" + "</td><td>" + "3PT" + "</td></tr>");
+    table.append(tableHeader)
     for(var i=0; i < data.length; i++){
-      var playerRow = jQuery("<tr><td>" + data[i]['dk_name'] + "</td><td>" + data[i]['dk_fppg'] + "</td><td>" + data[i]['minutes'] + "</td><td>" + data[i]['three_pointers'] + "</td></tr>");
+      var playerRow = jQuery("<tr><td>" + data[i]['dk_name'] +
+                              "</td><td>" + data[i]['dk_fppg'] +
+                              "</td><td>" + data[i]['minutes'] +
+                              "</td><td>" + data[i]['three_pointers'] +
+                              "</td></tr>");
       table.append(playerRow)
     }
   };

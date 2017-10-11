@@ -3,3 +3,7 @@
         width:100%;
         table-layout: fixed;
 }
+
+.nba-table-header {
+  font-weight: bold;
+}
