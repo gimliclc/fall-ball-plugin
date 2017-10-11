@@ -21,6 +21,8 @@ class DFS_NBA_Cron {
 
     // create function to scrape DvP pages
     function dvp_scrape($dvp_url){
+      //create array to hold dvp object
+      $dvp_scraped = array();
       $dvp_url_to_scrape = $dvp_url;
       $dvp_url_response = file_get_contents($dvp_url_to_scrape);
       $dvp_dom = new DOMDocument();
@@ -34,15 +36,25 @@ class DFS_NBA_Cron {
         $dvp_tds = $dvp_xpath->query($td_query, $row);
         $teamNameNode = $dvp_tds->item(0);
         $vsPos = $dvp_tds->item(1);
+        $season_dvp = $dvp_tds->item(2);
+        $last_five_dvp = $dvp_tds->item(3);
+        $last_ten_dvp = $dvp_tds->item(4);
         // Avoids wayback machine text
         if (strpos($teamNameNode->nodeValue, 'captures') !== false){}
         // Checks to make sure response is alphanumeric (avoids blanks)
         elseif(preg_match("/[a-z]/i", $teamNameNode->nodeValue)){
-          $dvp_arr[] = $teamNameNode->nodeValue;
+          $dvp_obj = array(
+            "name" => $teamNameNode->nodeValue,
+            "vsPos" => $vsPos->nodeValue,
+            "season_dvp" => $season_dvp->nodeValue,
+            "last_five_dvp" => $last_five_dvp->nodeValue,
+            "last_ten_dvp" => $last_ten_dvp->nodeValue
+          );
+          $dvp_scraped[] = $dvp_obj;
         }
-        else { }
+        else {}
       }
-      return $dvp_arr;
+      return $dvp_scraped;
     }
     $dvp_pg = dvp_scrape('https://web.archive.org/web/20170310152146/http://www.rotowire.com/daily/nba/defense-vspos.php?site=FanDuel&astatview=season&pos=PG');
     error_log(print_r($dvp_pg, TRUE));
