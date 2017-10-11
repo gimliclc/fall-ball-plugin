@@ -6,4 +6,33 @@
 
 .nba-table-header {
   font-weight: bold;
+  background-color: #6495ED;
+  color: white;
+}
+
+.player-name {
+  width: 200px;
+  padding-left: 10px;
+}
+
+#nba-pos {
+  width: 65px;
+}
+
+#nba-game-info {
+  width: 200px;
+}
+
+#nba-price {
+  width: 80px;
+  text-align: center;
+}
+
+#nba-inj {
+  text-align: center;
+}
+
+#nba-note {
+  width: 100px;
+  text-align: center;
 }
