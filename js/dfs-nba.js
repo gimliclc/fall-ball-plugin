@@ -10,10 +10,9 @@ var DfsNba = (function() {
     table.empty();
 
     for(var i=0; i < data.length; i++){
-      var tempEl = jQuery("<tr><td>Player " + i + "</td><td>" + JSON.stringify(data[i]) + "</td></tr>");
-      table.append(tempEl)
+      var playerRow = jQuery("<tr><td>" + data[i]['dk_name'] + "</td><td>" + data[i]['dk_fppg'] + "</td><td>" + data[i]['minutes'] + "</td><td>" + data[i]['three_pointers'] + "</td></tr>");
+      table.append(playerRow)
     }
-
   };
 
   //Methods placed here will be considered "public" and can be acessed through the global namespace
@@ -51,7 +50,6 @@ jQuery(document).ready(function() {
         if(stats.length > 0){
           //Send the data off to our class DfsNba and public method buildTable
           DfsNba.buildTable(stats);
-
           //Once processing is complete go ahead and show the table (it's initially hidden)
           jQuery('#dfs-nba-table').show();
         }
