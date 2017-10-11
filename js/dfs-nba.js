@@ -8,7 +8,7 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var tableHeader = jQuery("<tr class='nba-table-header' id='draftkings-nba'><td class='player-name'>" + "Player Name" +
+    var tableHeader = jQuery("<thead class='nba-table-header' id='draftkings-nba'><td class='player-name'>" + "Player Name" +
                             "</td><td id='nba-pos'>" + "POS" +
                             "</td><td>" + "Min" +
                             "</td><td>" + "Proj" +
@@ -28,7 +28,7 @@ var DfsNba = (function() {
                             "</td><td>" + "DBL" +
                             "</td><td>" + "TRP" +
                             "</td><td id='nba-game-info'>" + "Game" +
-                            "</td></tr>");
+                            "</td></thead>");
     table.append(tableHeader)
     for(var i=0; i < data.length; i++){
       let minutes = data[i]['minutes'];
@@ -158,6 +158,9 @@ jQuery(document).ready(function() {
           DfsNba.buildTable(stats);
           //Once processing is complete go ahead and show the table (it's initially hidden)
           jQuery('#dfs-nba-table').show();
+          // Make table sortable
+          var newTableObject = document.getElementById('dfs-nba-table');
+          sorttable.makeSortable(newTableObject)
         }
       },
       error: function(errorThrown){
