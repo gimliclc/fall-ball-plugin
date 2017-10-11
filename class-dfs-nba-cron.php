@@ -56,8 +56,15 @@ class DFS_NBA_Cron {
       }
       return $dvp_scraped;
     }
+    // Adjust URLs once season begins
     $dvp_pg = dvp_scrape('https://web.archive.org/web/20170310152146/http://www.rotowire.com/daily/nba/defense-vspos.php?site=FanDuel&astatview=season&pos=PG');
-    error_log(print_r($dvp_pg, TRUE));
+    $dvp_sg = dvp_scrape('https://web.archive.org/web/20170311074055/http://www.rotowire.com:80/daily/nba/defense-vspos.php?site=FanDuel&statview=season&pos=SG');
+    $dvp_sf = dvp_scrape('https://web.archive.org/web/20170311074050/http://www.rotowire.com:80/daily/nba/defense-vspos.php?site=FanDuel&statview=season&pos=SF');
+    $dvp_pf = dvp_scrape('https://web.archive.org/web/20170311074044/http://www.rotowire.com:80/daily/nba/defense-vspos.php?site=FanDuel&statview=season&pos=PF');
+    $dvp_c = dvp_scrape('https://web.archive.org/web/20170311074029/http://www.rotowire.com:80/daily/nba/defense-vspos.php?site=FanDuel&statview=season&pos=C');
+    // Push scraped data to DvP array
+    array_push($dvp_arr,$dvp_pg,$dvp_sg,$dvp_sf,$dvp_pf,$dvp_c);
+    error_log(print_r($dvp_arr, TRUE));
     // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
     $home_scraped = array();
