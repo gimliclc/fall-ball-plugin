@@ -33,18 +33,14 @@ class DFS_NBA_Cron {
       foreach($dvp_rows_result as $row){
         $dvp_tds = $dvp_xpath->query($td_query, $row);
         $teamNameNode = $dvp_tds->item(0);
-        $seasonDvp = $dvp_tds->item(2);
-        $lastFiveDvp = $dvp_tds->item(3);
-        $lastTenDvp = $dvp_tds->item(4);
+        $vsPos = $dvp_tds->item(1);
         // Avoids wayback machine text
-        $dvp_obj = array(
-          "team" => $teamNameNode->nodeValue,
-          "seasonDvp" => (int)$seasonDvp->nodeValue,
-          "lastFiveDvp" => (int)$lastFiveDvp->nodeValue,
-          "lastTenDvp" => (int)$lastTenDvp->nodeValue
-        );
-          $dvp_arr[] = $dvp_obj;
-
+        if (strpos($teamNameNode->nodeValue, 'captures') !== false){}
+        // Checks to make sure response is alphanumeric (avoids blanks)
+        elseif(preg_match("/[a-z]/i", $teamNameNode->nodeValue)){
+          $dvp_arr[] = $teamNameNode->nodeValue;
+        }
+        else { }
       }
       return $dvp_arr;
     }
@@ -94,7 +90,7 @@ class DFS_NBA_Cron {
         "assists" => (int)$home_player_tds->item(19)->nodeValue,
         "steals" => (int)$home_player_tds->item(20)->nodeValue,
         "blocks" => (int)$home_player_tds->item(21)->nodeValue,
-        "turnovers" => (int)$home_player_tds->item(14)->nodeValue
+        "turnovers" => $home_player_tds->item(14)->nodeValue
       );
       $home_scraped[] = $home_player_obj;
 
