@@ -6,16 +6,8 @@ class DFS_NBA_Cron {
   public static function load_stats() {
     // create separate arrays for home and away to be accessed later
     // using the Fanduel data to push to final result_arr
-    $home_result_arr1 = array();
-    $home_result_arr2 = array();
-    $home_result_arr3 = array();
-    $home_result_arr4 = array();
-    $home_result_arr5 = array();
-    $away_result_arr1 = array();
-    $away_result_arr2 = array();
-    $away_result_arr3 = array();
-    $away_result_arr4 = array();
-    $away_result_arr5 = array();
+    $home_result_arr = array();
+    $away_result_arr = array();
     $result_arr = array();
     $dvp_arr = array();
 
@@ -64,7 +56,6 @@ class DFS_NBA_Cron {
     $dvp_c = dvp_scrape('https://web.archive.org/web/20170311074029/http://www.rotowire.com:80/daily/nba/defense-vspos.php?site=FanDuel&statview=season&pos=C');
     // Push scraped data to DvP array
     array_push($dvp_arr,$dvp_pg,$dvp_sg,$dvp_sf,$dvp_pf,$dvp_c);
-    error_log(print_r($dvp_arr, TRUE));
     // create function to scrape home stats pages
     function home_load_stats($url_to_scrape){
     $home_scraped = array();
@@ -116,12 +107,12 @@ class DFS_NBA_Cron {
     }
     return $home_scraped;
   }
-    $home_result_arr1[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
-    $home_result_arr2[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
-    $home_result_arr3[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
-    $home_result_arr4[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
-    $home_result_arr5[] = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
-
+    $home_result_1 = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/Home");
+    $home_result_2 = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/Home");
+    $home_result_3 = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/Home");
+    $home_result_4 = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/Home");
+    $home_result_5 = home_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/Home");
+    array_push($home_result_arr,$home_result_1,$home_result_2,$home_result_3,$home_result_4,$home_result_5);
     // create function to process away stats pages
     function away_load_stats($url_to_scrape){
     $away_scraped = array();
@@ -173,11 +164,12 @@ class DFS_NBA_Cron {
     }
     return $away_scraped;
   }
-    $away_result_arr1[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
-    $away_result_arr2[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
-    $away_result_arr3[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
-    $away_result_arr4[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
-    $away_result_arr5[] = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+    $away_result_1 = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/1/away");
+    $away_result_2 = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/2/away");
+    $away_result_3 = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/3/away");
+    $away_result_4 = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/4/away");
+    $away_result_5 = away_load_stats("https://basketball.realgm.com/nba/stats/2017/Averages/All/points/All/desc/5/away");
+    array_push($away_result_arr,$away_result_1,$away_result_2,$away_result_3,$away_result_4,$away_result_5);
     // create function to handle scraping of CSVs
     function load_csvs($csv_to_scrape) {
       $csv_arr = array();
@@ -230,15 +222,15 @@ class DFS_NBA_Cron {
       $found_fd_player = selectByFdId($fd_result_arr, $player[0]);
       $found_yahoo_player = selectByYahooId($y_result_arr, $player[0]);
           if ($player[1] == "Home") {
-              $found_player = selectById($home_result_arr1[0], $player[0]);
+              $found_player = selectById($home_result_arr[0], $player[0]);
               if ($found_player == "X"){
-                $found_player = selectById($home_result_arr2[0], $player[0]);
+                $found_player = selectById($home_result_arr[1], $player[0]);
                 if ($found_player == "X"){
-                  $found_player = selectById($home_result_arr3[0], $player[0]);
+                  $found_player = selectById($home_result_arr[2], $player[0]);
                   if ($found_player == "X"){
-                    $found_player = selectById($home_result_arr4[0], $player[0]);
+                    $found_player = selectById($home_result_arr[3], $player[0]);
                     if ($found_player == "X"){
-                      $found_player = selectById($home_result_arr5[0], $player[0]);
+                      $found_player = selectById($home_result_arr[4], $player[0]);
                     }
                   }
                 }
@@ -503,15 +495,15 @@ class DFS_NBA_Cron {
             $result_arr[] = $found_home_player_obj;
           }
           else {
-            $found_player = selectById($away_result_arr1[0], $player[0]);
+            $found_player = selectById($away_result_arr[0], $player[0]);
             if ($found_player == "X"){
-              $found_player = selectById($away_result_arr2[0], $player[0]);
+              $found_player = selectById($away_result_arr[1], $player[0]);
               if ($found_player == "X"){
-                $found_player = selectById($away_result_arr3[0], $player[0]);
+                $found_player = selectById($away_result_arr[2], $player[0]);
                 if ($found_player == "X"){
-                  $found_player = selectById($away_result_arr4[0], $player[0]);
+                  $found_player = selectById($away_result_arr[3], $player[0]);
                   if ($found_player == "X"){
-                    $found_player = selectById($away_result_arr5[0], $player[0]);
+                    $found_player = selectById($away_result_arr[4], $player[0]);
                   }
                 }
               }
