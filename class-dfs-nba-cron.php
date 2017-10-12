@@ -781,7 +781,6 @@ class DFS_NBA_Cron {
           $result_arr[] = $found_away_player_obj;
         }
         }
-    error_log(print_r($result_arr, TRUE));
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
