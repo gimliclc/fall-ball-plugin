@@ -124,7 +124,7 @@ var DfsNba = (function() {
             let turnovers = (parseFloat(turnovers_per_min) * parseFloat(minutes)).toFixed(1);
             // Calculate player projection
             let y_proj = (parseFloat(points) + (parseFloat(data[i]['rebounds']) * 1.2) + (parseFloat(data[i]['assists']) * 1.5) + (parseFloat(data[i]['steals']) * 3) + (parseFloat(data[i]['blocks']) * 3) + (parseFloat(data[i]['turnovers']) * (-1))).toFixed(1);
-            let y_value = ((y_proj) / ((parseFloat(data[i]['y_price'])) / 1000)).toFixed(1);
+            let y_value = ((y_proj) / ((parseFloat(data[i]['y_price'])))).toFixed(1);
             // Assign each player row
             var y_playerRow = jQuery("<tr id='yahoo-nba'><td class='player-name'>" + data[i]['dk_name'] + "</td><td>" + data[i]['team'] + "</td><td>" + data[i]['opponent'] + "</td><td id='nba-pos'>" + data[i]["y_position"] + "</td><td>" + minutes + "</td><td>" + y_proj + "</td><td id='nba-price'>" + "$" + data[i]['y_price'] + "</td><td>" + y_value + "</td><td id='nba-inj'>" + data[i]['injured'] + "</td><td id='nba-note'>" + data[i]['injured note'] + "</td><td>" + "DvP" + "</td><td>" + points + "</td><td>" + rebounds + "</td><td>" + assists + "</td><td>" + steals + "</td><td>" + blocks + "</td><td>" + turnovers + "</td><td id='nba-game-info'>" + data[i]['game_info'] + "</td></tr>");
             YtableHeader.append(y_playerRow);
