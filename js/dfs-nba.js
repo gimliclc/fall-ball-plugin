@@ -8,13 +8,14 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var DKtableHeader = jQuery("<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
-                            "</td><td id='nba-pos' title='Player's team'>" + "Team" +
+    var DKtableHeader = jQuery("<table id='nba-table' class='sortable'>" +
+                            "<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
+                            "</td><td id='nba-pos' class='nba-mobile-hide' title='Player's team'>" + "Team" +
                             "</td><td id='nba-pos' title='Opponent'>" + "Opp" +
                             "</td><td id='nba-pos' title='Draftkings position'>" + "POS" +
-                            "</td><td title='Projected minutes'>" + "Min" +
+                            "</td><td title='Projected minutes' class='nba-mobile-hide'>" + "Min" +
                             "</td><td title='Projected fantasy points'>" + "Proj" +
-                            "</td><td id='nba-price' title='Draftkings cost'>" + "Price" +
+                            "</td><td id='nba-price' title='Draftkings cost' class='nba-mobile-hide'>" + "Price" +
                             "</td><td title='Projected value (Over 5.5x is good)'>" + "Val" +
                             "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" +
                             "</td><td id='nba-note' title='Player note'>" + "Note" +
@@ -83,7 +84,7 @@ var DfsNba = (function() {
         trp_dbl_odds = dbl_comparison_arr[0];
       }
       // Calculate player projection
-      let proj = (parseFloat(points)+
+      let dk_proj = (parseFloat(points)+
                   (parseFloat(data[i]['three_pointers'])*0.5)+
                   (parseFloat(data[i]['rebounds'])*1.25)+
                   (parseFloat(data[i]['assists'])*1.5)+
@@ -92,16 +93,16 @@ var DfsNba = (function() {
                   (parseFloat(data[i]['turnovers'])*(-0.5))+
                   (parseFloat(dbl_dbl_odds)*1.5)+
                   (parseFloat(trp_dbl_odds)*3)).toFixed(1);
-      let value = ((proj) / ((parseFloat(data[i]['dk_price']))/1000)).toFixed(1);
+      let dk_value = ((dk_proj) / ((parseFloat(data[i]['dk_price']))/1000)).toFixed(1);
       // Assign each player row
-      var playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
+      var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
                               "</td><td>" + data[i]['team'] +
                               "</td><td>" + data[i]['opponent'] +
                               "</td><td id='nba-pos'>" + data[i]['dk_position'] +
                               "</td><td>" + minutes +
-                              "</td><td>" + proj +
+                              "</td><td>" + dk_proj +
                               "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
-                              "</td><td>" + value +
+                              "</td><td>" + dk_value +
                               "</td><td id='nba-inj'>" + data[i]['injured'] +
                               "</td><td id='nba-note'>" + data[i]['injured note'] +
                               "</td><td>" + "DvP" +
@@ -113,13 +114,11 @@ var DfsNba = (function() {
                               "</td><td>" + turnovers +
                               "</td><td id='nba-game-info'>" + data[i]['game_info'] +
                               "</td></tr>");
-        // Turn row red if player is out or minutes 0
-        if (data[i]['injured'] === "O"){
-
-        }
-        console.log(data[i]['injured']);
-      table.append(playerRow)
+      table.append(dk_playerRow)
+      var DKtablefooter = jQuery("</table>");
+      table.append(DKtablefooter);
     }
+
   };
 
   //Methods placed here will be considered "public" and can be acessed through the global namespace
@@ -158,9 +157,10 @@ jQuery(document).ready(function() {
           DfsNba.buildTable(stats);
           //Once processing is complete go ahead and show the table (it's initially hidden)
           jQuery('#dfs-nba-table').show();
-          var newTableObject = document.getElementById('dfs-nba-table');
+          var newTableObject = document.getElementById('nba-table');
           sorttable.makeSortable(newTableObject)
         }
+
       },
       error: function(errorThrown){
         console.log(errorThrown);
