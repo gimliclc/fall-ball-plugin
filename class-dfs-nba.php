@@ -79,9 +79,9 @@ class DFS_NBA {
 	#jQuery is also listed as a dependency for our javascript file.
 	private static function init_js() {
                 wp_register_script('DFS_NBA_MAIN',DFS_NBA_URL.'js/dfs-nba.js',array('jquery'), false, true);
-                wp_register_script('SORTABLE',DFS_NBA_URL.'js/sorttable.js','', false, false);
+                wp_register_script('DATATABLES',DFS_NBA_URL.'js/datatables.min.js','', false, false);
                 wp_enqueue_script('DFS_NBA_MAIN');
-                wp_enqueue_script('SORTABLE');
+                wp_enqueue_script('DATATABLES');
   }
 
 	#Our plugin will be included on a page through a wordpress shortcode.
