@@ -69,7 +69,7 @@ class DFS_NBA {
 		if($dvp_arr === false){
 			$dvp_arr = array();
 		}
-		$manual_stats_arr = get_transient('dfs_nba_stat_updates');
+		$manual_stats_arr = get_transient('dfs_nba_stat_overrides');
 		if($manual_stats_arr === false){
 			$manual_stats_arr = array();
 		}
@@ -102,7 +102,8 @@ class DFS_NBA {
                         $current_updates_arr = array();
                 }
 
-                $update_obj = json_decode($_POST['player_update'],true);
+                //$update_obj = json_decode($_POST['player_update'],true);
+                $update_obj = $_POST['player_update'];
                 $player_id = $update_obj["playerID"];
                 if(is_null($player_id)){
                         wp_die();
@@ -117,22 +118,37 @@ class DFS_NBA {
                 $player_blocks = $update_obj["blocks"];
                 $player_turnovers = $update_obj["turnovers"];
                 $player_injured = $update_obj["injured"];
-                $player_injured_note = $update_obj["injured note"];
+                $player_injured_note = $update_obj["injured_note"];
 
-                $has_data = is_null($player_minutes)
-                        || is_null($player_field_goals)
-                        || is_null($player_three_pointers)
-                        || is_null($player_free_throws)
-                        || is_null($player_rebounds)
-                        || is_null($player_assists)
-                        || is_null($player_steals)
-                        || is_null($player_blocks)
-                        || is_null($player_turnovers)
-                        || is_null($player_injured)
-                        || is_null($player_injured_note);
+                $has_data = !is_null($player_minutes)
+                        || !is_null($player_field_goals)
+                        || !is_null($player_three_pointers)
+                        || !is_null($player_free_throws)
+                        || !is_null($player_rebounds)
+                        || !is_null($player_assists)
+                        || !is_null($player_steals)
+                        || !is_null($player_blocks)
+                        || !is_null($player_turnovers)
+                        || !is_null($player_injured)
+                        || !is_null($player_injured_note);
 
                 if($has_data){
-                        $current_updates_arr[$player_id] = $update_obj;
+			$result_arr = array(
+				"playerID" => $player_id,
+				"minutes" => $player_minutes,
+				"field_goals" => $player_field_goals,
+				"three_pointers" => $player_three_pointers,
+				"free_throws" => $player_free_throws,
+				"rebounds" => $player_rebounds,
+				"assists" => $player_assists,
+				"steals" => $player_steals,
+				"blocks" => $player_blocks,
+				"turnovers" => $player_turnovers,
+				"injured" => $player_injured,
+				"injured_note" => $player_injured_note
+			);
+
+                        $current_updates_arr[$player_id] = $result_arr;
                 } else {
                         unset($current_updates_arr[$player_id]);
                 }
