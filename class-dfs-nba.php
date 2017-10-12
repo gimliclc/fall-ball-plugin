@@ -77,9 +77,11 @@ class DFS_NBA {
 	#Tell wordpress to include our custom javascript file.  The url for the javascript file references the DFS_NBA_URL defined
 	#in the configuration file
 	#jQuery is also listed as a dependency for our javascript file.
-  private static function init_js() {
-		wp_register_script('DFS_NBA_MAIN',DFS_NBA_URL.'js/dfs-nba.js',array('jquery'), false, true);
-		wp_enqueue_script('DFS_NBA_MAIN');
+	private static function init_js() {
+                wp_register_script('DFS_NBA_MAIN',DFS_NBA_URL.'js/dfs-nba.js',array('jquery'), false, true);
+                wp_register_script('SORTABLE',DFS_NBA_URL.'js/sorttable.js','', false, false);
+                wp_enqueue_script('DFS_NBA_MAIN');
+                wp_enqueue_script('SORTABLE');
   }
 
 	#Our plugin will be included on a page through a wordpress shortcode.
@@ -91,7 +93,7 @@ class DFS_NBA {
 
 	#Processes the html for the shortcode.  In our case we are just outputting a simple container to be filled in by javascript
 	public static function dfs_nba_shortcode($atts) {
-		return '<table id="dfs-nba-table" class="sortable"><tr><td>Projections Loading</td></tr></table>';
+		return '<button class="fanduel-button">Fanduel</button>' . '<button class="draftkings-button">Draftkings</button>' . '<button class="yahoo-button">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loading</h2></div>';
 	}
 
 	#This will let our javascript know where to make a ajax call through wordpress.  We would post our ajax action to get a response
@@ -105,12 +107,18 @@ class DFS_NBA {
 
 	#Creates a javascript file that will let the client know the url for this plugin
 	public static function dfs_nba_url() {
-		$html = '<script type="text/javascript">';
-		$html .= 'var dfsNbaPluginUrl = "' . DFS_NBA_URL . '";';
-		$html .= '</script>';
+                $user = wp_get_current_user();
+                $allowed_roles = array('editor', 'administrator', 'author');
+                $user_admin_roles_arr = array_intersect($allowed_roles, $user->roles);
+                $is_plugin_admin = !empty($user_admin_roles_arr) ? 'true' : 'false';
 
-		echo $html;
-	}
+                $html = '<script type="text/javascript">';
+                $html .= 'var dfsNbaPluginUrl = "' . DFS_NBA_URL . '";';
+                $html .= 'var dfsIsPluginAdmin = ' . $is_plugin_admin . ';';
+                $html .= '</script>';
+
+                echo $html;
+        }
 
 	#Adds css files to be included in pages that reference this plugin
 	public static function init_css() {
