@@ -23,21 +23,18 @@ select {
   font-weight: bold;
   color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #F46C22;
 }
 
 .fd-nba-table-header {
   font-weight: bold;
   color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #5cb85c;
 }
 
 .y-nba-table-header {
   font-weight: bold;
   color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #7B0099;
 }
 
 .redRow {
@@ -67,8 +64,13 @@ select {
   margin-right: 5%;
   width: 28%;
 }
+tbody {
+      border-top: 2px solid #F46C22;
+}
 .dataTables_scrollHead {
-  height: 20px;
+  height: 30px;
+  line-height:30px;
+  background-color: white;
 }
 
 @media only screen and (max-width: 700px) {
