@@ -4,16 +4,22 @@
         table-layout: fixed;
 }
 
-.nba-table-header {
+.dk-nba-table-header {
   font-weight: bold;
-  background-color: #6495ED;
-  color: white;
+  background-color: #000;
+  color: orange;
   cursor: pointer;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 .player-name {
   width: 200px;
   padding-left: 10px;
+}
+
+.redRow {
+  background-color: red;
 }
 
 #nba-pos {

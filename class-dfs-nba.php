@@ -62,6 +62,10 @@ class DFS_NBA {
 		if($result_arr === false){
 			$result_arr = array();
 		}
+		$dvp_arr = get_transient('dfs_nba_dvp');
+		if($dvp_arr === false){
+			$dvp_arr = array();
+		}
 
 		#the echo command will write to the current stream.  In our case echo will output our data
 		echo json_encode($result_arr);
@@ -87,7 +91,7 @@ class DFS_NBA {
 
 	#Processes the html for the shortcode.  In our case we are just outputting a simple container to be filled in by javascript
 	public static function dfs_nba_shortcode($atts) {
-		return '<table id="dfs-nba-table" style="display:none;" class="dfs-nba-table"><tr><td>Empty DFS NBA Table</td></tr></table>';
+		return '<table id="dfs-nba-table" class="sortable"><tr><td>Projections Loading</td></tr></table>';
 	}
 
 	#This will let our javascript know where to make a ajax call through wordpress.  We would post our ajax action to get a response

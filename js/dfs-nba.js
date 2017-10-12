@@ -8,12 +8,12 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var DKtableHeader = jQuery("<thead class='nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
+    var DKtableHeader = jQuery("<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
                             "</td><td id='nba-pos' title='Draftkings position'>" + "POS" +
                             "</td><td title='Projected minutes'>" + "Min" +
                             "</td><td title='Projected fantasy points'>" + "Proj" +
                             "</td><td id='nba-price' title='Draftkings cost'>" + "Price" +
-                            "</td><td title='Returned value (Over 5.5x is good)'>" + "Val" +
+                            "</td><td title='Projected value (Over 5.5x is good)'>" + "Val" +
                             "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" +
                             "</td><td id='nba-note' title='Player note'>" + "Note" +
                             "</td><td title='Defense vs position'>" + "DvP" +
@@ -27,7 +27,7 @@ var DfsNba = (function() {
                             "</td><td title='Projected turnovers'>" + "TO" +
                             "</td><td title='Projected odds of a double double'>" + "DBL" +
                             "</td><td title='Projected odds of a triple double'>" + "TRP" +
-                            "</td><td id='nba-game-info'>" + "Game" +
+                            "</td><td id='nba-game-info'>" + "Game (Draftkings)" +
                             "</td></thead>");
     table.append(DKtableHeader)
     for(var i=0; i < data.length; i++){
@@ -98,7 +98,7 @@ var DfsNba = (function() {
       // Assign each player row
       var playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
                               "</td><td id='nba-pos'>" + data[i]['dk_position'] +
-                              "</td><td>" + data[i]['minutes'] +
+                              "</td><td>" + minutes +
                               "</td><td>" + proj +
                               "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
                               "</td><td>" + value +
@@ -117,6 +117,11 @@ var DfsNba = (function() {
                               "</td><td>" + trp_dbl_odds.toFixed(1) +
                               "</td><td id='nba-game-info'>" + data[i]['game_info'] +
                               "</td></tr>");
+        // Turn row red if player is out or minutes 0
+        if (data[i]['injured'] === "O"){
+
+        }
+        console.log(data[i]['injured']);
       table.append(playerRow)
     }
   };
@@ -143,7 +148,6 @@ jQuery(document).ready(function() {
       },
       success:function(data) {
         //If the server responsed successfully (no 500 errors) this method will execute
-
         var stats = [];
 
         //Processes through each item in the returned data
