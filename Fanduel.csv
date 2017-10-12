@@ -1,4 +1,4 @@
-playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,FanduelNumber,InitPlayerName,InitPlayerID,AtTeam
+playerID,homeAway,name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,FanduelNumber,InitPlayerName,InitPlayerID,AtTeam
 759,Home,Russell Westbrook,18721-9642,PG,Russell,Russell Westbrook,Westbrook,59.03499756,80,13900,DEN@OKC,OKC,DEN,O,Rest,9642,Russell Westbrook,759,@OKC
 1598,Home,James Harden,18721-9644,SG,James,James Harden,Harden,53.72874756,80,11700,MIN@HOU,HOU,MIN,,,9644,James Harden,1598,@HOU
 13305,Away,Anthony Davis,18721-15755,PF,Anthony,Anthony Davis,Davis,49.81733398,75,11300,NO@POR,NO,POR,O,Knee,15755,Isaiah Thomas,4711,@NO
@@ -269,7 +269,7 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 80992,Away,Gary Payton II,18721-58519,PG,Gary,Gary Payton II,Payton II,7.6,5,3500,MIL@BOS,MIL,BOS,,,58519,Luc Mbah a Moute,786,@MIL
 939,Home,Alan Anderson,18721-21665,SG,Alan,Alan Anderson,Anderson,4.343333435,30,3500,SAC@LAC,LAC,SAC,,,21665,Glenn Robinson,28500,@LAC
 6644,Home,Derrick Williams,18721-14500,PF,Derrick,Derrick Williams,Williams,10.17755127,49,3500,TOR@CLE,CLE,TOR,,,14500,Mindaugas Kuzminskas,9729,@CLE
-,Away,Georgios Papagiannis,18721-70821,C,Georgios,Georgios Papagiannis,Papagiannis,12.24000015,20,3500,SAC@LAC,SAC,LAC,,,70821,Brandon Jennings,1609,@SAC
+32198,Away,Georgios Papagiannis,18721-70821,C,Georgios,Georgios Papagiannis,Papagiannis,12.24000015,20,3500,SAC@LAC,SAC,LAC,,,70821,Brandon Jennings,1609,@SAC
 42192,Away,Thon Maker,18721-70820,C,Thon,Thon Maker,Maker,7.653571538,56,3500,MIL@BOS,MIL,BOS,,,70820,Lance Thomas,1948,@MIL
 52816,Away,Juancho Hernangomez,18721-70822,PF,Juancho,Juancho Hernangomez,Hernangomez,9.754999797,60,3500,DEN@OKC,DEN,OKC,,,70822,Beno Udrih,394,@DEN
 28823,Away,K.J. McDaniels,18721-15532,SG,K.J.,K.J. McDaniels,McDaniels,7.202083588,48,3500,BKN@CHI,BKN,CHI,,,15532,Ian Mahinmi,264,@BKN
@@ -301,12 +301,12 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 26575,Home,Alex Abrines,18721-40206,SG,Alex,Alex Abrines,Abrines,9.067164179,67,3500,DEN@OKC,OKC,DEN,,,40206,Shaun Livingston,377,@OKC
 6088,Away,Hollis Thompson,18721-15631,SG,Hollis,Hollis Thompson,Thompson,10.82249985,40,3500,NO@POR,NO,POR,,,15631,Anthony Morrow,864,@NO
 24257,Away,Archie Goodwin,18721-23824,PG,Archie,Archie Goodwin,Goodwin,10.72857121,14,3500,BKN@CHI,BKN,CHI,,,23824,Thomas Robinson,2383,@BKN
-24092,Home,Raulzinho Neto,18721-40208,PG,Raul,Raul Neto,Neto,5.6,40,3500,SA@UTA,UTA,SA,O,Ankle,40208,,,@UTA
+24092,Home,Raulzinho Neto,18721-40208,PG,Raul,Raul Neto,Neto,5.6,40,3500,SA@UTA,UTA,SA,O,Ankle,40208,Ben Simmons,41364,@UTA
 24383,Home,Joffrey Lauvergne,18721-40209,C,Joffrey,Joffrey Lauvergne,Lauvergne,11.26666702,69,3500,BKN@CHI,CHI,BKN,,,40209,Mike Dunleavy,244,@CHI
 251,Home,Anderson Varejao,18721-9490,C,Anderson,Anderson Varejao,Varejao,4.957142966,14,3500,LAL@GS,GS,LAL,,,9490,Anthony Brown,6998,@GS
 24266,Away,Alex Poythress,18721-23826,SF,Alex,Alex Poythress,Poythress,16.51999969,5,3500,PHI@NY,PHI,NY,,,23826,Chasson Randle,24199,@PHI
 24661,Home,Jerami Grant,18721-23831,SF,Jerami,Jerami Grant,Grant,11.52784826,79,3500,DEN@OKC,OKC,DEN,,,23831,Gerald Green,354,@OKC
-383,Away,Kris Humphries,18721-9501,PF,Kris,Kris Humphries,Humphries,10.41999956,55,3500,ATL@IND,ATL,IND,,,9501,Wayne Selden,24687,@ATL
+383,Away,Kris Humphries,18721-9501,PF,Kris,Kris Humphries,Humphries,10.41999956,55,3500,ATL@IND,ATL,IND,,,9501,Wayne Selden Jr.,24687,@ATL
 80940,Home,Patrick McCaw,18721-58658,SG,Patrick,Patrick McCaw,McCaw,7.931428746,70,3500,LAL@GS,GS,LAL,,,58658,Denzel Valentine,44077,@GS
 42082,Away,Rashad Vaughn,18721-58661,SG,Rashad,Rashad Vaughn,Vaughn,6.367499924,40,3500,MIL@BOS,MIL,BOS,,,58661,Cameron Payne,57476,@MIL
 787,Home,C.J. Watson,18721-9525,SG,C.J.,C.J. Watson,Watson,9.706451416,62,3500,DET@ORL,ORL,DET,,,9525,Omri Casspi,1618,@ORL
@@ -331,7 +331,7 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 276,Away,Devin Harris,18721-9613,PG,Devin,Devin Harris,Harris,12.56031727,63,3500,DAL@MEM,DAL,MEM,,,9613,Aaron Brooks,53,@DAL
 7109,Away,Terrence Jones,18721-15757,PF,Terrence,Terrence Jones,Jones,21.84629539,54,3500,MIL@BOS,MIL,BOS,,,15757,Mario Hezonja,24763,@MIL
 24155,Home,Kyle Wiltjer,18721-15767,PF,Kyle,Kyle Wiltjer,Wiltjer,2.384615385,13,3500,MIN@HOU,HOU,MIN,,,15767,Corey Brewer,43,@HOU
-54846,Home,Stephen Zimmerman,18721-66966,C,Stephen,Stephen Zimmerman Jr.,Zimmerman Jr.,4.322222392,18,3500,DET@ORL,ORL,DET,,,66966,Dewayne Dedmon,28991,@ORL
+,Home,Stephen Zimmerman,18721-66966,C,Stephen,Stephen Zimmerman Jr.,Zimmerman Jr.,4.322222392,18,3500,DET@ORL,ORL,DET,,,66966,Dewayne Dedmon,28991,@ORL
 377,Home,Shaun Livingston,18721-9643,PG,Shaun,Shaun Livingston,Livingston,10.95866699,75,3500,LAL@GS,GS,LAL,,,9643,Joakim Noah,50,@GS
 37,Home,Jeff Green,18721-9648,SF,Jeff,Jeff Green,Green,15.09130506,69,3500,DET@ORL,ORL,DET,O,Back,9648,Cristiano Felicio,24840,@ORL
 292,Home,Nick Collison,18721-9649,PF,Nick,Nick Collison,Collison,4.331579108,19,3500,DEN@OKC,OKC,DEN,,,9649,Pascal Siakam,81426,@OKC
@@ -402,7 +402,7 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 23259,Home,Josh Huestis,18721-16191,SF,Josh,Josh Huestis,Huestis,13.30000019,1,3500,DEN@OKC,OKC,DEN,,,16191,Lavoy Allen,9730,@OKC
 10813,Away,Andrew Nicholson,18721-17218,PF,Andrew,Andrew Nicholson,Nicholson,5.545945863,37,3500,BKN@CHI,BKN,CHI,,,17218,Sasha Vujacic,393,@BKN
 24199,Home,Chasson Randle,18721-16197,PG,Chasson,Chasson Randle,Randle,8.695999756,25,3500,PHI@NY,NY,PHI,,,16197,Anthony Bennett,24660,@NY
-24158,Home,Michael Carter-Williams,18721-16201,PG,Michael,Michael Carter-Williams,Carter-Williams,15.96818126,44,3500,BKN@CHI,CHI,BKN,,,16201,,,@CHI
+24158,Home,Michael Carter-Williams,18721-16201,PG,Michael,Michael Carter-Williams,Carter-Williams,15.96818126,44,3500,BKN@CHI,CHI,BKN,,,16201,Quincy Pondexter,2317,@CHI
 24156,Home,Rakeem Christmas,18721-16202,C,Rakeem,Rakeem Christmas,Christmas,4.903448171,29,3500,ATL@IND,IND,ATL,,,16202,Wesley Johnson,4081,@IND
 23478,Home,Doug McDermott,18721-18256,SF,Doug,Doug McDermott,McDermott,13.51212103,66,3500,DEN@OKC,OKC,DEN,O,Knee,18256,Omer Asik,807,@OKC
 9345,Home,Jordan McRae,18721-16230,SG,Jordan,Jordan McRae,McRae,6.829729647,37,3500,TOR@CLE,CLE,TOR,,,16230,Miles Plumlee,3654,@CLE
@@ -413,8 +413,8 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 54842,Away,Henry Ellenson,18721-66455,PF,Henry,Henry Ellenson,Ellenson,5,18,3500,DET@ORL,DET,ORL,,,66455,Tomas Satoransky,24374,@DET
 24195,Away,Norman Powell,18721-16293,SG,Norman,Norman Powell,Powell,13.21866699,75,3500,TOR@CLE,TOR,CLE,,,16293,Salah Mejri,24116,@TOR
 28991,Away,Dewayne Dedmon,18721-16301,C,Dewayne,Dewayne Dedmon,Dedmon,15.64799967,75,3500,SA@UTA,SA,UTA,,,16301,Maurice Ndour,57363,@SA
-,Home,Festus Ezeli,18721-16331,C,Festus,Festus Ezeli,Ezeli,16.91304348,46,3500,NO@POR,POR,NO,O,Knee,16331,Kyle Anderson,24265,@POR
-,Home,Wayne Selden Jr.,18721-49115,SG,Wayne,Wayne Selden Jr.,Selden Jr.,7.692307692,13,3500,DAL@MEM,MEM,DAL,,,49115,Kevon Looney,41494,@MEM
+5962,Home,Festus Ezeli,18721-16331,C,Festus,Festus Ezeli,Ezeli,16.91304348,46,3500,NO@POR,POR,NO,O,Knee,16331,Kyle Anderson,24265,@POR
+24687,Home,Wayne Selden Jr.,18721-49115,SG,Wayne,Wayne Selden Jr.,Selden Jr.,7.692307692,13,3500,DAL@MEM,MEM,DAL,,,49115,Kevon Looney,41494,@MEM
 28956,Away,Darrun Hilliard,18721-16348,SG,Darrun,Darrun Hilliard,Hilliard,5.436842266,38,3500,DET@ORL,DET,ORL,,,16348,James McAdoo,9304,@DET
 33381,Home,Domas Sabonis,18721-59358,PF,Domantas,Domantas Sabonis,Sabonis,12.475,80,3500,DEN@OKC,OKC,DEN,,,59358,Raulzinho Neto,24092,@OKC
 44077,Home,Denzel Valentine,18721-24546,SG,Denzel,Denzel Valentine,Valentine,10.37142835,56,3500,BKN@CHI,CHI,BKN,,,24546,Jordan Mickey,28236,@CHI
@@ -453,7 +453,7 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 ,Away,,,,,,,,,,,,,,,#VALUE!,Deyonta Davis,73162,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Jordan Hill,1603,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Alonzo Gee,1657,@
-,Away,,,,,,,,,,,,,,,#VALUE!,Stephen Zimmerman,54846,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Stephen Zimmerman Jr.,54846,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Cole Aldrich,2159,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Udonis Haslem,682,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Diamond Stone,41493,@
@@ -485,9 +485,9 @@ playerID,homeAway,Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Pla
 ,Away,,,,,,,,,,,,,,,#VALUE!,Gary Neal,10568,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Elijah Millsap,8158,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,Patricio Garino,24744,@
-,Away,,,,,,,,,,,,,,,#VALUE!,,,@
-,Away,,,,,,,,,,,,,,,#VALUE!,,,@
-,Away,,,,,,,,,,,,,,,#VALUE!,,,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Georgios Papagiannis,32198,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Chris Bosh,451,@
+,Away,,,,,,,,,,,,,,,#VALUE!,Festus Ezeli,5962,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,,,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,,,@
 ,Away,,,,,,,,,,,,,,,#VALUE!,,,@

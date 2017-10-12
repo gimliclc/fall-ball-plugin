@@ -1,4 +1,4 @@
-playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,InitPlayerName,InitPlayerID,Away?
+playerID,homeAway,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,InitPlayerName,InitPlayerID,Away?
 759,Away,Russell Westbrook,PG,Russell Westbrook,13200,OKC@Orl 07:00PM ET,65.274,OKC,Russell Westbrook,759,@OKC
 13305,Home,Anthony Davis,PF/C,Anthony Davis,10800,Dal@NO 08:00PM ET,53.299,NO,James Harden,1598,@NO
 2195,Away,John Wall,PG,John Wall,10200,Was@LAC 10:30PM ET,48.944,Was,Isaiah Thomas,4711,@Was
@@ -157,7 +157,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 24265,Home,Kyle Anderson,SG,Kyle Anderson,3400,GS@SA 09:30PM ET,10.012,SA,Marcus Smart,24275,@SA
 28991,Home,Dewayne Dedmon,C,Dewayne Dedmon,3400,GS@SA 09:30PM ET,16.463,SA,Jeremy Lamb,22394,@SA
 24763,Home,Mario Hezonja,SF,Mario Hezonja,3300,OKC@Orl 07:00PM ET,9.627,Orl,Michael Kidd-Gilchrist,9290,@Orl
-,Home,Georgios Papagiannis,C,Georgios Papagiannis,3300,Uta@Sac 10:30PM ET,10.661,Sac,Jamal Murray,49976,@Sac
+32198,Home,Georgios Papagiannis,C,Georgios Papagiannis,3300,Uta@Sac 10:30PM ET,10.661,Sac,Jamal Murray,49976,@Sac
 1650,Home,Dante Cunningham,SF/PF,Dante Cunningham,3300,Dal@NO 08:00PM ET,14.763,NO,Robin Lopez,769,@NO
 52352,Away,"Kelly Oubre, Jr.",SG/SF,Kelly Oubre Jr.,3300,Was@LAC 10:30PM ET,12.354,Was,Gorgui Dieng,22403,@Was
 2152,Home,Patrick Patterson,PF,Patrick Patterson,3300,Cha@Tor 07:30PM ET,17.342,Tor,Ish Smith,3665,@Tor
@@ -189,7 +189,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 31122,Home,James Ennis,SG/SF,James Ennis III,3000,Ind@Mem 08:00PM ET,14.862,Mem,Tony Allen,391,@Mem
 18948,Home,Troy Daniels,SG,Troy Daniels,3000,Ind@Mem 08:00PM ET,12.165,Mem,Arron Afflalo,54,@Mem
 22869,Away,Joe Young,SG,Joe Young,3000,Ind@Mem 08:00PM ET,3.793,Ind,Kelly Olynyk,8330,@Ind
-,Home,Wayne Selden Jr.,SG,Wayne Selden Jr.,3000,Ind@Mem 08:00PM ET,6.458,Mem,Willie Cauley-Stein,24287,@Mem
+24687,Home,Wayne Selden Jr.,SG,Wayne Selden Jr.,3000,Ind@Mem 08:00PM ET,6.458,Mem,Willie Cauley-Stein,24287,@Mem
 2537,Home,Chandler Parsons,SF,Chandler Parsons,3000,Ind@Mem 08:00PM ET,13.176,Mem,Jeff Green,37,@Mem
 28500,Away,Glenn Robinson,SF,Glenn Robinson III,3000,Ind@Mem 08:00PM ET,13.453,Ind,Timofey Mozgov,11008,@Ind
 9730,Away,Lavoy Allen,PF,Lavoy Allen,3000,Ind@Mem 08:00PM ET,10.023,Ind,Derrick Favors,2191,@Ind
@@ -213,7 +213,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 33381,Away,Domas Sabonis,PF/C,Domantas Sabonis,3000,OKC@Orl 07:00PM ET,13.521,OKC,Willy Hernangomez,37870,@OKC
 2912,Home,Damjan Rudez,PF,Damjan Rudez,3000,OKC@Orl 07:00PM ET,3.982,Orl,Sergio Rodriguez,85,@Orl
 292,Away,Nick Collison,C,Nick Collison,3000,OKC@Orl 07:00PM ET,4.391,OKC,Jodie Meeks,1644,@OKC
-,Home,Stephen Zimmerman Jr.,C,Stephen Zimmerman Jr.,3000,OKC@Orl 07:00PM ET,4.265,Orl,Joe Ingles,1683,@Orl
+54846,Home,Stephen Zimmerman Jr.,C,Stephen Zimmerman Jr.,3000,OKC@Orl 07:00PM ET,4.265,Orl,Joe Ingles,1683,@Orl
 4169,Away,Alec Burks,PG/SG,Alec Burks,3000,Uta@Sac 10:30PM ET,12.723,Uta,Devin Harris,276,@Uta
 24092,Away,Raulzinho Neto,PG,Raul Neto,3000,Uta@Sac 10:30PM ET,5.872,Uta,Rodney Stuckey,42,@Uta
 28245,Away,Dante Exum,PG,Dante Exum,3000,Uta@Sac 10:30PM ET,11.746,Uta,Alex Len,26866,@Uta
@@ -229,7 +229,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 30538,Home,Ron Baker,PG/SG,Ron Baker,3000,Mia@NY 07:30PM ET,9.165,NY,Tyler Ulis,52567,@NY
 24199,Home,Chasson Randle,PG,Chasson Randle,3000,Mia@NY 07:30PM ET,8.474,NY,Spencer Dinwiddie,30385,@NY
 393,Home,Sasha Vujacic,SG,Sasha Vujacic,3000,Mia@NY 07:30PM ET,5.375,NY,Bobby Portis,41433,@NY
-,Away,Chris Bosh,PF,Chris Bosh,3000,Mia@NY 07:30PM ET,0,Mia,Rajon Rondo,93,@Mia
+451,Away,Chris Bosh,PF,Chris Bosh,3000,Mia@NY 07:30PM ET,0,Mia,Rajon Rondo,93,@Mia
 682,Away,Udonis Haslem,PF,Udonis Haslem,3000,Mia@NY 07:30PM ET,5.859,Mia,Kyle O'Quinn,19543,@Mia
 6,Away,Josh McRoberts,PF,Josh McRoberts,3000,Mia@NY 07:30PM ET,13.523,Mia,"Larry Nance, Jr.",30624,@Mia
 2185,Away,Luke Babbitt,PF,Luke Babbitt,3000,Mia@NY 07:30PM ET,9.512,Mia,Garrett Temple,1757,@Mia
@@ -241,7 +241,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 794,Away,Jose Calderon,PG,Jose Calderon,3000,Atl@Phi 07:00PM ET,8.409,Atl,Patrick Patterson,2152,@Atl
 765,Home,Jerryd Bayless,PG,Jerryd Bayless,3000,Atl@Phi 07:00PM ET,21.333,Phi,Ian Clark,14156,@Phi
 2301,Away,Malcolm Delaney,PG,Malcolm Delaney,3000,Atl@Phi 07:00PM ET,11.757,Atl,Josh Huestis,23259,@Atl
-,Home,Ben Simmons,PG,Ben Simmons,3000,Atl@Phi 07:00PM ET,0,Phi,Amir Johnson,147,@Phi
+41364,Home,Ben Simmons,PG,Ben Simmons,3000,Atl@Phi 07:00PM ET,0,Phi,Amir Johnson,147,@Phi
 244,Away,Mike Dunleavy,SF,Mike Dunleavy,3000,Atl@Phi 07:00PM ET,10.289,Atl,James Ennis,31122,@Atl
 2193,Away,Ryan Kelly,SF,Ryan Kelly,3000,Atl@Phi 07:00PM ET,3.357,Atl,Dante Cunningham,1650,@Atl
 49891,Away,DeAndre' Bembry,SF,DeAndre' Bembry,3000,Atl@Phi 07:00PM ET,5.977,Atl,Jonathon Simmons,30740,@Atl
@@ -252,7 +252,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 24179,Home,Quinn Cook,PG,Quinn Cook,3000,Dal@NO 08:00PM ET,7.375,NO,Marcus Thornton,1634,@NO
 2279,Away,Manny Harris,SG,Manny Harris,3000,Dal@NO 08:00PM ET,5.313,Dal,Alec Burks,4169,@Dal
 59353,Away,Nicolas Brussino,SG,Nicolas Brussino,3000,Dal@NO 08:00PM ET,5.348,Dal,Paul Zipser,26506,@Dal
-,Home,Quincy Pondexter,SF,Quincy Pondexter,3000,Dal@NO 08:00PM ET,0,NO,Lance Stephenson,2196,@NO
+2317,Home,Quincy Pondexter,SF,Quincy Pondexter,3000,Dal@NO 08:00PM ET,0,NO,Lance Stephenson,2196,@NO
 24159,Away,Dorian Finney-Smith,SF,Dorian Finney-Smith,3000,Dal@NO 08:00PM ET,10.635,Dal,Raymond Felton,62,@Dal
 9346,Away,Dwight Powell,PF/C,Dwight Powell,3000,Dal@NO 08:00PM ET,14.967,Dal,Dante Exum,28245,@Dal
 2314,Home,Donatas Motiejunas,PF,Donatas Motiejunas,3000,Dal@NO 08:00PM ET,10.879,NO,JaVale McGee,773,@NO
@@ -301,12 +301,12 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 ,Away,,,,,,,,Shaun Livingston,377,@
 ,Away,,,,,,,,Anthony Morrow,864,@
 ,Away,,,,,,,,Thomas Robinson,2383,@
-,Away,,,,,,,,,,@
+,Away,,,,,,,,Ben Simmons,41364,@
 ,Away,,,,,,,,Mike Dunleavy,244,@
 ,Away,,,,,,,,Anthony Brown,6998,@
 ,Away,,,,,,,,Chasson Randle,24199,@
 ,Away,,,,,,,,Gerald Green,354,@
-,Away,,,,,,,,Wayne Selden,24687,@
+,Away,,,,,,,,Wayne Selden Jr.,24687,@
 ,Away,,,,,,,,Denzel Valentine,44077,@
 ,Away,,,,,,,,Cameron Payne,57476,@
 ,Away,,,,,,,,Omri Casspi,1618,@
@@ -402,7 +402,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 ,Away,,,,,,,,Lavoy Allen,9730,@
 ,Away,,,,,,,,Sasha Vujacic,393,@
 ,Away,,,,,,,,Anthony Bennett,24660,@
-,Away,,,,,,,,,,@
+,Away,,,,,,,,Quincy Pondexter,2317,@
 ,Away,,,,,,,,Wesley Johnson,4081,@
 ,Away,,,,,,,,Omer Asik,807,@
 ,Away,,,,,,,,Miles Plumlee,3654,@
@@ -453,7 +453,7 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 ,Away,,,,,,,,Deyonta Davis,73162,@
 ,Away,,,,,,,,Jordan Hill,1603,@
 ,Away,,,,,,,,Alonzo Gee,1657,@
-,Away,,,,,,,,Stephen Zimmerman,54846,@
+,Away,,,,,,,,Stephen Zimmerman Jr.,54846,@
 ,Away,,,,,,,,Cole Aldrich,2159,@
 ,Away,,,,,,,,Udonis Haslem,682,@
 ,Away,,,,,,,,Diamond Stone,41493,@
@@ -485,8 +485,8 @@ playerID,Away,Name,Position,Name,Salary,GameInfo,AvgPointsPerGame,teamAbbrev,Ini
 ,Away,,,,,,,,Gary Neal,10568,@
 ,Away,,,,,,,,Elijah Millsap,8158,@
 ,Away,,,,,,,,Patricio Garino,24744,@
-,Away,,,,,,,,,,@
-,Away,,,,,,,,,,@
+,Away,,,,,,,,Georgios Papagiannis,32198,@
+,Away,,,,,,,,Chris Bosh,451,@
 ,Away,,,,,,,,,,@
 ,Away,,,,,,,,,,@
 ,Away,,,,,,,,,,@
