@@ -4,6 +4,9 @@ defined( 'ABSPATH' ) or die( 'Error: Plugin cannot be called directly!' );
 
 class DFS_NBA_Cron {
   public static function load_stats() {
+	//Delete any manual overrides that were set since this is new data coming in
+	delete_transient('dfs_nba_stat_overrides');
+
     // create separate arrays for home and away to be accessed later
     // using the Fanduel data to push to final result_arr
     $home_result_arr = array();
@@ -501,7 +504,7 @@ class DFS_NBA_Cron {
             }
           }
             // Store in a FD array to be added to the DK data
-            $result_arr[] = $found_home_player_obj;
+            $result_arr[$found_home_player_obj["playerID"]] = $found_home_player_obj;
           }
           else {
             $found_player = selectById($away_result_arr[0], $player[0]);
@@ -778,7 +781,7 @@ class DFS_NBA_Cron {
           }
         }
           // Store in a FD array to be added to the DK data
-          $result_arr[] = $found_away_player_obj;
+          $result_arr[$found_away_player_obj["playerID"]] = $found_away_player_obj;
         }
         }
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.

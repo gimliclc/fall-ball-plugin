@@ -7,6 +7,7 @@ class DFS_NBA {
 	#We only want the initialization methods to be run once, so initially set this boolean to false and then change it to true once that process has started
 	#It defined as static so that this value is shared across every instance of this class.
 	private static $initiated = false;
+	private static $admin_roles = array('administrator');
 
 	#This method will run once wordpress has been initialized.  The code here will only run if it hasn't been processed yet.
   public static function init() {
@@ -60,14 +61,25 @@ class DFS_NBA {
 	#It will retrieve the transient "dfs_nba_stats" which is a temporarily cached data created from the cron job
 	#This cached data could also further processed if necessary
 	public static function dfs_nba_ajax_request(){
-		$result_arr =  get_transient('dfs_nba_stats');
-		if($result_arr === false){
-			$result_arr = array();
+		$stats_arr =  get_transient('dfs_nba_stats');
+		if($stats_arr === false){
+			$stats_arr = array();
 		}
 		$dvp_arr = get_transient('dfs_nba_dvp');
 		if($dvp_arr === false){
 			$dvp_arr = array();
 		}
+		$manual_stats_arr = get_transient('dfs_nba_stat_updates');
+		if($manual_stats_arr === false){
+			$manual_stats_arr = array();
+		}
+
+		$result_arr= array(
+                	"stats" => $stats_arr,
+	                "dvp" => $dvp_arr,
+	                "stats_override" => $manual_stats_arr
+		);
+
 
 		#the echo command will write to the current stream.  In our case echo will output our data
 		echo json_encode($result_arr);
@@ -78,14 +90,14 @@ class DFS_NBA {
 
 	public static function dfs_nba_ajax_data_update(){
                 $user = wp_get_current_user();
-                $allowed_roles = array('editor', 'administrator', 'author');
+                $allowed_roles = self::$admin_roles;
                 $user_admin_roles_arr = array_intersect($allowed_roles, $user->roles);
                 #Only allow admin users to make submissions
                 if(empty($user_admin_roles_arr)){
                         wp_die();
                 }
 
-                $current_updates_arr = get_transient('dfs_nba_stat_updates');
+                $current_updates_arr = get_transient('dfs_nba_stat_overrides');
                 if($current_updates_arr === false) {
                         $current_updates_arr = array();
                 }
@@ -95,7 +107,7 @@ class DFS_NBA {
                 if(is_null($player_id)){
                         wp_die();
                 }
-$player_minutes = $update_obj["minutes"];
+		$player_minutes = $update_obj["minutes"];
                 $player_field_goals = $update_obj["field_goals"];
                 $player_three_pointers = $update_obj["three_pointers"];
                 $player_free_throws = $update_obj["free_throws"];
@@ -125,7 +137,7 @@ $player_minutes = $update_obj["minutes"];
                         unset($current_updates_arr[$player_id]);
                 }
 
-                set_transient('dfs_nba_stat_updates', $current_updates_arr, 606048 );
+                set_transient('dfs_nba_stat_overrides', $current_updates_arr, 606048 );
 
                 //TODO: Also back this up to a local file
         }
@@ -166,7 +178,7 @@ color: white;">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loadin
 	#Creates a javascript file that will let the client know the url for this plugin
 	public static function dfs_nba_url() {
                 $user = wp_get_current_user();
-                $allowed_roles = array('editor', 'administrator', 'author');
+                $allowed_roles = self::$admin_roles;
                 $user_admin_roles_arr = array_intersect($allowed_roles, $user->roles);
                 $is_plugin_admin = !empty($user_admin_roles_arr) ? 'true' : 'false';
 
@@ -195,6 +207,7 @@ color: white;">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loadin
   	error_log("DFS NBA plugin deactivated!", 0);
   	self::stop_cron();
   	delete_transient('dfs_nba_stats');
+  	delete_transient('dfs_nba_dvp');
 	}
 
 
