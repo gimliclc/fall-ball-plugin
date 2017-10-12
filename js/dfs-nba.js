@@ -162,12 +162,11 @@ var DfsNba = (function() {
       let turnovers = (parseFloat(turnovers_per_min) * parseFloat(minutes)).toFixed(1);
       // Calculate player projection
       let fd_proj = (parseFloat(points)+
-                  (parseFloat(data[i]['three_pointers'])*0.5)+
-                  (parseFloat(data[i]['rebounds'])*1.25)+
+                  (parseFloat(data[i]['rebounds'])*1.2)+
                   (parseFloat(data[i]['assists'])*1.5)+
-                  (parseFloat(data[i]['steals'])*2)+
-                  (parseFloat(data[i]['blocks'])*2)+
-                  (parseFloat(data[i]['turnovers'])*(-0.5))).toFixed(1);
+                  (parseFloat(data[i]['steals'])*3)+
+                  (parseFloat(data[i]['blocks'])*3)+
+                  (parseFloat(data[i]['turnovers'])*(-1))).toFixed(1);
       let fd_value = ((fd_proj) / ((parseFloat(data[i]['fd_price']))/1000)).toFixed(1);
       // Assign each player row
       var fd_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
