@@ -1,5 +1,5 @@
 var DfsNba = (function() {
-    var buildTable = function(data) {
+    var buildTable = function(data, dvp, statsOverride) {
         var table = jQuery('#dfs-nba-table');
         if (!table || !data) {
             return;
@@ -7,7 +7,7 @@ var DfsNba = (function() {
         table.empty();
         var DKtableHeader = jQuery("<table id='dk-nba-table' class='sortable'>" + "<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" + "</td><td id='nba-team' class='nba-mobile-hide' title='Player's team'>" + "Team" + "</td><td id='nba-opp' title='Opponent'>" + "Opp" + "</td><td id='nba-pos' title='Draftkings position'>" + "POS" + "</td><td title='Projected minutes' class='nba-mobile-hide' id='nba-minutes'>" + "Min" + "</td><td title='Projected fantasy points' id='nba-proj'>" + "Proj" + "</td><td id='nba-price' title='Draftkings cost' class='nba-mobile-hide'>" + "Price" + "</td><td title='Projected value (Over 5.5x is good)' id='nba-value'>" + "Val" + "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" + "</td><td id='nba-note' title='Player note'>" + "Note" + "</td><td title='Defense vs position' id='nba-dvp'>" + "DvP" + "</td><td title='Projected points' id='nba-points'>" + "PTS" + "</td><td title='Projected rebounds' id='nba-rebounds'>" + "Reb" + "</td><td title='Projected assists' id='nba-assists'>" + "Ast" + "</td><td title='Projected steals' id='nba-steals'>" + "Stl" + "</td><td title='Projected blocks' id='nba-blocks'>" + "Blk" + "</td><td title='Projected turnovers' id='nba-turnovers'>" + "TO" + "</td><td id='nba-game-info'>" + "Game (Draftkings)" + "</td></thead></table>");
         table.append(DKtableHeader)
-        for (var i = 0; i < data.length; i++) {
+        for (var i in data) {
             let minutes = data[i]['minutes'];
             // Tie calculations from data to the minutes for updated projections
             let field_goals_per_min = (parseFloat(data[i]['field_goals']) / parseFloat(minutes));
@@ -149,7 +149,7 @@ var DfsNba = (function() {
         // Create separate table for Fanduel
         var FDtableHeader = jQuery("<table id='fd-nba-table' class='sortable'>" + "<thead class='fd-nba-table-header' id='fanduel-nba'><td class='player-name' title='Players name'>" + "Player Name" + "</td><td id='nba-team' class='nba-mobile-hide' title='Player's team'>" + "Team" + "</td><td id='nba-opp' title='Opponent'>" + "Opp" + "</td><td id='nba-pos' title='Fanduel position'>" + "POS" + "</td><td title='Projected minutes' class='nba-mobile-hide' id='nba-minutes'>" + "Min" + "</td><td title='Projected fantasy points' id='nba-proj'>" + "Proj" + "</td><td id='nba-price' title='Draftkings cost' class='nba-mobile-hide'>" + "Price" + "</td><td title='Projected value (Over 5.5x is good)' id='nba-value'>" + "Val" + "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" + "</td><td id='nba-note' title='Player note'>" + "Note" + "</td><td title='Defense vs position' id='nba-dvp'>" + "DvP" + "</td><td title='Projected points' id='nba-points'>" + "PTS" + "</td><td title='Projected rebounds' id='nba-rebounds'>" + "Reb" + "</td><td title='Projected assists' id='nba-assists'>" + "Ast" + "</td><td title='Projected steals' id='nba-steals'>" + "Stl" + "</td><td title='Projected blocks' id='nba-blocks'>" + "Blk" + "</td><td title='Projected turnovers' id='nba-turnovers'>" + "TO" + "</td><td id='nba-game-info'>" + "Game (Fanduel)" + "</td></thead></table>");
         table.append(FDtableHeader)
-        for (var i = 0; i < data.length; i++) {
+        for (var i in data) {
             let minutes = data[i]['minutes'];
             // Tie calculations from data to the minutes for updated projections
             let field_goals_per_min = (parseFloat(data[i]['field_goals']) / parseFloat(minutes));
@@ -246,7 +246,7 @@ var DfsNba = (function() {
         "</td><td title='Projected turnovers' id='nba-turnovers'>" + "TO" +
         "</td><td id='nba-game-info'>" + "Game (Yahoo)" + "</td></thead></table>");
         table.append(YtableHeader)
-        for (var i = 0; i < data.length; i++) {
+        for (var i in data) {
             let minutes = data[i]['minutes'];
             // Tie calculations from data to the minutes for updated projections
             let field_goals_per_min = (parseFloat(data[i]['field_goals']) / parseFloat(minutes));
@@ -350,14 +350,24 @@ jQuery(document).ready(function() {
             success: function(data) {
                 //If the server responsed successfully (no 500 errors) this method will execute
                 var stats = [];
-                //Processes through each item in the returned data
-                //Could take a different approach if this data doesn't need further processing
-                jQuery.each(data, function(key, val) {
-                    stats.push(val);
-                });
-                if (stats.length > 0) {
+		var dvp = [];	
+		var statsOverride = [];
+
+		if(data && data !== "null" && data !== "undefined" ){
+			if(data.stats && data.stats !== "null" && data.stats !== "undefined" ){
+				stats = data.stats;
+			}
+			if(data.dvp && data.dvp !== "null" && data.dvp !== "undefined" ){
+				dvp = data.dvp;
+			}
+			if(data.stats_override && data.stats_override !== "null" && data.stats_override !== "undefined" ){
+				statsOverride = data.stats_override;
+			}
+		}
+
+                if (Object.keys(stats).length > 0) {
                     //Send the data off to our class DfsNba and public method buildTable
-                    DfsNba.buildTable(stats);
+                    DfsNba.buildTable(stats, dvp, statsOverride);
                     //Once processing is complete go ahead and show the table (it's initially hidden)
                     jQuery("#dk-nba-table").show();
  jQuery("#dk-nba-table_info").show();
