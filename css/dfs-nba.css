@@ -9,10 +9,14 @@ label {
   margin-left: 5%;
 }
 
-.player-name {
-    width: 150px;
-    text-align: left;
-    padding-left: 2px;
+br {
+    display: none;
+}
+.nba-desktop-padding{
+    margin-top:50px;
+}
+select {
+    width: 75%;
 }
 
 .dk-nba-table-header {
@@ -67,8 +71,20 @@ label {
   height: 20px;
 }
 
-@media only screen and (max-width: 900px) {
-	#nba-minutes, #nba-team, #nba-price, #nba-note, #nba-dvp, #nba-points, #nba-rebounds, #nba-assists, #nba-steals, #nba-blocks, #nba-turnovers, #nba-game-info   {
+@media only screen and (max-width: 700px) {
+	#nba-minutes, #nba-team, #nba-note, #nba-dvp, #nba-points, #nba-rebounds, #nba-assists, #nba-steals, #nba-blocks, #nba-turnovers, #nba-game-info   {
     display: none;
+}
+    .player-name {
+    text-align: left;
+    padding-left: 2px;
+    font-size: 12px;
+    width: 100px;
+}
+    #nba-opp, #nba-pos, #nba-proj, #nba-price, #nba-value, #nba-inj {
+        font-size: 12px;
+    }
+    .nba-desktop-padding{
+        margin-top: 0px;
 }
 }
