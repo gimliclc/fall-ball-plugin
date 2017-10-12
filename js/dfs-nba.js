@@ -8,7 +8,7 @@ var DfsNba = (function() {
     }
 
     table.empty();
-    var DKtableHeader = jQuery("<table id='nba-table' class='sortable'>" +
+    var DKtableHeader = jQuery("<table id='dk-nba-table' class='sortable'>" +
                             "<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
                             "</td><td id='nba-pos' class='nba-mobile-hide' title='Player's team'>" + "Team" +
                             "</td><td id='nba-pos' title='Opponent'>" + "Opp" +
@@ -116,8 +116,10 @@ var DfsNba = (function() {
                               "</td></tr>");
       DKtableHeader.append(dk_playerRow);
     }
+    var dkTable = document.getElementById('dk-nba-table');
+    sorttable.makeSortable(dkTable);
     // Create separate table for Fanduel
-    var FDtableHeader = jQuery("<table id='nba-table' class='sortable'>" +
+    var FDtableHeader = jQuery("<table id='fd-nba-table' class='sortable'>" +
                             "<thead class='fd-nba-table-header' id='fanduel-nba'><td class='player-name' title='Players name'>" + "Player Name" +
                             "</td><td id='nba-pos' title='Player's team'>" + "Team" +
                             "</td><td id='nba-pos' title='Opponent'>" + "Opp" +
@@ -189,6 +191,8 @@ var DfsNba = (function() {
                               "</td></tr>");
                   FDtableHeader.append(fd_playerRow);
                             }
+                            var fdTable = document.getElementById('fd-nba-table');
+                            sorttable.makeSortable(fdTable);
   };
 
   //Methods placed here will be considered "public" and can be acessed through the global namespace
