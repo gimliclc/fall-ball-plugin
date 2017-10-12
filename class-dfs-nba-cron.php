@@ -174,6 +174,7 @@ class DFS_NBA_Cron {
     function load_csvs($csv_to_scrape) {
       $csv_arr = array();
       $openFile = fopen($csv_to_scrape, 'r');
+      if($openFile){
       while (($line = fgetcsv($openFile)) !== FALSE) {
         if ($line[0] == ""){}
         elseif ($line[0] == "playerID") {}
@@ -181,13 +182,17 @@ class DFS_NBA_Cron {
           $csv_arr[] = $line;
         }
       }
+
       fclose($openFile);
+      } else {
+        error_log("Unable to open file!", 0);
+      }
       return $csv_arr;
     }
     // load csvs to the $result_arr
-    $fd_result_arr = load_csvs(DFS_NBA_DIR . '\Fanduel.csv');
-    $dk_result_arr = load_csvs(DFS_NBA_DIR . '\Draftkings.csv');
-    $y_result_arr = load_csvs(DFS_NBA_DIR . '\Yahoo.csv');
+    $fd_result_arr = load_csvs(DFS_NBA_DIR . 'Fanduel.csv');
+    $dk_result_arr = load_csvs(DFS_NBA_DIR . 'Draftkings.csv');
+    $y_result_arr = load_csvs(DFS_NBA_DIR . 'Yahoo.csv');
     // Create function to search through arrays
     // Have to use multiple arrays to store scraped data
     function selectById($array, $data) {
@@ -321,6 +326,7 @@ class DFS_NBA_Cron {
                     "steals" => "",
                     "blocks" => "",
                     "turnovers" => "",
+                    "fd_position" => $found_fd_player[4],
                     "fd_fppg" => $found_fd_player[8],
                     "fd_price" => $found_fd_player[10],
                     "opponent" => $found_fd_player[13],
@@ -351,6 +357,7 @@ class DFS_NBA_Cron {
                     "steals" => $found_player['steals'],
                     "blocks" => $found_player['blocks'],
                     "turnovers" => $found_player['turnovers'],
+                    "fd_position" => $found_fd_player[4],
                     "fd_fppg" => $found_fd_player[8],
                     "fd_price" => $found_fd_player[10],
                     "opponent" => $found_fd_player[13],
@@ -449,6 +456,7 @@ class DFS_NBA_Cron {
                   "steals" => "",
                   "blocks" => "",
                   "turnovers" => "",
+                  "fd_position" => $found_fd_player[4],
                   "fd_fppg" => $found_fd_player[8],
                   "fd_price" => $found_fd_player[10],
                   "opponent" => $found_fd_player[13],
@@ -479,6 +487,7 @@ class DFS_NBA_Cron {
                   "steals" => $found_player['steals'],
                   "blocks" => $found_player['blocks'],
                   "turnovers" => $found_player['turnovers'],
+                  "fd_position" => $found_fd_player[4],
                   "fd_fppg" => $found_fd_player[8],
                   "fd_price" => $found_fd_player[10],
                   "opponent" => $found_fd_player[13],
@@ -594,6 +603,7 @@ class DFS_NBA_Cron {
                   "steals" => "",
                   "blocks" => "",
                   "turnovers" => "",
+                  "fd_position" => $found_fd_player[4],
                   "fd_fppg" => $found_fd_player[8],
                   "fd_price" => $found_fd_player[10],
                   "opponent" => $found_fd_player[13],
@@ -624,6 +634,7 @@ class DFS_NBA_Cron {
                   "steals" => $found_player['steals'],
                   "blocks" => $found_player['blocks'],
                   "turnovers" => $found_player['turnovers'],
+                  "fd_position" => $found_fd_player[4],
                   "fd_fppg" => $found_fd_player[8],
                   "fd_price" => $found_fd_player[10],
                   "opponent" => $found_fd_player[13],
@@ -722,6 +733,7 @@ class DFS_NBA_Cron {
                 "steals" => "",
                 "blocks" => "",
                 "turnovers" => "",
+                "fd_position" => $found_fd_player[4],
                 "fd_fppg" => $found_fd_player[8],
                 "fd_price" => $found_fd_player[10],
                 "opponent" => $found_fd_player[13],
@@ -752,6 +764,7 @@ class DFS_NBA_Cron {
                 "steals" => $found_player['steals'],
                 "blocks" => $found_player['blocks'],
                 "turnovers" => $found_player['turnovers'],
+                "fd_position" => $found_fd_player[4],
                 "fd_fppg" => $found_fd_player[8],
                 "fd_price" => $found_fd_player[10],
                 "opponent" => $found_fd_player[13],
@@ -768,6 +781,7 @@ class DFS_NBA_Cron {
           $result_arr[] = $found_away_player_obj;
         }
         }
+    error_log(print_r($result_arr, TRUE));
     #Wordpress transients allow us to temporarily store a variable to be referenced elsewhere.
     #We will want to store our processed data here so that it doesn't have to be processed on every page request
     set_transient('dfs_nba_stats', $result_arr, 60*60*48 );
