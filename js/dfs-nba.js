@@ -9,6 +9,8 @@ var DfsNba = (function() {
 
     table.empty();
     var DKtableHeader = jQuery("<thead class='dk-nba-table-header' id='draftkings-nba'><td class='player-name' title='Players name'>" + "Player Name" +
+                            "</td><td id='nba-pos' title='Player's team'>" + "Team" +
+                            "</td><td id='nba-pos' title='Opponent'>" + "Opp" +
                             "</td><td id='nba-pos' title='Draftkings position'>" + "POS" +
                             "</td><td title='Projected minutes'>" + "Min" +
                             "</td><td title='Projected fantasy points'>" + "Proj" +
@@ -18,15 +20,11 @@ var DfsNba = (function() {
                             "</td><td id='nba-note' title='Player note'>" + "Note" +
                             "</td><td title='Defense vs position'>" + "DvP" +
                             "</td><td title='Projected points'>" + "PTS" +
-                            "</td><td title='Projected three pointers'>" + "3PT" +
-                            "</td><td title='Projected points from free throws'>" + "FT" +
                             "</td><td title='Projected rebounds'>" + "Reb" +
                             "</td><td title='Projected assists'>" + "Ast" +
                             "</td><td title='Projected steals'>" + "Stl" +
                             "</td><td title='Projected blocks'>" + "Blk" +
                             "</td><td title='Projected turnovers'>" + "TO" +
-                            "</td><td title='Projected odds of a double double'>" + "DBL" +
-                            "</td><td title='Projected odds of a triple double'>" + "TRP" +
                             "</td><td id='nba-game-info'>" + "Game (Draftkings)" +
                             "</td></thead>");
     table.append(DKtableHeader)
@@ -97,6 +95,8 @@ var DfsNba = (function() {
       let value = ((proj) / ((parseFloat(data[i]['dk_price']))/1000)).toFixed(1);
       // Assign each player row
       var playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
+                              "</td><td>" + data[i]['team'] +
+                              "</td><td>" + data[i]['opponent'] +
                               "</td><td id='nba-pos'>" + data[i]['dk_position'] +
                               "</td><td>" + minutes +
                               "</td><td>" + proj +
@@ -106,15 +106,11 @@ var DfsNba = (function() {
                               "</td><td id='nba-note'>" + data[i]['injured note'] +
                               "</td><td>" + "DvP" +
                               "</td><td>" + points +
-                              "</td><td>" + three_points +
-                              "</td><td>" + free_throws +
                               "</td><td>" + rebounds +
                               "</td><td>" + assists +
                               "</td><td>" + steals +
                               "</td><td>" + blocks +
                               "</td><td>" + turnovers +
-                              "</td><td>" + dbl_dbl_odds.toFixed(1) +
-                              "</td><td>" + trp_dbl_odds.toFixed(1) +
                               "</td><td id='nba-game-info'>" + data[i]['game_info'] +
                               "</td></tr>");
         // Turn row red if player is out or minutes 0
