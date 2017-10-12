@@ -149,7 +149,7 @@ $player_minutes = $update_obj["minutes"];
 
 	#Processes the html for the shortcode.  In our case we are just outputting a simple container to be filled in by javascript
 public static function dfs_nba_shortcode($atts) {
-	return '<button type="button" class="fanduel-button btn btn-success" style="margin-top: 10px;">Fanduel</button>' . '<button type="button" class=" draftkings-button btn btn-warning" style="margin-top: 10px;">Draftkings</button>' . '<button type="button" class=" yahoo-button btn" style="margin-top: 10px; background-color: #7B0099;
+	return '<button type="button" class="fanduel-button btn btn-success" style="margin-bottom: 5px;">Fanduel</button>' . '<button type="button" class=" draftkings-button btn btn-warning" style="margin-bottom: 5px;">Draftkings</button>' . '<button type="button" class=" yahoo-button btn" style="margin-bottom: 5px;" background-color: #7B0099;
 color: white;">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loading</h2></div>';
 }
 
