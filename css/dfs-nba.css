@@ -4,59 +4,40 @@
         table-layout: fixed;
 }
 
+label {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.player-name {
+    width: 150px;
+    text-align: left;
+    padding-left: 2px;
+}
+
 .dk-nba-table-header {
   font-weight: bold;
-  background-color: #000;
-  color: #F46C22;
+  color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #9AC434;
+  border-bottom: 2px solid #F46C22;
 }
 
 .fd-nba-table-header {
   font-weight: bold;
-  background-color: #6495ED;
-  color: white;
+  color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid #5cb85c;
 }
 
 .y-nba-table-header {
   font-weight: bold;
-  background-color: #7B0099;
-  color: white;
+  color: #000;
   cursor: pointer;
-  border-bottom: 2px solid #fff;
-}
-
-.player-name {
-  width: 200px;
-  padding-left: 10px;
+  border-bottom: 2px solid #7B0099;
 }
 
 .redRow {
   background-color: red;
-}
-
-#nba-pos {
-  width: 65px;
-}
-
-#nba-game-info {
-  width: 200px;
-}
-
-#nba-price {
-  width: 80px;
-  text-align: center;
-}
-
-#nba-inj {
-  text-align: center;
-}
-
-#nba-note {
-  width: 100px;
-  text-align: center;
 }
 
 .fanduel-button {
@@ -81,4 +62,13 @@
   color: white;
   margin-right: 5%;
   width: 28%;
+}
+.dataTables_scrollHead {
+  height: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+	#nba-minutes, #nba-team, #nba-price, #nba-note, #nba-dvp, #nba-points, #nba-rebounds, #nba-assists, #nba-steals, #nba-blocks, #nba-turnovers, #nba-game-info   {
+    display: none;
+}
 }
