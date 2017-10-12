@@ -52,6 +52,8 @@ class DFS_NBA {
 	private static function init_ajax() {
 		add_action( 'wp_ajax_nopriv_dfs_nba', array('DFS_NBA','dfs_nba_ajax_request'));
 		add_action( 'wp_ajax_dfs_nba',array('DFS_NBA','dfs_nba_ajax_request'));
+		add_action( 'wp_ajax_nopriv_dfs_nba_update', array('DFS_NBA','dfs_nba_ajax_data_update'));
+    add_action( 'wp_ajax_dfs_nba_update',array('DFS_NBA','dfs_nba_ajax_data_update'));
 	}
 
 	#Processes the ajax request for the action "dfs_nba" defined above.
@@ -74,6 +76,60 @@ class DFS_NBA {
 		wp_die();
 	}
 
+	public static function dfs_nba_ajax_data_update(){
+                $user = wp_get_current_user();
+                $allowed_roles = array('editor', 'administrator', 'author');
+                $user_admin_roles_arr = array_intersect($allowed_roles, $user->roles);
+                #Only allow admin users to make submissions
+                if(empty($user_admin_roles_arr)){
+                        wp_die();
+                }
+
+                $current_updates_arr = get_transient('dfs_nba_stat_updates');
+                if($current_updates_arr === false) {
+                        $current_updates_arr = array();
+                }
+
+                $update_obj = json_decode($_POST['player_update'],true);
+                $player_id = $update_obj["playerID"];
+                if(is_null($player_id)){
+                        wp_die();
+                }
+$player_minutes = $update_obj["minutes"];
+                $player_field_goals = $update_obj["field_goals"];
+                $player_three_pointers = $update_obj["three_pointers"];
+                $player_free_throws = $update_obj["free_throws"];
+                $player_rebounds = $update_obj["rebounds"];
+                $player_assists = $update_obj["assists"];
+                $player_steals = $update_obj["steals"];
+                $player_blocks = $update_obj["blocks"];
+                $player_turnovers = $update_obj["turnovers"];
+                $player_injured = $update_obj["injured"];
+                $player_injured_note = $update_obj["injured note"];
+
+                $has_data = is_null($player_minutes)
+                        || is_null($player_field_goals)
+                        || is_null($player_three_pointers)
+                        || is_null($player_free_throws)
+                        || is_null($player_rebounds)
+                        || is_null($player_assists)
+                        || is_null($player_steals)
+                        || is_null($player_blocks)
+                        || is_null($player_turnovers)
+                        || is_null($player_injured)
+                        || is_null($player_injured_note);
+
+                if($has_data){
+                        $current_updates_arr[$player_id] = $update_obj;
+                } else {
+                        unset($current_updates_arr[$player_id]);
+                }
+
+                set_transient('dfs_nba_stat_updates', $current_updates_arr, 606048 );
+
+                //TODO: Also back this up to a local file
+        }
+
 	#Tell wordpress to include our custom javascript file.  The url for the javascript file references the DFS_NBA_URL defined
 	#in the configuration file
 	#jQuery is also listed as a dependency for our javascript file.
@@ -92,9 +148,11 @@ class DFS_NBA {
   }
 
 	#Processes the html for the shortcode.  In our case we are just outputting a simple container to be filled in by javascript
-	public static function dfs_nba_shortcode($atts) {
-		return '<button class="fanduel-button">Fanduel</button>' . '<button class="draftkings-button">Draftkings</button>' . '<button class="yahoo-button">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loading</h2></div>';
-	}
+public static function dfs_nba_shortcode($atts) {
+	return '<button type="button" class="fanduel-button btn btn-success" style="margin-top: 10px;">Fanduel</button>' . '<button type="button" class=" draftkings-button btn btn-warning" style="margin-top: 10px;">Draftkings</button>' . '<button type="button" class=" yahoo-button btn" style="margin-top: 10px; background-color: #7B0099;
+color: white;">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loading</h2></div>';
+}
+
 
 	#This will let our javascript know where to make a ajax call through wordpress.  We would post our ajax action to get a response
 	public static function dfs_nba_ajaxurl() {
@@ -138,5 +196,7 @@ class DFS_NBA {
   	self::stop_cron();
   	delete_transient('dfs_nba_stats');
 	}
+
+
 
 }
