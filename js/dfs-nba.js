@@ -69,6 +69,9 @@ var DfsNba = (function() {
         jQuery('#dk-nba-table').DataTable( {
           "paging" : false,
           order: [[6, 'desc']],
+          scrollY:        "450px",
+          scrollCollapse: true,
+          paging:         false,
         initComplete: function () {
             this.api().columns([1,3,17]).every( function () {
                 var column = this;
@@ -124,6 +127,9 @@ var DfsNba = (function() {
         jQuery('#fd-nba-table').DataTable( {
           "paging" : false,
           order: [[6, 'desc']],
+          scrollY:        "450px",
+          scrollCollapse: true,
+          paging:         false,
         initComplete: function () {
             this.api().columns([1,3,17]).every( function () {
                 var column = this;
@@ -146,7 +152,7 @@ var DfsNba = (function() {
         }
     });
         // Create separate table for Yahoo
-        var YtableHeader = jQuery("<table id='y-nba-table' class='sortable'>" + "<thead class='y-nba-table-header' id='yahoo-nba'><td class='player-name' title='Players name'>" + "Player Name" + "</td><td id='nba-pos' title='Player's team'>" + "Team" + "</td><td id='nba-pos' title='Opponent'>" + "Opp" + "</td><td id='nba-pos' title='Yahoo position'>" + "POS" + "</td><td title='Projected minutes'>" + "Min" + "</td><td title='Projected fantasy points'>" + "Proj" + "</td><td id='nba-price' title='Yahoo cost'>" + "Price" + "</td><td title='Projected value (1.5x is good)'>" + "Val" + "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" + "</td><td id='nba-note' title='Player note'>" + "Note" + "</td><td title='Defense vs position'>" + "DvP" + "</td><td title='Projected points'>" + "PTS" + "</td><td title='Projected rebounds'>" + "Reb" + "</td><td title='Projected assists'>" + "Ast" + "</td><td title='Projected steals'>" + "Stl" + "</td><td title='Projected blocks'>" + "Blk" + "</td><td title='Projected turnovers'>" + "TO" + "</td><td id='nba-game-info'>" + "Game (Yahoo)" + "</td></thead></table>");
+        var YtableHeader = jQuery("<table id='y-nba-table' class='sortable'>" + "<thead class='y-nba-table-header' id='yahoo-nba'><td class='player-name' title='Players name' style='width:200px;'>" + "Player Name" + "</td><td id='nba-pos' title='Player's team'>" + "Team" + "</td><td id='nba-pos' title='Opponent'>" + "Opp" + "</td><td id='nba-pos' title='Yahoo position'>" + "POS" + "</td><td title='Projected minutes'>" + "Min" + "</td><td title='Projected fantasy points'>" + "Proj" + "</td><td id='nba-price' title='Yahoo cost'>" + "Price" + "</td><td title='Projected value (1.5x is good)'>" + "Val" + "</td><td id='nba-inj' title='Player injured?'>" + "Inj?" + "</td><td id='nba-note' title='Player note'>" + "Note" + "</td><td title='Defense vs position'>" + "DvP" + "</td><td title='Projected points'>" + "P" + "</td><td title='Projected rebounds'>" + "R" + "</td><td title='Projected assists'>" + "A" + "</td><td title='Projected steals'>" + "S" + "</td><td title='Projected blocks'>" + "B" + "</td><td title='Projected turnovers'>" + "TO" + "</td><td id='nba-game-info'>" + "Game (Yahoo)" + "</td></thead></table>");
         table.append(YtableHeader)
         for (var i = 0; i < data.length; i++) {
             let minutes = data[i]['minutes'];
@@ -177,28 +183,30 @@ var DfsNba = (function() {
         }
         var yTable = document.getElementById('y-nba-table');
         jQuery('#y-nba-table').DataTable( {
-          "paging" : false,
           order: [[6, 'desc']],
-        initComplete: function () {
-            this.api().columns([1,3,17]).every( function () {
-                var column = this;
-                var select = jQuery('<select><option value=""></option></select>')
-                    .appendTo(jQuery(column.header()).empty())
-                    .on('change', function () {
-                        var val = jQuery.fn.dataTable.util.escapeRegex(
-                            jQuery(this).val()
-                        );
+          scrollY:        "450px",
+          scrollCollapse: true,
+          paging:         false,
+          initComplete: function () {
+              this.api().columns([1,3,17]).every( function () {
+                  var column = this;
+                  var select = jQuery('<select><option value=""></option></select>')
+                      .appendTo(jQuery(column.header()).empty())
+                      .on('change', function () {
+                          var val = jQuery.fn.dataTable.util.escapeRegex(
+                              jQuery(this).val()
+                          );
 
-                        column
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            .draw();
-                    });
+                          column
+                              .search( val ? '^'+val+'$' : '', true, false )
+                              .draw();
+                      });
 
-                column.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                });
-            });
-        }
+                  column.data().unique().sort().each( function ( d, j ) {
+                      select.append( '<option value="'+d+'">'+d+'</option>' )
+                  });
+              });
+          }
     });
     };
     //Methods placed here will be considered "public" and can be acessed through the global namespace
@@ -232,55 +240,77 @@ jQuery(document).ready(function() {
                     //Send the data off to our class DfsNba and public method buildTable
                     DfsNba.buildTable(stats);
                     //Once processing is complete go ahead and show the table (it's initially hidden)
-                    jQuery('#dfs-nba-table').show();
                     jQuery("#dk-nba-table").show();
-                    jQuery("#dk-nba-table_info").show();
-                    jQuery("#dk-nba-table_filter").show();
-                    jQuery("#y-nba-table").hide();
-                    jQuery("#y-nba-table_filter").hide();
-                    jQuery("#y-nba-table_info").hide();
-                    jQuery("#fd-nba-table").hide();
-                    jQuery("#fd-nba-table_filter").hide();
-                    jQuery("#fd-nba-table_info").hide();
-                }
-            },
-            error: function(errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-    }
+ jQuery("#dk-nba-table_info").show();
+ jQuery("#dk-nba-table_filter").show();
+ jQuery("#draftkings-nba").show();
+ jQuery("#dk-nba-table_wrapper").show();
+ jQuery("#y-nba-table").hide();
+ jQuery("#y-nba-table_filter").hide();
+ jQuery("#y-nba-table_info").hide();
+ jQuery("#yahoo-nba").hide();
+ jQuery("#y-nba-table_wrapper").hide();
+ jQuery("#fd-nba-table").hide();
+ jQuery("#fd-nba-table_filter").hide();
+ jQuery("#fd-nba-table_info").hide();
+ jQuery("#fanduel-nba").hide();
+ jQuery("#fd-nba-table_wrapper").hide();
+               }
+           },
+           error: function(errorThrown) {
+               console.log(errorThrown);
+           }
+       });
+   }
 });
 
 jQuery(".fanduel-button").click(function(){
-  jQuery("#dk-nba-table").hide();
-  jQuery("#dk-nba-table_info").hide();
-  jQuery("#dk-nba-table_filter").hide();
-  jQuery("#y-nba-table").hide();
-  jQuery("#y-nba-table_filter").hide();
-  jQuery("#y-nba-table_info").hide();
-  jQuery("#fd-nba-table").show();
-  jQuery("#fd-nba-table_filter").show();
-  jQuery("#fd-nba-table_info").show();
+ jQuery("#dk-nba-table").hide();
+ jQuery("#dk-nba-table_info").hide();
+ jQuery("#dk-nba-table_filter").hide();
+ jQuery("#draftkings-nba").hide();
+ jQuery("#dk-nba-table_wrapper").hide();
+ jQuery("#y-nba-table").hide();
+ jQuery("#y-nba-table_filter").hide();
+ jQuery("#y-nba-table_info").hide();
+ jQuery("#y-nba-table_wrapper").hide();
+ jQuery("#yahoo-nba").hide();
+ jQuery("#fd-nba-table").show();
+ jQuery("#fd-nba-table_filter").show();
+ jQuery("#fd-nba-table_info").show();
+ jQuery("#fanduel-nba").show();
+ jQuery("#fd-nba-table_wrapper").show();
 });
 jQuery(".draftkings-button").click(function(){
-  jQuery("#dk-nba-table").show();
-  jQuery("#dk-nba-table_info").show();
-  jQuery("#dk-nba-table_filter").show();
-  jQuery("#y-nba-table").hide();
-  jQuery("#y-nba-table_filter").hide();
-  jQuery("#y-nba-table_info").hide();
-  jQuery("#fd-nba-table").hide();
-  jQuery("#fd-nba-table_filter").hide();
-  jQuery("#fd-nba-table_info").hide();
+ jQuery("#dk-nba-table").show();
+ jQuery("#dk-nba-table_info").show();
+ jQuery("#dk-nba-table_filter").show();
+ jQuery("#draftkings-nba").show();
+ jQuery("#dk-nba-table_wrapper").show();
+ jQuery("#y-nba-table").hide();
+ jQuery("#y-nba-table_filter").hide();
+ jQuery("#y-nba-table_info").hide();
+ jQuery("#yahoo-nba").hide();
+ jQuery("#y-nba-table_wrapper").hide();
+ jQuery("#fd-nba-table").hide();
+ jQuery("#fd-nba-table_filter").hide();
+ jQuery("#fd-nba-table_info").hide();
+ jQuery("#fanduel-nba").hide();
+ jQuery("#fd-nba-table_wrapper").hide();
 });
 jQuery(".yahoo-button").click(function(){
-  jQuery("#dk-nba-table").hide();
-  jQuery("#dk-nba-table_info").hide();
-  jQuery("#dk-nba-table_filter").hide();
-  jQuery("#y-nba-table").show();
-  jQuery("#y-nba-table_filter").show();
-  jQuery("#y-nba-table_info").show();
-  jQuery("#fd-nba-table").hide();
-  jQuery("#fd-nba-table_filter").hide();
-  jQuery("#fd-nba-table_info").hide();
+ jQuery("#dk-nba-table").hide();
+ jQuery("#dk-nba-table_info").hide();
+ jQuery("#dk-nba-table_filter").hide();
+ jQuery("#dk-nba-table_wrapper").hide();
+ jQuery("#y-nba-table").show();
+ jQuery("#y-nba-table_filter").show();
+ jQuery("#y-nba-table_info").show();
+ jQuery("#yahoo-nba").show();
+ jQuery("#y-nba-table_wrapper").show();
+ jQuery("#fd-nba-table").hide();
+ jQuery("#fd-nba-table_filter").hide();
+ jQuery("#fd-nba-table_info").hide();
+ jQuery("#fanduel-nba").hide();
+ jQuery("#fd-nba-table_wrapper").hide();
 });
