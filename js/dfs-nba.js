@@ -68,34 +68,59 @@ var DfsNba = (function() {
             if (dk_proj == "NaN"){
               dk_proj = 0;
             }
+            let dk_value = ((dk_proj) / ((parseFloat(data[i]['dk_price'])) / 1000)).toFixed(1);
             if (data[i]['opponent'] == ""){
               console.log("Removed " + data[i]['dk_name'] + " from DK");
             }
-            let dk_value = ((dk_proj) / ((parseFloat(data[i]['dk_price'])) / 1000)).toFixed(1);
-            // Assign each player row
-            var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
-             "</td><td>" + data[i]['team'] +
-              "</td><td>" + data[i]['opponent'] +
-               "</td><td id='nba-pos'>" + data[i]['dk_position'] +
-                "</td><td id='nba-minutes'>" + minutes +
-                 "</td><td id='nba-proj'>" + dk_proj +
-                  "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
-                   "</td><td id='nba-value'>" + dk_value +
-                    "</td><td id='nba-inj'>" + data[i]['injured'] +
-                     "</td><td id='nba-note'>" + data[i]['injured note'] +
-                      "</td><td id='nba-dvp'>" + "DvP" +
-                       "</td><td id='nba-points'>" + points +
-                        "</td><td id='nba-rebounds'>" + rebounds +
-                         "</td><td id='nba-assists'>" + assists +
-                          "</td><td id='nba-steals'>" + steals +
-                           "</td><td id='nba-blocks'>" + blocks +
-                            "</td><td id='nba-turnovers'>" + turnovers +
-                             "</td><td id='nba-game-info'>" + data[i]['game_info'] + "</td></tr>");
-            DKtableHeader.append(dk_playerRow);
+            else {
+              // Assign each player row
+              if(dfsIsPluginAdmin){
+               var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
+               "</td><td id='nba-team'>" + data[i]['team']  +
+                "</td><td 'nba-opp'>" + data[i]['opponent'] +
+                 "</td><td id='nba-pos'>" + data[i]['dk_position'] +
+                  "</td><td id='nba-minutes'>"+ "<input placeholder=" + minutes + ">" +
+                   "</td><td id='nba-proj'>" + dk_proj +
+                    "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
+                     "</td><td id='nba-value'>" + dk_value +
+                      "</td><td id='nba-inj'>" + "<input placeholder=" + data[i]['injured'] + ">" +
+                       "</td><td id='nba-note'>" + "<input placeholder=" + data[i]['injured note'] + ">" +
+                        "</td><td id='nba-dvp'>" + "<input placeholder=" + "DvP" + ">" +
+                         "</td><td id='nba-points'>" + "<input placeholder=" + points + ">" +
+                          "</td><td id='nba-rebounds'>" + "<input placeholder=" + rebounds + ">" +
+                           "</td><td id='nba-assists'>" + "<input placeholder=" + assists + ">" +
+                            "</td><td id='nba-steals'>" + "<input placeholder=" + steals + ">" +
+                             "</td><td id='nba-blocks'>" + "<input placeholder=" + blocks + ">" +
+                              "</td><td id='nba-turnovers'>" + "<input placeholder=" + turnovers + ">" +
+                               "</td><td id='nba-game-info'>" + data[i]['game_info'] + "</td></tr>");
+                }
+                else {
+              var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
+               "</td><td id='nba-team'>" + data[i]['team'] +
+                "</td><td 'nba-opp'>" + data[i]['opponent'] +
+                 "</td><td id='nba-pos'>" + data[i]['dk_position'] +
+                  "</td><td id='nba-minutes'>" + minutes +
+                   "</td><td id='nba-proj'>" + dk_proj +
+                    "</td><td id='nba-price'>" + "$" + data[i]['dk_price'] +
+                     "</td><td id='nba-value'>" + dk_value +
+                      "</td><td id='nba-inj'>" + data[i]['injured'] +
+                       "</td><td id='nba-note'>" + data[i]['injured note'] +
+                        "</td><td id='nba-dvp'>" + "DvP" +
+                         "</td><td id='nba-points'>" + points +
+                          "</td><td id='nba-rebounds'>" + rebounds +
+                           "</td><td id='nba-assists'>" + assists +
+                            "</td><td id='nba-steals'>" + steals +
+                             "</td><td id='nba-blocks'>" + blocks +
+                              "</td><td id='nba-turnovers'>" + turnovers +
+                               "</td><td id='nba-game-info'>" + data[i]['game_info'] + "</td></tr>");
+
+                }
+                DKtableHeader.append(dk_playerRow);
+            }
+
         }
         var dkTable = document.getElementById('dk-nba-table');
         jQuery('#dk-nba-table').DataTable( {
-          "paging" : false,
           order: [[6, 'desc']],
           scrollY:        "450px",
           scrollCollapse: true,
@@ -159,12 +184,12 @@ var DfsNba = (function() {
             else {
               // Assign each player row
               var fd_playerRow = jQuery("<tr id='fanduel-nba'><td class='player-name'>" + data[i]['dk_name'] +
-              "</td><td>" + data[i]['team'] +
-              "</td><td>" + data[i]['opponent'] +
+              "</td><td id='nba-team'>" + data[i]['team'] +
+              "</td><td id='nba-opp'>" + data[i]['opponent'] +
               "</td><td id='nba-pos'>" + data[i]["fd_position"] +
-              "</td><td>" + minutes + "</td><td>" + fd_proj +
+              "</td><td id='nba-minutes'>" + minutes + "</td><td>" + fd_proj +
               "</td><td id='nba-price'>" + "$" + fd_price +
-              "</td><td>" + fd_value +
+              "</td><td id='nba-value'>" + fd_value +
               "</td><td id='nba-inj'>" + data[i]['injured'] +
                "</td><td id='nba-note'>" + data[i]['injured note'] +
                 "</td><td id='nba-dvp'>" + "DvP" +
