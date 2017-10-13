@@ -208,6 +208,7 @@ color: white;">Yahoo</button>' . '<div id="dfs-nba-table"><h2>Projections Loadin
   	self::stop_cron();
   	delete_transient('dfs_nba_stats');
   	delete_transient('dfs_nba_dvp');
+		delete_transient('dfs_nba_stat_overrides');
 	}
 
 
