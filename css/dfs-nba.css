@@ -7,7 +7,12 @@
 input {
     width: 75%;
 }
-
+.even {
+    background-color: #E6E6FA;
+}
+.odd {
+    background-color: #fff;
+}
 label {
   width: 90%;
   margin-left: 5%;
