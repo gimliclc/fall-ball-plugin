@@ -77,7 +77,7 @@ var DfsNba = (function() {
               if(dfsIsPluginAdmin){
                var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
                "</td><td id='nba-team'>" + data[i]['team']  +
-                "</td><td 'nba-opp'>" + data[i]['opponent'] +
+                "</td><td id='nba-opp'>" + data[i]['opponent'] +
                  "</td><td id='nba-pos'>" + data[i]['dk_position'] +
                   "</td><td id='nba-minutes'>"+ "<input placeholder=" + minutes + ">" +
                    "</td><td id='nba-proj'>" + dk_proj +
@@ -97,7 +97,7 @@ var DfsNba = (function() {
                 else {
               var dk_playerRow = jQuery("<tr id='draftkings-nba'><td class='player-name'>" + data[i]['dk_name'] +
                "</td><td id='nba-team'>" + data[i]['team'] +
-                "</td><td 'nba-opp'>" + data[i]['opponent'] +
+                "</td><td id='nba-opp'>" + data[i]['opponent'] +
                  "</td><td id='nba-pos'>" + data[i]['dk_position'] +
                   "</td><td id='nba-minutes'>" + minutes +
                    "</td><td id='nba-proj'>" + dk_proj +
